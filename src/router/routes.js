@@ -1,24 +1,10 @@
-import Home from '../pages/Home'
-import Menu from '../pages/Menu'
-import Game from '../pages/Game'
 
 const routes = [
   {
     path: '/',
-    component: () => import('../layouts/MainLayout'),
+    component: () => import('layouts/MyLayout.vue'),
     children: [
-      {
-        path: '',
-        component: Home
-      },
-      {
-        path: '/menu',
-        component: Menu
-      },
-      {
-        path: '/game',
-        component: Game
-      }
+      { path: '', component: () => import('pages/Index.vue') }
     ]
   }
 ]
