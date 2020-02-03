@@ -6,6 +6,24 @@ const routes = [
     children: [
       { path: '', component: () => import('pages/Index.vue') }
     ]
+  },
+  {
+    path: '/game',
+    component: () => import('layouts/GameLayout.vue'),
+    children: [
+      {
+        path: '',
+        component: () => import('pages/InstructionsPage.vue')
+      },
+      {
+        path: 'two-choices',
+        component: () => import('pages/TwoChoicesPage.vue')
+      },
+      {
+        path: 'one-input',
+        component: () => import('pages/OneInputPage.vue')
+      }
+    ]
   }
 ]
 
