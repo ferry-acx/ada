@@ -6,8 +6,7 @@
       </div>
     </div>
     <div class="col-12 text-center">
-      <q-img :src="monsterImg">
-      </q-img>
+      <q-img :src="monsterImg"></q-img>
     </div>
   </q-page>
 </template>

@@ -5,6 +5,11 @@
 
 <script>
 export default {
-  name: 'PageIndex'
+  name: 'PageIndex',
+  created () {
+    // route to game for now
+    console.log('route to game for now...')
+    this.$router.push('game')
+  }
 }
 </script>

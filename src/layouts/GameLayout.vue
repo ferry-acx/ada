@@ -48,6 +48,7 @@
             class="full-width"
             color="secondary"
             size="lg"
+            @click="nextQuestion"
           >
             Next Question
           </q-btn>
@@ -63,7 +64,24 @@ export default {
   name: 'GameLayout',
   data () {
     return {
-      progress: 0.6
+      progress: 0.6,
+      currRouteIdx: 0,
+      routes: [
+        '/game',
+        '/game/two-choices',
+        '/game/one-input'
+      ]
+    }
+  },
+  methods: {
+    nextQuestion () {
+      this.currRouteIdx++
+
+      if (this.currRouteIdx >= this.routes.length) {
+        this.currRouteIdx = 0
+      }
+
+      this.$router.push(this.routes[this.currRouteIdx])
     }
   }
 }
