@@ -27,8 +27,8 @@
         </div>
         <div class="col-2 q-ma-md">
           <q-icon
-            name="favorite_border"
-            color="negative"
+            name="volume_up"
+            color="secondary"
             size="md"
           >
           </q-icon>

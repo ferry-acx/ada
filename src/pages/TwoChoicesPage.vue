@@ -8,30 +8,20 @@
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-12">
-          <div class="q-gutter-md" style="display: contents">
-            <q-btn-toggle
-              v-model="model"
-              push
-              toggle-color="secondary"
-              :options="[
-                {value: 'yes', slot: 'yes'},
-                {value: 'no', slot: 'no'}
-              ]"
-            >
-              <template v-slot:yes>
-                <div class="row items-center no-wrap">
-                  <img src="../statics/images/monster-yes.png" height="150" width="150"/>
-                </div>
-              </template>
-
-              <template v-slot:no>
-                <div class="row items-center no-wrap">
-                  <img src="../statics/images/monster-no.png" height="150" width="150"/>
-                </div>
-              </template>
-            </q-btn-toggle>
+      <div class="row" style="min-height: 150px">
+        <div class="col-12 q-gutter-md relative-position">
+          <div class="row q-gutter-md justify-center full-height">
+            <div class="col-12 justify-center">
+              <q-btn-toggle
+                v-model="model"
+                spread
+                class="full-width full-height justify-center items-center"
+                :options="answers"
+              >
+                <div class="option-1 full-height full-width" slot="yes"></div>
+                <div class="option-2 full-height full-width" slot="no"></div>
+              </q-btn-toggle>
+            </div>
           </div>
         </div>
       </div>
@@ -45,9 +35,19 @@ export default {
   data () {
     return {
       model: 'yes',
-      monsterYesImg: 'statics/images/monster-yes.png',
-      monsterNoImg: 'statics/images/monster-no.png',
-      bodyText: 'The gates will be opened to let you experience a brand-new adventure. Are you ready?'
+      monsterYesUrl: 'statics/images/monster-yes.png',
+      monsterNoUrl: 'statics/images/monster-no.png',
+      bodyText: 'The gates will be opened to let you experience a brand-new adventure. Are you ready?',
+      answers: [
+        {
+          slot: 'yes',
+          value: 'yes'
+        },
+        {
+          slot: 'no',
+          value: 'no'
+        }
+      ]
     }
   }
 }
@@ -57,4 +57,16 @@ export default {
   font-size: 16px
   font-weight: bold
   position: relative
+
+.option-1
+  background: url('../statics/images/monster-yes.png')
+  background-size: contain
+  background-repeat: no-repeat
+  background-position: center
+
+.option-2
+  background: url('../statics/images/monster-no.png')
+  background-size: contain
+  background-repeat: no-repeat
+  background-position: center
 </style>
