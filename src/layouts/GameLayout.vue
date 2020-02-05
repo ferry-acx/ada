@@ -71,7 +71,8 @@ export default {
         '/game/two-choices',
         '/game/one-input',
         '/game/multi-single-image',
-        '/game/multi-single-text'
+        '/game/multi-single-text',
+        '/banner'
       ]
     }
   },

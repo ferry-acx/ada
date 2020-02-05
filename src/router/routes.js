@@ -32,6 +32,16 @@ const routes = [
         component: () => import('pages/MultiSingleTextPage.vue')
       }
     ]
+  },
+  {
+    path: '/banner',
+    component: () => import('layouts/BannerLayout.vue'),
+    children: [
+      {
+        path: '',
+        component: () => import('pages/BannerPage.vue')
+      }
+    ]
   }
 ]
 
