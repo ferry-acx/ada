@@ -1,6 +1,6 @@
 {
   "name": "ada",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A game to detect any form of abuse using Q&A",
   "productName": "Amazing Land of Adventures",
   "cordovaId": "org.bidlisiw.ada.app",
