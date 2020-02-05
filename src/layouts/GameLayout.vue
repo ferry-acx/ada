@@ -69,7 +69,8 @@ export default {
       routes: [
         '/game',
         '/game/two-choices',
-        '/game/one-input'
+        '/game/one-input',
+        '/game/multiple-image-choice'
       ]
     }
   },

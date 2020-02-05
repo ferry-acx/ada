@@ -22,6 +22,10 @@ const routes = [
       {
         path: 'one-input',
         component: () => import('pages/OneInputPage.vue')
+      },
+      {
+        path: 'multiple-image-choice',
+        component: () => import('pages/MultiSingleImagedPage.vue')
       }
     ]
   }
