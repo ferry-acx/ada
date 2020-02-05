@@ -70,7 +70,8 @@ export default {
         '/game',
         '/game/two-choices',
         '/game/one-input',
-        '/game/multiple-image-choice'
+        '/game/multi-single-image',
+        '/game/multi-single-text'
       ]
     }
   },
