@@ -2,6 +2,10 @@ function incrementStageIndex (state) {
   state.currentStageIndex++
 }
 
+function resetStageIndex (state) {
+  state.currentStageIndex = 0
+}
+
 function setCurrentQuestionSet (state, payload) {
   state.currentQuestionSet = payload
 }
@@ -20,6 +24,7 @@ function resetQuestionIndex (state) {
 
 export default {
   incrementStageIndex,
+  resetStageIndex,
   setCurrentQuestionSet,
   setCurrentQuestion,
   incrementQuestionIndex,

@@ -86,6 +86,87 @@
         "image": "statics/images/monster-hi.png",
         "inputType": "number",
         "answer": ""
+      },
+      {
+        "template": "multi-multi-imaged",
+        "text": "Just choose the right answers for you to complete your gears before you begin the first stage!",
+        "image": "",
+        "choices": [
+          {
+            "text": "I am a happy person",
+            "value": "happy",
+            "image": "statics/images/boy.png"
+          },
+          {
+            "text": "I am always excited to try new things",
+            "value": "excited",
+            "image": "statics/images/girl.png"
+          },
+          {
+            "text": "I prefer to be alone",
+            "value": "alone",
+            "image": "statics/images/gay.png"
+          },
+          {
+            "text": "I like having friends",
+            "value": "friends",
+            "image": "statics/images/lesbian.png"
+          },
+          {
+            "text": "I like myself",
+            "value": "myself",
+            "image": "statics/images/transgender.png"
+          },
+          {
+            "text": "I do not like myself",
+            "value": "noself",
+            "image": "statics/images/idiot.png"
+          }
+        ],
+        "answer": ""
+      },
+      {
+        "template": "multi-multi-text",
+        "text": "Oh wow! You have your clothes, boots and cap complete. All you need is the backpack for all your essentials. Check everything here so we know what to put in your backpack.",
+        "image": "",
+        "choices": [
+          {
+            "text": "I like to hang out with friends",
+            "value": "friends",
+            "image": ""
+          },
+          {
+            "text": "I like to stay home with my family",
+            "value": "family",
+            "image": ""
+          },
+          {
+            "text": "I like to be in school",
+            "value": "school",
+            "image": ""
+          },
+          {
+            "text": "I like to go out in the streets",
+            "value": "streets",
+            "image": ""
+          },
+          {
+            "text": "I like to play",
+            "value": "play",
+            "image": ""
+          },
+          {
+            "text": "I like to read",
+            "value": "read",
+            "image": ""
+          },
+          {
+            "text": "I like to listen to music",
+            "value": "music",
+            "image": ""
+          }
+        ],
+        "answer": ""
       }
     ]
   },

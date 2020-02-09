@@ -11,6 +11,7 @@
             icon="close"
             size="lg"
             color="grey-8"
+            @click="reset"
           >
           </q-btn>
         </div>
@@ -43,6 +44,8 @@
       <two-choices-page v-if="currentQuestion.template === 'two-choices'" />
       <one-input-page v-if="currentQuestion.template === 'one-input'" />
       <multi-single-imaged-page v-if="currentQuestion.template === 'multi-single-imaged'" />
+      <multi-multi-imaged-page v-if="currentQuestion.template === 'multi-multi-imaged'" />
+      <multi-multi-text-page v-if="currentQuestion.template === 'multi-multi-text'" />
     </q-page-container>
 
     <q-footer class="bg-white text-white">
@@ -71,6 +74,8 @@ import InstructionsPage from '../pages/InstructionsPage'
 import TwoChoicesPage from '../pages/TwoChoicesPage'
 import OneInputPage from '../pages/OneInputPage'
 import MultiSingleImagedPage from '../pages/MultiSingleImagedPage'
+import MultiMultiImagedPage from '../pages/MultiMultiImagedPage'
+import MultiMultiTextPage from '../pages/MultiMultiTextPage'
 
 export default {
   name: 'GameLayout',
@@ -79,7 +84,9 @@ export default {
     InstructionsPage,
     TwoChoicesPage,
     OneInputPage,
-    MultiSingleImagedPage
+    MultiSingleImagedPage,
+    MultiMultiImagedPage,
+    MultiMultiTextPage
   },
   data () {
     return {
@@ -88,7 +95,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['currentStageIndex', 'currentStage', 'currentQuestionSet', 'currentQuestion', 'currentQuestionIndex'])
+    ...mapGetters(['currentStageIndex', 'currentQuestionSet', 'currentQuestion', 'currentQuestionIndex'])
   },
   created () {
     const stageIdx = this.currentStageIndex
@@ -99,6 +106,16 @@ export default {
     this.$store.commit('setCurrentQuestion', questions[this.currentQuestionIndex])
   },
   methods: {
+    reset () {
+      this.$store.commit('resetStageIndex')
+
+      const stageIdx = this.currentStageIndex
+      const questions = this.stages[stageIdx].questions && this.stages[stageIdx].questions.length > 0 ? this.stages[stageIdx].questions : []
+
+      this.$store.commit('setCurrentQuestionSet', questions)
+      this.$store.commit('resetQuestionIndex')
+      this.$store.commit('setCurrentQuestion', questions[this.currentQuestionIndex])
+    },
     nextQuestion () {
       try {
         if (this.currentQuestionIndex < this.currentQuestionSet.length - 1) {
@@ -119,6 +136,7 @@ export default {
           throw Error('No question')
         }
       } catch (error) {
+        this.reset()
         console.log('something went wrong:', error)
         this.$router.push('/error')
       }

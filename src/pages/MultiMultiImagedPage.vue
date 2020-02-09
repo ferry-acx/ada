@@ -15,7 +15,7 @@
           :key="index"
         >
           <div class="row justify-center full-height full-width text-center">
-            <q-btn v-bind:class="[active === index ? 'bg-primary' : 'bg-white']" @click="answerClicked(index)">
+            <q-btn v-bind:class="[active.includes(index) ? 'bg-primary' : 'bg-white']" @click="answerClicked(index)">
               <img :src="choice.image" style="height: 100px; width: 100px; object" />
               <span class="button-text text-white text-center">{{ choice.text }}</span>
             </q-btn>
@@ -30,20 +30,21 @@
 import { mapGetters } from 'vuex'
 
 export default {
-  name: 'MultiSingleImagedPage',
+  name: 'MultiMultiImagedPage',
   computed: {
     ...mapGetters(['currentQuestion'])
   },
   data () {
     return {
-      active: 0
+      active: []
     }
   },
   created () {
+    console.log(this.currentQuestion)
   },
   methods: {
     answerClicked (index) {
-      this.active = index
+      this.active.push(index)
     }
   }
 }

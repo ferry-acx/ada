@@ -4,14 +4,14 @@
       <div class="row q-ma-lg">
         <div class="col-12 text-center">
           <div class="text-grey-8 text-subtitle1">
-              {{ bodyText }}
+              {{ currentQuestion.text }}
           </div>
         </div>
       </div>
       <div class="row wrap q-ma-md justify-center items center">
         <div
           class="col-12 q-ma-sm"
-          v-for="[index, answer] of answers.entries()"
+          v-for="[index, choice] of currentQuestion.choices.entries()"
           :key="index"
         >
           <div class="row justify-center full-height full-width text-center">
@@ -20,7 +20,7 @@
               v-bind:class="[active === index ? 'bg-secondary' : 'bg-white']"
               @click="answerClicked(index)"
             >
-              <div class="text-body text-black">{{ answer.text }}</div>
+              <div class="text-body text-black">{{ choice.text }}</div>
             </q-btn>
           </div>
         </div>
@@ -30,46 +30,16 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'MultiSingleTextPage',
+  computed: {
+    ...mapGetters(['currentQuestion'])
+  },
   data () {
     return {
-      active: 0,
-      monsterImg: 'statics/images/monster.png',
-      bodyText: 'What are you? Are you a...',
-      answers: [
-        {
-          text: 'Boy',
-          value: 'boy',
-          image: '../statics/images/boy.png'
-        },
-        {
-          text: 'Girl',
-          value: 'girl',
-          image: '../statics/images/girl.png'
-        },
-        {
-          text: 'Gay',
-          value: 'gay',
-          image: '../statics/images/gay.png'
-        },
-        {
-          text: 'Lesbian',
-          value: 'lesbian',
-          image: 'statics/images/lesbian.png'
-        },
-        {
-          text: 'Transgender',
-          value: 'transgender',
-          image: '../statics/images/transgender.png'
-        },
-        {
-          text: 'Idiot',
-          value: 'idiot',
-          image: '../statics/images/idiot.png'
-        }
-      ],
-      groupedAnswers: []
+      active: 0
     }
   },
   methods: {

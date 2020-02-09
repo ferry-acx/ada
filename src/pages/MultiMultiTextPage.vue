@@ -10,14 +10,17 @@
       </div>
       <div class="row wrap q-ma-md justify-center items center">
         <div
-          class="col-5 q-ma-sm"
+          class="col-12 q-ma-sm"
           v-for="[index, choice] of currentQuestion.choices.entries()"
           :key="index"
         >
           <div class="row justify-center full-height full-width text-center">
-            <q-btn v-bind:class="[active === index ? 'bg-primary' : 'bg-white']" @click="answerClicked(index)">
-              <img :src="choice.image" style="height: 100px; width: 100px; object" />
-              <span class="button-text text-white text-center">{{ choice.text }}</span>
+            <q-btn
+              class="full-width"
+              v-bind:class="[active.includes(index) ? 'bg-secondary' : 'bg-white']"
+              @click="answerClicked(index)"
+            >
+              <div class="text-body text-black">{{ choice.text }}</div>
             </q-btn>
           </div>
         </div>
@@ -30,20 +33,18 @@
 import { mapGetters } from 'vuex'
 
 export default {
-  name: 'MultiSingleImagedPage',
+  name: 'MultiMultiTextPage',
   computed: {
     ...mapGetters(['currentQuestion'])
   },
   data () {
     return {
-      active: 0
+      active: []
     }
-  },
-  created () {
   },
   methods: {
     answerClicked (index) {
-      this.active = index
+      this.active.push(index)
     }
   }
 }
