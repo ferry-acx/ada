@@ -2,12 +2,20 @@
   <q-page padding class="row full-width full-height items-center">
     <div class="col-12 text-center">
       <div class="text-grey-8 text-subtitle1">
-          {{ bodyText }}
+          {{ currentQuestion.text }}
       </div>
     </div>
     <div class="col-12 text-center">
-      <q-img :src="monsterImg" style="max-heiht: 300px;">
-        <q-input standout="bg-secondary text-white" rounded autofocus v-model="inputText" input-class="text-right" class="q-ma-lg">
+      <q-img :src="currentQuestion.image" style="max-heiht: 300px;">
+        <q-input
+          standout="bg-secondary text-white"
+          rounded
+          autofocus
+          :type="currentQuestion.inputType"
+          v-model="model"
+          input-class="text-right"
+          class="q-ma-lg"
+        >
           <template v-slot:prepend>
             <q-icon name="person" />
           </template>
@@ -18,13 +26,16 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'OneInputPage',
+  computed: {
+    ...mapGetters(['currentQuestion'])
+  },
   data () {
     return {
-      inputText: '',
-      monsterImg: 'statics/images/monster-hi.png',
-      bodyText: 'Ooops! Not too fast fellow adventure-seeker! Before we open the gate, it\'ll be nice to know your name and where are you from. (example: Cris of Barangay San Vicente)'
+      model: null
     }
   }
 }
@@ -34,8 +45,4 @@ export default {
   font-size: 16px
   font-weight: bold
   position: relative
-
-.input-container
-  background: url("../statics/images/monster-hi.png")
-  background-size: auto
 </style>

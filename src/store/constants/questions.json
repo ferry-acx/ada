@@ -1,0 +1,98 @@
+[
+  {
+    "stage": 0,
+    "stageName": "Introductions",
+    "theme": "",
+    "questions": [
+      {
+        "template": "instructions",
+        "text": "Welcome to the Amazing Land of Adventures! You’re here because you’re excited to play games, learn something new, and meet other adventure-seekers. Everybody is welcomed! No need to be shy!",
+        "image": "statics/images/monster.png"
+      },
+      {
+        "template": "two-choices",
+        "text": "The gates will be opened to let you experience a brand-new adventure. Are you ready?",
+        "image": "",
+        "choices": [
+          {
+            "text": "Yes",
+            "image": "statics/images/monster-yes.png"
+          },
+          {
+            "text": "No",
+            "image": "statics/images/monster-no.png"
+          }
+        ],
+        "answer": ""
+      },
+      {
+        "template": "one-input",
+        "text": "Ooops! Not too fast fellow adventure-seeker! Before we open the gate, it'll be nice to know your name and where are you from. (example: Cris of Barangay San Vicente)",
+        "image": "statics/images/monster-hi.png",
+        "inputType": "text",
+        "answer": ""
+      },
+      {
+        "template": "banner",
+        "text": "",
+        "image": "statics/images/monster.png"
+      },
+      {
+        "template": "instructions",
+        "text": "Hello there (name)! It's great to have you here at the Amazing Land of Adventures. Remember: you need to earn five values badges so you will officially earn your adventure-seeker trophy. Carry on each stage with an honest heart and a strong mind!",
+        "image": "statics/images/monster.png"
+      },
+      {
+        "template": "instructions",
+        "text": "Ready? But oh... what do we have here...another gate? Oops looks like there are a couple more questions you need to answer to open the other gate.",
+        "image": "statics/images/monster.png"
+      },
+      {
+        "template": "multi-single-imaged",
+        "text": "Are you…? Just click your answer!",
+        "image": "",
+        "choices": [
+          {
+            "text": "Boy",
+            "value": "boy",
+            "image": "statics/images/boy.png"
+          },
+          {
+            "text": "Girl",
+            "value": "girl",
+            "image": "statics/images/girl.png"
+          },
+          {
+            "text": "Gay",
+            "value": "gay",
+            "image": "statics/images/gay.png"
+          },
+          {
+            "text": "Lesbian",
+            "value": "lesbian",
+            "image": "statics/images/lesbian.png"
+          },
+          {
+            "text": "Transgender",
+            "value": "transgender",
+            "image": "statics/images/transgender.png"
+          }
+        ],
+        "answer": ""
+      },
+      {
+        "template": "one-input",
+        "text": "And if you don't mind, can you type in your age? I mean, how old are you?",
+        "image": "statics/images/monster-hi.png",
+        "inputType": "number",
+        "answer": ""
+      }
+    ]
+  },
+  {
+    "stage": 1,
+    "stageName": "Family Town",
+    "theme": "",
+    "questions": []
+  }
+]

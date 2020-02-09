@@ -12,7 +12,7 @@ const routes = [
     component: () => import('layouts/GameLayout.vue'),
     children: [
       {
-        path: '',
+        path: 'instructions',
         component: () => import('pages/InstructionsPage.vue')
       },
       {
