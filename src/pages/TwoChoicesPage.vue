@@ -8,26 +8,20 @@
           </div>
         </div>
       </div>
-      <div class="row" style="min-height: 150px">
-        <div class="col-12 q-gutter-md relative-position">
-          <div class="row q-gutter-md justify-center full-height">
-            <div class="col-12 justify-center">
-              <q-btn-toggle
-                v-model="model"
-                spread
-                class="full-width full-height justify-center items-center"
-                :options="answers"
-              >
-                <div
-                  v-bind:style="{ 'background-image': 'url(' + this.monsterYesUrl + ')' }"
-                  class="option-1 full-height full-width" slot="yes"
-                ></div>
-                <div
-                  v-bind:style="{ 'background-image': 'url(' + this.monsterNoUrl + ')' }"
-                  class="option-2 full-height full-width" slot="no"
-                ></div>
-              </q-btn-toggle>
-            </div>
+      <div class="row wrap q-ma-md justify-center items center">
+        <div
+          class="col-5 q-ma-sm"
+          v-for="[index, choice] of currentQuestion.choices.entries()"
+          :key="index"
+        >
+          <div class="row justify-center full-height full-width text-center">
+            <q-btn
+              v-bind:class="[active === index ? activeClass : inactiveClass]"
+              @click="answerClicked(index)"
+            >
+              <img :src="choice.image" style="height: 100px; width: 100px; object" />
+              <span class="text-subtitle1 text-center">{{ choice.text }}</span>
+            </q-btn>
           </div>
         </div>
       </div>
@@ -45,6 +39,9 @@ export default {
   },
   data () {
     return {
+      active: 0,
+      activeClass: 'bg-secondary text-white',
+      inactiveClass: 'bg-white text-secondary',
       model: 'yes',
       monsterYesUrl: '',
       monsterNoUrl: '',
@@ -63,6 +60,12 @@ export default {
   created () {
     this.monsterYesUrl = this.currentQuestion.choices[0].image
     this.monsterNoUrl = this.currentQuestion.choices[1].image
+  },
+  methods: {
+    answerClicked (index) {
+      console.log(index)
+      this.active = index
+    }
   }
 }
 </script>
@@ -71,16 +74,4 @@ export default {
   font-size: 16px
   font-weight: bold
   position: relative
-
-.option-1
-  // background: url('../statics/images/monster-yes.png')
-  background-size: contain
-  background-repeat: no-repeat
-  background-position: center
-
-.option-2
-  background: url('../statics/images/monster-no.png')
-  background-size: contain
-  background-repeat: no-repeat
-  background-position: center
 </style>

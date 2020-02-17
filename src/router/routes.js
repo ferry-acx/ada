@@ -1,3 +1,7 @@
+import GameLayout from 'layouts/GameLayout'
+import BannerLayout from 'layouts/BannerLayout'
+
+import BannerPage from 'pages/BannerPage'
 
 const routes = [
   {
@@ -9,15 +13,15 @@ const routes = [
   },
   {
     path: '/game',
-    component: () => import('layouts/GameLayout.vue')
+    component: GameLayout
   },
   {
     path: '/banner',
-    component: () => import('layouts/BannerLayout.vue'),
+    component: BannerLayout,
     children: [
       {
         path: '',
-        component: () => import('pages/BannerPage.vue')
+        component: BannerPage
       }
     ]
   }

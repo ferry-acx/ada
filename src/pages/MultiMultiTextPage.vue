@@ -17,10 +17,10 @@
           <div class="row justify-center full-height full-width text-center">
             <q-btn
               class="full-width"
-              v-bind:class="[active.includes(index) ? 'bg-secondary' : 'bg-white']"
+              v-bind:class="[active.includes(index) ? activeClass : inactiveClass]"
               @click="answerClicked(index)"
             >
-              <div class="text-body text-black">{{ choice.text }}</div>
+              <div class="text-body">{{ choice.text }}</div>
             </q-btn>
           </div>
         </div>
@@ -39,12 +39,18 @@ export default {
   },
   data () {
     return {
-      active: []
+      active: [],
+      activeClass: 'bg-secondary text-white',
+      inactiveClass: 'bg-white text-secondary'
     }
   },
   methods: {
     answerClicked (index) {
-      this.active.push(index)
+      if (this.active.includes(index)) {
+        this.active = this.active.filter(value => index !== value)
+      } else {
+        this.active.push(index)
+      }
     }
   }
 }

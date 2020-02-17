@@ -15,9 +15,12 @@
           :key="index"
         >
           <div class="row justify-center full-height full-width text-center">
-            <q-btn v-bind:class="[active === index ? 'bg-primary' : 'bg-white']" @click="answerClicked(index)">
+            <q-btn
+              v-bind:class="[active === index ? activeClass : inactiveClass]"
+              @click="answerClicked(index)"
+            >
               <img :src="choice.image" style="height: 100px; width: 100px; object" />
-              <span class="button-text text-white text-center">{{ choice.text }}</span>
+              <span class="text-caption text-center">{{ choice.text }}</span>
             </q-btn>
           </div>
         </div>
@@ -36,7 +39,9 @@ export default {
   },
   data () {
     return {
-      active: 0
+      active: 0,
+      activeClass: 'bg-secondary text-white',
+      inactiveClass: 'bg-white text-secondary'
     }
   },
   created () {
