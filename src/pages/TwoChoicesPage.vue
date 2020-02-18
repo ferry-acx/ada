@@ -4,14 +4,14 @@
       <div class = "row">
         <div class="col-12 text-center">
           <div class="text-grey-8 text-h6">
-              {{ currentQuestion.text }}
+              {{ current.question.text }}
           </div>
         </div>
       </div>
       <div class="row wrap q-ma-md justify-center items center">
         <div
           class="col-5 q-ma-sm"
-          v-for="[index, choice] of currentQuestion.choices.entries()"
+          v-for="[index, choice] of current.question.choices.entries()"
           :key="index"
         >
           <div class="row justify-center full-height full-width text-center">
@@ -30,40 +30,29 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { sync } from 'vuex-pathify'
 
 export default {
   name: 'TwoChoicesPage',
   computed: {
-    ...mapGetters(['currentQuestion'])
+    current: sync('game/active')
   },
   data () {
     return {
       active: 0,
       activeClass: 'bg-secondary text-white',
       inactiveClass: 'bg-white text-secondary',
-      model: 'yes',
       monsterYesUrl: '',
       monsterNoUrl: '',
-      answers: [
-        {
-          slot: 'yes',
-          value: 'yes'
-        },
-        {
-          slot: 'no',
-          value: 'no'
-        }
-      ]
+      answer: {}
     }
   },
   created () {
-    this.monsterYesUrl = this.currentQuestion.choices[0].image
-    this.monsterNoUrl = this.currentQuestion.choices[1].image
+    this.monsterYesUrl = this.current.question.choices[0].image
+    this.monsterNoUrl = this.current.question.choices[1].image
   },
   methods: {
     answerClicked (index) {
-      console.log(index)
       this.active = index
     }
   }

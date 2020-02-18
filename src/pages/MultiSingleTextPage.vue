@@ -4,14 +4,14 @@
       <div class="row q-ma-lg">
         <div class="col-12 text-center">
           <div class="text-grey-8 text-subtitle1">
-              {{ currentQuestion.text }}
+              {{ current.question.text }}
           </div>
         </div>
       </div>
       <div class="row wrap q-ma-md justify-center items center">
         <div
           class="col-12 q-ma-sm"
-          v-for="[index, choice] of currentQuestion.choices.entries()"
+          v-for="[index, choice] of current.question.choices.entries()"
           :key="index"
         >
           <div class="row justify-center full-height full-width text-center">
@@ -30,12 +30,12 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { sync } from 'vuex-pathify'
 
 export default {
   name: 'MultiSingleTextPage',
   computed: {
-    ...mapGetters(['currentQuestion'])
+    current: sync('game/*')
   },
   data () {
     return {

@@ -23,14 +23,14 @@
             "image": "statics/images/monster-no.png"
           }
         ],
-        "answer": ""
+        "answer": null
       },
       {
         "template": "one-input",
         "text": "Ooops! Not too fast fellow adventure-seeker! Before we open the gate, it'll be nice to know your name and where are you from. (example: Cris of Barangay San Vicente)",
         "image": "statics/images/monster-hi.png",
         "inputType": "text",
-        "answer": ""
+        "answer": null
       },
       {
         "template": "banner",
@@ -78,14 +78,14 @@
             "image": "statics/images/transgender.png"
           }
         ],
-        "answer": ""
+        "answer": null
       },
       {
         "template": "one-input",
         "text": "And if you don't mind, can you type in your age? I mean, how old are you?",
         "image": "statics/images/monster-hi.png",
         "inputType": "number",
-        "answer": ""
+        "answer": null
       },
       {
         "template": "multi-multi-imaged",
@@ -123,7 +123,7 @@
             "image": "statics/images/idiot.png"
           }
         ],
-        "answer": ""
+        "answer": null
       },
       {
         "template": "multi-multi-text",
@@ -166,7 +166,7 @@
             "image": ""
           }
         ],
-        "answer": ""
+        "answer": null
       }
     ]
   },
@@ -199,7 +199,7 @@
             "image": "statics/images/monster-no.png"
           }
         ],
-        "answer": ""
+        "answer": null
       }
     ]
   }

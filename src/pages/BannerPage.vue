@@ -3,12 +3,12 @@
     <div class="col-12">
       <div class="row">
         <div class="col-12">
-          <q-img :src="currentQuestion.image" ratio="1" />
+          <q-img :src="current.question.image" ratio="1" />
         </div>
       </div>
       <div class="row full-width">
         <div class="col-12 text-center text-h3">
-          {{ currentQuestion.text }}
+          {{ current.question.text }}
         </div>
       </div>
     </div>
@@ -16,12 +16,12 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { sync } from 'vuex-pathify'
 
 export default {
   name: 'BannerPage',
   computed: {
-    ...mapGetters(['currentQuestion'])
+    current: sync('game/active')
   },
   data () {
     return {

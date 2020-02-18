@@ -11,7 +11,7 @@
             icon="close"
             size="lg"
             color="grey-8"
-            @click="reset"
+            @click="setupGame"
           >
           </q-btn>
         </div>
@@ -38,14 +38,13 @@
     </q-header>
 
     <q-page-container>
-      <!-- <router-view /> -->
-      <banner-page v-if="currentQuestion.template === 'banner'" />
-      <instructions-page v-if="currentQuestion.template === 'instructions'" />
-      <two-choices-page v-if="currentQuestion.template === 'two-choices'" />
-      <one-input-page v-if="currentQuestion.template === 'one-input'" />
-      <multi-single-imaged-page v-if="currentQuestion.template === 'multi-single-imaged'" />
-      <multi-multi-imaged-page v-if="currentQuestion.template === 'multi-multi-imaged'" />
-      <multi-multi-text-page v-if="currentQuestion.template === 'multi-multi-text'" />
+      <banner-page v-if="game.question.template === 'banner'" />
+      <instructions-page v-if="game.question.template === 'instructions'" />
+      <two-choices-page v-if="game.question.template === 'two-choices'" />
+      <one-input-page v-if="game.question.template === 'one-input'" />
+      <multi-single-imaged-page v-if="game.question.template === 'multi-single-imaged'" />
+      <multi-multi-imaged-page v-if="game.question.template === 'multi-multi-imaged'" />
+      <multi-multi-text-page v-if="game.question.template === 'multi-multi-text'" />
     </q-page-container>
 
     <q-footer class="bg-white text-white">
@@ -56,9 +55,9 @@
             class="full-width"
             color="secondary"
             size="lg"
-            @click="nextQuestion"
+            @click="submit"
           >
-            Next Question
+            {{ buttonLabel }}
           </q-btn>
         </div>
       </q-toolbar>
@@ -68,7 +67,8 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { sync, call } from 'vuex-pathify'
+
 import BannerPage from '../pages/BannerPage'
 import InstructionsPage from '../pages/InstructionsPage'
 import TwoChoicesPage from '../pages/TwoChoicesPage'
@@ -90,56 +90,20 @@ export default {
   },
   data () {
     return {
-      stages: require('../store/constants/questions.json'),
-      progress: 0.6
+      progress: 0.6,
+      buttonLabel: 'Next Question'
     }
   },
   computed: {
-    ...mapGetters(['currentStageIndex', 'currentQuestionSet', 'currentQuestion', 'currentQuestionIndex'])
+    game: sync('game/active')
   },
   created () {
-    const stageIdx = this.currentStageIndex
-    const questions = this.stages[stageIdx].questions && this.stages[stageIdx].questions.length > 0 ? this.stages[stageIdx].questions : []
-
-    this.$store.commit('setCurrentQuestionSet', questions)
-    this.$store.commit('resetQuestionIndex')
-    this.$store.commit('setCurrentQuestion', questions[this.currentQuestionIndex])
+    console.log(this.game)
   },
   methods: {
-    reset () {
-      this.$store.commit('resetStageIndex')
-
-      const stageIdx = this.currentStageIndex
-      const questions = this.stages[stageIdx].questions && this.stages[stageIdx].questions.length > 0 ? this.stages[stageIdx].questions : []
-
-      this.$store.commit('setCurrentQuestionSet', questions)
-      this.$store.commit('resetQuestionIndex')
-      this.$store.commit('setCurrentQuestion', questions[this.currentQuestionIndex])
-    },
-    nextQuestion () {
-      try {
-        if (this.currentQuestionIndex < this.currentQuestionSet.length - 1) {
-          this.$store.commit('incrementQuestionIndex')
-          this.$store.commit('setCurrentQuestion', this.currentQuestionSet[this.currentQuestionIndex])
-        } else {
-          this.$store.commit('incrementStageIndex')
-
-          const stageIdx = this.currentStageIndex
-          const questions = this.stages[stageIdx].questions && this.stages[stageIdx].questions.length > 0 ? this.stages[stageIdx].questions : []
-
-          this.$store.commit('setCurrentQuestionSet', questions)
-          this.$store.commit('resetQuestionIndex')
-          this.$store.commit('setCurrentQuestion', this.currentQuestionSet[this.currentQuestionIndex])
-        }
-
-        if (!this.currentQuestion) {
-          throw Error('No question')
-        }
-      } catch (error) {
-        this.reset()
-        console.log('something went wrong:', error)
-        this.$router.push('/error')
-      }
+    ...call('game/*'),
+    submit () {
+      this.nextQuestion()
     }
   }
 }
