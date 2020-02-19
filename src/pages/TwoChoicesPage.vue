@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import { sync } from 'vuex-pathify'
+import { sync, call } from 'vuex-pathify'
 
 export default {
   name: 'TwoChoicesPage',
@@ -39,21 +39,22 @@ export default {
   },
   data () {
     return {
-      active: 0,
+      active: null,
       activeClass: 'bg-secondary text-white',
-      inactiveClass: 'bg-white text-secondary',
-      monsterYesUrl: '',
-      monsterNoUrl: '',
-      answer: {}
+      inactiveClass: 'bg-white text-secondary'
     }
   },
-  created () {
-    this.monsterYesUrl = this.current.question.choices[0].image
-    this.monsterNoUrl = this.current.question.choices[1].image
-  },
   methods: {
+    ...call('game/*'),
     answerClicked (index) {
       this.active = index
+
+      const answer = {
+        id: index,
+        value: this.current.question.choices[index].text
+      }
+
+      this.setAnswer(answer)
     }
   }
 }

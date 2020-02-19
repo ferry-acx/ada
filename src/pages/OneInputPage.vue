@@ -13,6 +13,7 @@
           autofocus
           :type="current.question.inputType"
           v-model="model"
+          @input="inputChanged"
           input-class="text-right"
           class="q-ma-lg"
         >
@@ -26,7 +27,7 @@
 </template>
 
 <script>
-import { sync } from 'vuex-pathify'
+import { sync, call } from 'vuex-pathify'
 
 export default {
   name: 'OneInputPage',
@@ -36,6 +37,16 @@ export default {
   data () {
     return {
       model: null
+    }
+  },
+  methods: {
+    ...call('game/*'),
+    inputChanged () {
+      const answer = {
+        value: this.model
+      }
+
+      this.setAnswer(answer)
     }
   }
 }

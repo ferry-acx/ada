@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import { sync } from 'vuex-pathify'
+import { sync, call } from 'vuex-pathify'
 
 export default {
   name: 'MultiSingleTextPage',
@@ -45,8 +45,16 @@ export default {
     }
   },
   methods: {
+    ...call('game/*'),
     answerClicked (index) {
       this.active = index
+
+      const answer = {
+        id: index,
+        value: this.current.question.choices[index].text
+      }
+
+      this.setAnswer(answer)
     }
   }
 }

@@ -11,7 +11,7 @@
             icon="close"
             size="lg"
             color="grey-8"
-            @click="setupGame"
+            @click="resetGame"
           >
           </q-btn>
         </div>
@@ -53,9 +53,10 @@
           <q-btn
             push
             class="full-width"
-            color="secondary"
+            :color="disabledNext ? 'grey' : 'secondary'"
             size="lg"
             @click="submit"
+            :disable="disabledNext"
           >
             {{ buttonLabel }}
           </q-btn>
@@ -95,14 +96,21 @@ export default {
     }
   },
   computed: {
-    game: sync('game/active')
+    game: sync('game/active'),
+    disabledNext () {
+      if ((this.game.question.choices || this.game.question.inputType) && !this.game.question.answer) {
+        return true
+      } else {
+        return false
+      }
+    }
   },
   created () {
-    console.log(this.game)
   },
   methods: {
     ...call('game/*'),
     submit () {
+      this.storeAnswer()
       this.nextQuestion()
     }
   }

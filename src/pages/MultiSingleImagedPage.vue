@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import { sync } from 'vuex-pathify'
+import { sync, call } from 'vuex-pathify'
 
 export default {
   name: 'MultiSingleImagedPage',
@@ -39,16 +39,22 @@ export default {
   },
   data () {
     return {
-      active: 0,
+      active: null,
       activeClass: 'bg-secondary text-white',
       inactiveClass: 'bg-white text-secondary'
     }
   },
-  created () {
-  },
   methods: {
+    ...call('game/*'),
     answerClicked (index) {
       this.active = index
+
+      const answer = {
+        id: index,
+        value: this.current.question.choices[index].text
+      }
+
+      this.setAnswer(answer)
     }
   }
 }

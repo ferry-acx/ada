@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import { sync } from 'vuex-pathify'
+import { sync, call } from 'vuex-pathify'
 
 export default {
   name: 'MultiMultiTextPage',
@@ -45,12 +45,23 @@ export default {
     }
   },
   methods: {
+    ...call('game/*'),
     answerClicked (index) {
       if (this.active.includes(index)) {
         this.active = this.active.filter(value => index !== value)
       } else {
         this.active.push(index)
       }
+
+      let answers = []
+      for (const id of this.active) {
+        answers.push({
+          id,
+          value: this.current.question.choices[id].text
+        })
+      }
+
+      this.setAnswer(answers)
     }
   }
 }

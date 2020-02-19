@@ -1,12 +1,13 @@
 import { make } from 'vuex-pathify'
 
-const GAME_CONTENT = require('../constants/questions.json')
+const GAME_FILE = require('../constants/questions.json')
+const GAME_CONTENT = JSON.parse(JSON.stringify(GAME_FILE))
 const state = {
+  list: GAME_CONTENT,
   active: {
     stage: GAME_CONTENT[0],
     question: GAME_CONTENT[0].questions[0]
-  },
-  list: GAME_CONTENT
+  }
 }
 
 export default {
@@ -16,13 +17,17 @@ export default {
   mutations: make.mutations(state),
   actions: {
     ...make.actions(state),
-    setupGame ({ commit, state }) {
-      const active = {
+    resetGame ({ commit, state }) {
+      const NEW_COPY = JSON.parse(JSON.stringify(GAME_FILE))
+
+      commit('SET_LIST', NEW_COPY)
+
+      const newActive = {
         stage: state.list[0],
         question: state.list[0].questions[0]
       }
 
-      commit('SET_ACTIVE', active)
+      commit('SET_ACTIVE', newActive)
     },
     nextQuestion ({ commit, state, dispatch }) {
       try {
@@ -39,13 +44,12 @@ export default {
         }
       } catch (e) {
         console.error(e)
-        dispatch('setupGame')
+        dispatch('resetGame')
       }
     },
     nextStage ({ commit, state, dispatch }) {
       try {
         const nextIndex = state.list.indexOf(state.active.stage) + 1
-        console.log('next stage:', nextIndex)
         if (nextIndex < state.list.length) {
           const active = {
             stage: state.list[nextIndex],
@@ -54,22 +58,34 @@ export default {
 
           commit('SET_ACTIVE', active)
         } else {
-          dispatch('setupGame')
+          dispatch('resetGame')
         }
       } catch (e) {
         console.error(e)
-        dispatch('setupGame')
+        dispatch('resetGame')
       }
     },
     setAnswer ({ commit, state }, answer) {
-      const stageIndex = GAME_CONTENT.indexOf(state.currentStage)
+      try {
+        const active = state.active
+        active.question.answer = answer
+        commit('SET_ACTIVE', active)
+      } catch (e) {
+        console.error(e)
+      }
+    },
+    storeAnswer ({ commit, state }) {
+      try {
+        const { stage, question } = state.active
+        const stageIndex = state.list.indexOf(stage)
+        const questionIndex = state.list[stageIndex].questions.indexOf(question)
+        const newList = state.list
 
-      if (stageIndex < GAME_CONTENT.length) {
-        const questionIndex = state.currentQuestionSet.indexOf(state.currentQuestion)
-        if (questionIndex < GAME_CONTENT[stageIndex].questions.length) {
-          GAME_CONTENT[stageIndex].questions[questionIndex].answer = answer
-          console.log(GAME_CONTENT[stageIndex].questions[questionIndex])
-        }
+        newList[stageIndex].questions[questionIndex] = question
+
+        commit('SET_LIST', newList)
+      } catch (e) {
+        console.error(e)
       }
     }
   }
