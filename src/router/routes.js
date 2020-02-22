@@ -1,14 +1,24 @@
+import MainLayout from 'layouts/MainLayout'
 import GameLayout from 'layouts/GameLayout'
 import BannerLayout from 'layouts/BannerLayout'
 
+import MainMenu from 'pages/MainMenu'
+import SetupPage from 'pages/SetupPage'
 import BannerPage from 'pages/BannerPage'
 
 const routes = [
   {
     path: '/',
-    component: () => import('layouts/MyLayout.vue'),
+    component: MainLayout,
     children: [
-      { path: '', component: () => import('pages/Index.vue') }
+      {
+        path: '',
+        component: MainMenu
+      },
+      {
+        path: 'setup',
+        component: SetupPage
+      }
     ]
   },
   {

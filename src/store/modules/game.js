@@ -6,7 +6,8 @@ const state = {
   list: GAME_CONTENT,
   active: {
     stage: GAME_CONTENT[0],
-    question: GAME_CONTENT[0].questions[0]
+    question: GAME_CONTENT[0].questions[0],
+    progress: 0
   }
 }
 
@@ -35,7 +36,8 @@ export default {
         if (nextIndex < state.active.stage.questions.length) {
           const active = {
             stage: state.active.stage,
-            question: state.active.stage.questions[nextIndex]
+            question: state.active.stage.questions[nextIndex],
+            progress: (nextIndex / state.active.stage.questions.length)
           }
 
           commit('SET_ACTIVE', active)
@@ -53,7 +55,8 @@ export default {
         if (nextIndex < state.list.length) {
           const active = {
             stage: state.list[nextIndex],
-            question: state.list[nextIndex].questions[0]
+            question: state.list[nextIndex].questions[0],
+            progress: 0
           }
 
           commit('SET_ACTIVE', active)

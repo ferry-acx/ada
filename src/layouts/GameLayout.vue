@@ -8,10 +8,10 @@
             dense
             round
             flat
-            icon="close"
+            icon="home"
             size="lg"
             color="grey-8"
-            @click="resetGame"
+            to="/"
           >
           </q-btn>
         </div>
@@ -22,7 +22,7 @@
             class="q-ma-none"
             color="secondary"
             size="15px"
-            :value="progress"
+            :value="game.progress"
           >
           </q-linear-progress>
         </div>
@@ -91,7 +91,6 @@ export default {
   },
   data () {
     return {
-      progress: 0.6,
       buttonLabel: 'Next Question'
     }
   },
