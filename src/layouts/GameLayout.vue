@@ -11,7 +11,7 @@
             icon="home"
             size="lg"
             color="grey-8"
-            to="/"
+            @click="goHome"
           >
           </q-btn>
         </div>
@@ -108,6 +108,10 @@ export default {
   },
   methods: {
     ...call('game/*'),
+    goHome () {
+      this.resetGame()
+      this.$router.push('/')
+    },
     submit () {
       this.storeAnswer()
       this.nextQuestion()
