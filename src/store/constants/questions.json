@@ -34,8 +34,8 @@
       },
       {
         "template": "banner",
-        "text": "",
-        "image": "statics/images/monster.png"
+        "text": "Red Gate Open",
+        "image": "statics/images/red-gate.png"
       },
       {
         "template": "instructions",
@@ -177,8 +177,8 @@
     "questions": [
       {
         "template": "banner",
-        "text": "Looks like you’re all set to enter stage 1… Family Town!",
-        "image": "statics/images/monster.png"
+        "text": "(Family Town Banner) Looks like you’re all set to enter stage 1… Family Town!",
+        "image": "statics/images/family.png"
       },
       {
         "template": "instructions",
@@ -200,6 +200,881 @@
           }
         ],
         "answer": null
+      },
+      {
+        "template": "multi-single-text",
+        "text": "If you’re not with your family, where do you live?",
+        "image": "",
+        "choices": [
+          {
+            "text": "With my grandparents",
+            "image": ""
+          },
+          {
+            "text": "With my aunt/uncle",
+            "image": ""
+          },
+          {
+            "text": "With my siblings",
+            "image": ""
+          },
+          {
+            "text": "On the street with other kids",
+            "image": ""
+          }
+        ],
+        "answer": null
+      },
+      {
+        "templage": "multi-single-text",
+        "text": "Does you parents live with you at home? Just click on your answer.",
+        "image": "",
+        "choices": [
+          {
+            "text": "Both parents live with me at home",
+            "image": ""
+          },
+          {
+            "text": "Only my father lives with me",
+            "image": ""
+          },
+          {
+            "text": "Only my mother lives with me",
+            "image": ""
+          }
+        ],
+        "answer": null
+      },
+      {
+        "templage": "two-choices",
+        "text": "Do you get along with your siblings?",
+        "image": "",
+        "choices": [
+          {
+            "text": "Yes",
+            "image": "statics/images/monster-yes.png"
+          },
+          {
+            "text": "No",
+            "image": "statics/images/monster-no.png"
+          }
+        ],
+        "answer": null
+      },
+      {
+        "template": "two-choices",
+        "text": "Do you have quarrels or arguments",
+        "image": "",
+        "choices": [
+          {
+            "text": "Yes",
+            "image": "statics/images/monster-yes.png"
+          },
+          {
+            "text": "No",
+            "image": "statics/images/monster-no.png"
+          }
+        ],
+        "answer": null
+      },
+      {
+        "template": "multi-multi-imaged",
+        "text": "If you have fihts, what kind?",
+        "image": "",
+        "choices": [
+          {
+            "text": "What?",
+            "image": "statics/images/idiot.png"
+          }
+        ],
+        "answer": null
+      },
+      {
+        "template": "multi-multi-text",
+        "text": "Honesty is the best policy so we ask you to click on the answers that best applies to you, okay?",
+        "image": "",
+        "choices": [
+          {
+            "text": "My parents care for me",
+            "image": ""
+          },
+          {
+            "text": "My parents do not care about their children",
+            "image": ""
+          },
+          {
+            "text": "My parents work to give us good life",
+            "image": ""
+          },
+          {
+            "text": "My parents do not have work",
+            "image": ""
+          },
+          {
+            "text": "My family is always out of money",
+            "image": ""
+          },
+          {
+            "text": "We have enough food on the table everyday",
+            "image": ""
+          },
+          {
+            "text": "I have very loving family",
+            "image": ""
+          },
+          {
+            "text": "My parents argue a lot",
+            "image": ""
+          },
+          {
+            "text": "I argue a lot with my siblings",
+            "image": ""
+          },
+          {
+            "text": "I have very loving siblings",
+            "image": ""
+          },
+          {
+            "text": "My relatives are not nice to me",
+            "image": ""
+          },
+          {
+            "text": "My relatives are very caring",
+            "image": ""
+          }
+        ],
+        "answer": null
+      },
+      {
+        "template": "banner",
+        "text": "(Love Badge) Congratulations! You have earned your “love badge” from Family Town!",
+        "image": "statics/images/monster.png"
+      },
+      {
+        "template": "one-input",
+        "text": "Ready to step inside the next stage. Can you guess what is it? It’s the place where you go to so you can learn how to read and write. Type your answer!!!",
+        "image": "statics/images/monster-hi.png",
+        "answer": null
+      }
+    ]
+  },
+  {
+    "stage": 2,
+    "stageName": "School Town",
+    "theme": "",
+    "questions": [
+      {
+        "template": "banner",
+        "text": "(School Point Banner) Yes!!! It’s school! And you are on your way to stage 2 here at the Amazing Land of Adventures! Let’s go to… School Point!",
+        "image": "statics/images/school.png"
+      },
+      {
+        "template": "two-choices",
+        "text": "Are you in school?",
+        "image": "",
+        "choices": [
+          {
+            "text": "Yes",
+            "image": "statics/images/monster-yes.png"
+          },
+          {
+            "text": "No",
+            "image": "statics/images/monster-no.png"
+          }
+        ],
+        "answer": null
+      },
+      {
+        "template": "one-input",
+        "text": "If yes, what school do you go to?",
+        "image":"statics/images/question.png",
+        "answer": null
+      },
+      {
+        "template": "multi-single-imaged",
+        "text": "I’m sad that you’re not in school. Can you share why you’re not in school?",
+        "image": "",
+        "choices": [
+          {
+            "text": "My parents don't have money",
+            "image": "statics/images/money.png"
+          },
+          {
+            "text": "I decided to stop on my own",
+            "image": "statics/images/boy.png"
+          },
+          {
+            "text": "There are kids who bully me",
+            "image": "statics/images/bully.png"
+          },
+          {
+            "text": "I have to work",
+            "image": "statics/images/work.png"
+          },
+          {
+            "text": "I find school boring",
+            "image": "statics/images/idiot.png"
+          }
+        ],
+        "answer": null
+      },
+      {
+        "template": "two-choices",
+        "text": "Do you like going to school?",
+        "image": "",
+        "choices": [
+          {
+            "text": "Yes",
+            "image": "statics/images/monster-yes.png"
+          },
+          {
+            "text": "No",
+            "image": "statics/images/monster-no.png"
+          }
+        ],
+        "answer": null
+      },
+      {
+        "template": "multi-multi-text",
+        "text": "High five! Why do you like school? Check everything you like about school!",
+        "condition": "Yes",
+        "image": "",
+        "choices": [
+          {
+            "text": "I do well in school",
+            "image": ""
+          },
+          {
+            "text": "I have a lot of friends in school",
+            "image": ""
+          },
+          {
+            "text": "I like to study",
+            "image": ""
+          },
+          {
+            "text": "My teachers are very nice to me",
+            "image": ""
+          }
+        ],
+        "answer": null
+      },
+      {
+        "template": "multi-multi-text",
+        "text": "I don’t like school because… check everything that applies to you.",
+        "condition": "No",
+        "image": "",
+        "choices": [
+          {
+            "text": "I don't understand the lessons",
+            "image": ""
+          },
+          {
+            "text": "The teachers are not nice to me",
+            "image": ""
+          },
+          {
+            "text": "Some kids bully me",
+            "image": ""
+          },
+          {
+            "text": "I find school boring",
+            "image": ""
+          }
+        ],
+        "answer": null
+      },
+      {
+        "template": "two-choices",
+        "text": "A smart person once said that “a friend is someone who reached for your hand and touched your heart.” It’s great to have friends! Do you have any friends in school?",
+        "image": "",
+        "choices": [
+          {
+            "text": "Yes",
+            "image": "statics/images/monster-yes.png"
+          },
+          {
+            "text": "No",
+            "image": "statics/images/monster-no.png"
+          }
+        ],
+        "answer": null
+      },
+      {
+        "template": "one-input",
+        "text": "What are the names of you friends?",
+        "image": "statics/images/monster-hi.png",
+        "condition": "Yes",
+        "answer": null
+      },
+      {
+        "template": "multi-multi-text",
+        "text": "What do you like to do with them? Check as many as possible.",
+        "image": "",
+        "choices": [
+          {
+            "text": "We cut classes",
+            "image": ""
+          },
+          {
+            "text": "We study together",
+            "image": ""
+          },
+          {
+            "text": "We hang out in school",
+            "image": ""
+          },
+          {
+            "text": "We go out after school",
+            "image": ""
+          },
+          {
+            "text": "We engage in different mischiefs",
+            "image": ""
+          }
+        ],
+        "answer": null
+      },
+      {
+        "template": "banner",
+        "text": "Great job! You just got your “hard work badge!” Continue to work hard and work smart.",
+        "image": "statics/images/work.png"
+      },
+      {
+        "template": "instructions",
+        "text": "Was that hard? Well I am sure you got that just right! Ready for stage 3. Breathe in, breathe out!",
+        "image": "statics/images/monster.png"
+      }
+    ]
+  },
+  {
+    "stage": 3,
+    "stageName": "Internet Village",
+    "theme": "",
+    "questions": [
+      {
+        "template": "banner",
+        "text": "Re-check your gears because we’re about to enter… Internet Village!",
+        "image": "statics/images/internet.png"
+      },
+      {
+        "template": "multi-multi-imaged",
+        "text": "Okay! Let’s check what gadgets you have! If you have more than one, then go ahead check them!",
+        "image": "",
+        "choices": [
+          {
+            "text": "I have an android phone",
+            "image": "statics/images/android.png"
+          },
+          {
+            "text": "I have access to computer",
+            "image": "statics/images/computer.png"
+          },
+          {
+            "text": "I have access to internet",
+            "image": "statics/images/internet-globe.png"
+          },
+          {
+            "text": "I have access to the internet through Peso-net",
+            "image": "statics/images/peso.png"
+          }
+        ],
+        "answer": null
+      },
+      {
+        "template": "two-choices",
+        "text": "Do you like to surf the internet?",
+        "image": "",
+        "choices": [
+          {
+            "text": "Yes",
+            "image": "statics/images/monster-yes.png"
+          },
+          {
+            "text": "No",
+            "image": "statics/images/monster-no.png"
+          }
+        ],
+        "answer": null
+      },
+      {
+        "template": "multi-multi-text",
+        "text": "So when you’re connected to the internet, which sites do you go to?",
+        "condition": "Yes",
+        "image": "",
+        "choices": [
+          {
+            "text": "I use my email",
+            "image": ""
+          },
+          {
+            "text": "I use Facebook",
+            "image": ""
+          },
+          {
+            "text": "Messenger",
+            "image": ""
+          },
+          {
+            "text": "I go to dating sites",
+            "image": ""
+          },
+          {
+            "text": "I watch YouTube",
+            "image": ""
+          },
+          {
+            "text": "I go to chat sites",
+            "image": ""
+          },
+          {
+            "text": "I engage in cam-to-cam conversations",
+            "image": ""
+          },
+          {
+            "text": "I access pornography",
+            "image": ""
+          }
+        ],
+        "answer": null
+      },
+      {
+        "template": "instructions",
+        "text": "Thanks for your honesty! Now with the next questions, all you need to do is to answer YES or NO.",
+        "image": "statics/images/monster.png"
+      },
+      {
+        "template": "two-choices",
+        "text": "Have you been sent lewd photographs by strangers through the internet?",
+        "image": "",
+        "choices": [
+          {
+            "text": "Yes",
+            "image": "statics/images/monster-yes.png"
+          },
+          {
+            "text": "No",
+            "image": "statics/images/monster-no.png"
+          }
+        ],
+        "answer": null
+      },
+      {
+        "template": "two-choices",
+        "text": "Have you been asked by a stranger to give your nude photo?",
+        "image": "",
+        "choices": [
+          {
+            "text": "Yes",
+            "image": "statics/images/monster-yes.png"
+          },
+          {
+            "text": "No",
+            "image": "statics/images/monster-no.png"
+          }
+        ],
+        "answer": null
+      },
+      {
+        "template": "two-choices",
+        "text": "Have someone sent you videos of them performing sexual acts?",
+        "image": "",
+        "choices": [
+          {
+            "text": "Yes",
+            "image": "statics/images/monster-yes.png"
+          },
+          {
+            "text": "No",
+            "image": "statics/images/monster-no.png"
+          }
+        ],
+        "answer": null
+      },
+      {
+        "template": "two-choices",
+        "text": "Have you accessed pornographic sites?",
+        "image": "",
+        "choices": [
+          {
+            "text": "Yes",
+            "image": "statics/images/monster-yes.png"
+          },
+          {
+            "text": "No",
+            "image": "statics/images/monster-no.png"
+          }
+        ],
+        "answer": null
+      },
+      {
+        "template": "two-choices",
+        "text": "Has someone offered you money in exchange for sexual acts online?",
+        "image": "",
+        "choices": [
+          {
+            "text": "Yes",
+            "image": "statics/images/monster-yes.png"
+          },
+          {
+            "text": "No",
+            "image": "statics/images/monster-no.png"
+          }
+        ],
+        "answer": null
+      },
+      {
+        "template": "banner",
+        "text": "WOW! That wasn’t easy! But you did it because of your honesty! And for that, here’s your much deserved badge.",
+        "image": "statics/images/honesty.png"
+      }
+    ]
+  },
+  {
+    "stage": 2,
+    "stageName": "Sad Zone",
+    "theme": "",
+    "questions": [
+      {
+        "template": "instructions",
+        "text": "And now… try to relax. Breathe in, breathe out. Stretch your arms and count 1 to 10. Breathe in, breathe out. Feeling much better? Good! Because we’re about to enter The Sad Zone.",
+        "image": "statics/images/sad.png"
+      },
+      {
+        "template": "instructions",
+        "text": "We feel different emotions. We can be happy, angry, disgusted. We can also be sad, especially when we experience bad things in life. Sometimes the bad experience stays on. Want to know a secret? Bad experiences can slowly go away when you share you experience with people you trust who can help you become better.",
+        "image": "statics/images/monster.png"
+      },
+      {
+        "template": "two-choices",
+        "text": "At the end of this stage, you’ll get a courage badge. So, are you ready to be brave?",
+        "image": "",
+        "choices": [
+          {
+            "text": "Yes",
+            "image": "statics/images/monster-yes.png"
+          },
+          {
+            "text": "No",
+            "image": "statics/images/monster-no.png"
+          }
+        ],
+        "answer": null
+      },
+      {
+        "template": "two-choices",
+        "text": "Have your parents or guardians hit you physically?",
+        "image": "",
+        "choices": [
+          {
+            "text": "Yes",
+            "image": "statics/images/monster-yes.png"
+          },
+          {
+            "text": "No",
+            "image": "statics/images/monster-no.png"
+          }
+        ],
+        "answer": null
+      },
+      {
+        "template": "multi-multi-text",
+        "text": "In what manner were you hurt?",
+        "condition": "Yes",
+        "image": "",
+        "choices": [
+          {
+            "text": "Spanked",
+            "image": ""
+          },
+          {
+            "text": "Pinched",
+            "image": ""
+          },
+          {
+            "text": "Hit on the head",
+            "image": ""
+          },
+          {
+            "text": "Slapped",
+            "image": ""
+          },
+          {
+            "text": "Made to kneel on mongo seeds",
+            "image": ""
+          },
+          {
+            "text": "Tied to a tree/post",
+            "image": ""
+          },
+          {
+            "text": "Others",
+            "image": ""
+          }
+        ],
+        "answer": null
+      },
+      {
+        "template": "multi-multi-text",
+        "text": "Have you experienced any of the following?",
+        "image": "",
+        "choices": [
+          {
+            "text": "My parents/guardian shout at me when they are angry.",
+            "image": ""
+          },
+          {
+            "text": "People call me names",
+            "image": ""
+          },
+          {
+            "text": "People say hurtful things about me",
+            "image": ""
+          }
+        ],
+        "answer": null
+      },
+      {
+        "template": "two-choices",
+        "text": "Were your private parts touched by strangers?",
+        "image": "",
+        "choices": [
+          {
+            "text": "Yes",
+            "image": "statics/images/monster-yes.png"
+          },
+          {
+            "text": "No",
+            "image": "statics/images/monster-no.png"
+          }
+        ],
+        "answer": null
+      },
+      {
+        "template": "two-choices",
+        "text": "Has anyone attempted to force you to have sex with them?",
+        "image": "",
+        "choices": [
+          {
+            "text": "Yes",
+            "image": "statics/images/monster-yes.png"
+          },
+          {
+            "text": "No",
+            "image": "statics/images/monster-no.png"
+          }
+        ],
+        "answer": null
+      },
+      {
+        "template": "multi-multi-text",
+        "text": "Who tried to force you?",
+        "condition": "Yes",
+        "image": "",
+        "choices": [
+          {
+            "text": "Parents",
+            "image": ""
+          },
+          {
+            "text": "Neighbor",
+            "image": ""
+          },
+          {
+            "text": "Relatives",
+            "image": ""
+          },
+          {
+            "text": "Siblings",
+            "image": ""
+          },
+          {
+            "text": "Teacher",
+            "image": ""
+          }
+        ],
+        "answer": null
+      },
+      {
+        "template": "instructions",
+        "text": "Thank you for your honesty, you brave warrior! Now, answer the following with just yes or no. Ready?",
+        "image": "statics/images/monster.png"
+      },
+      {
+        "template": "two-choices",
+        "text": "I have friends who get paid for sex",
+        "image": "",
+        "choices": [
+          {
+            "text": "Yes",
+            "image": "statics/images/monster-yes.png"
+          },
+          {
+            "text": "No",
+            "image": "statics/images/monster-no.png"
+          }
+        ],
+        "answer": null
+      },
+      {
+        "template": "two-choices",
+        "text": "I have experienced being paid for sex",
+        "image": "",
+        "choices": [
+          {
+            "text": "Yes",
+            "image": "statics/images/monster-yes.png"
+          },
+          {
+            "text": "No",
+            "image": "statics/images/monster-no.png"
+          }
+        ],
+        "answer": null
+      },
+      {
+        "template": "two-choices",
+        "text": "I have friends who get paid for cybersex",
+        "image": "",
+        "choices": [
+          {
+            "text": "Yes",
+            "image": "statics/images/monster-yes.png"
+          },
+          {
+            "text": "No",
+            "image": "statics/images/monster-no.png"
+          }
+        ],
+        "answer": null
+      },
+      {
+        "template": "two-choices",
+        "text": "I know someone who pimps children for sex",
+        "image": "",
+        "choices": [
+          {
+            "text": "Yes",
+            "image": "statics/images/monster-yes.png"
+          },
+          {
+            "text": "No",
+            "image": "statics/images/monster-no.png"
+          }
+        ],
+        "answer": null
+      },
+      {
+        "template": "banner",
+        "text": "What a courageous heart you have! Thank you for braving that stage. You are indeed worthy to be called… brave warrior. For completing stage 4, here is your courage badge!",
+        "image": "statics/images/courage.png"
+      }
+    ]
+  },
+  {
+    "stage": 4,
+    "stageName": "Dream Land",
+    "questions": [
+      {
+        "template": "instructions",
+        "text": "One more badge from stage 5 and you will be officially declared as adventure-seeker and join a community of lifelong learners. Check your gears because this is your final stage.",
+        "image": "statics/images/monster.png"
+      },
+      {
+        "template": "banner",
+        "text": "This is stage 5 and it’s called… the Dream District. Here, you’re free to share what do you want to be and how you see yourself in the future.",
+        "image": "statics/images/dream.png"
+      },
+      {
+        "template": "two-choices",
+        "text": "I think I have a bright future ahead of me",
+        "image": "",
+        "choices": [
+          {
+            "text": "Yes",
+            "image": "statics/images/monster-yes.png"
+          },
+          {
+            "text": "No",
+            "image": "statics/images/monster-no.png"
+          }
+        ],
+        "answer": null
+      },
+      {
+        "template": "two-choices",
+        "text": "I want to graduate from college",
+        "image": "",
+        "choices": [
+          {
+            "text": "Yes",
+            "image": "statics/images/monster-yes.png"
+          },
+          {
+            "text": "No",
+            "image": "statics/images/monster-no.png"
+          }
+        ],
+        "answer": null
+      },
+      {
+        "template": "two-choices",
+        "text": "I want to help my parents in the future",
+        "image": "",
+        "choices": [
+          {
+            "text": "Yes",
+            "image": "statics/images/monster-yes.png"
+          },
+          {
+            "text": "No",
+            "image": "statics/images/monster-no.png"
+          }
+        ],
+        "answer": null
+      },
+      {
+        "template": "two-choices",
+        "text": "I have nothing to look forward to in the future",
+        "image": "",
+        "choices": [
+          {
+            "text": "Yes",
+            "image": "statics/images/monster-yes.png"
+          },
+          {
+            "text": "No",
+            "image": "statics/images/monster-no.png"
+          }
+        ],
+        "answer": null
+      },
+      {
+        "template": "one-input",
+        "text": "In the future, I want to be a...",
+        "image": "statics/images/work.png",
+        "answer": null
+      },
+      {
+        "template": "banner",
+        "text": "Congratulations for completing Stage 5. You have earned your fifth and final badge! Your hope badge!",
+        "image": "statics/images/finish-line.png"
+      }
+    ]
+  },
+  {
+    "stage": 5,
+    "stageName": "Finish Line",
+    "questions": [
+      {
+        "template": "banner",
+        "text": "You are officially elevated to the hall of adventure seekers and you will join a community of lifelong learners who is always excited to study, read, listen and learn! Here’s your trophy!",
+        "image": "statics/images/trophy.png"
+      },
+      {
+        "template": "banner",
+        "text": "Your love, hard work, honesty, courage, and hope badges were earned because of your commitment. Use them very wisely . Carry your trophy with humility and remember to never stop learning. Go, grow and glow!",
+        "image": "statics/images/monster-hi.png"
       }
     ]
   }

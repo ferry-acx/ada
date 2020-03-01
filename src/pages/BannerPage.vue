@@ -7,7 +7,7 @@
         </div>
       </div>
       <div class="row full-width">
-        <div class="col-12 text-center text-h3">
+        <div class="col-12 text-center text-h4">
           {{ current.question.text }}
         </div>
       </div>
