@@ -1,12 +1,12 @@
 <template>
-  <q-page padding class="row full-width full-height items-center">
+  <q-page padding class="row full-width items-center fixed">
     <div class="col-12">
       <div class="row">
         <div class="col-12">
           <q-img :src="current.question.image" ratio="1" />
         </div>
       </div>
-      <div class="row full-width">
+      <div class="row q-ma-lg items-center" style="min-height: 80px">
         <div class="col-12 text-center text-h4">
           {{ current.question.text }}
         </div>

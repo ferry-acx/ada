@@ -7,7 +7,7 @@
       {
         "template": "instructions",
         "text": "Welcome to the Amazing Land of Adventures! You’re here because you’re excited to play games, learn something new, and meet other adventure-seekers. Everybody is welcomed! No need to be shy!",
-        "image": "statics/images/monster.png"
+        "image": "statics/images/mascot/mother-info.png"
       },
       {
         "template": "two-choices",
@@ -16,19 +16,19 @@
         "choices": [
           {
             "text": "Yes",
-            "image": "statics/images/monster-yes.png"
+            "image": "statics/images/mascot/mother-yes.png"
           },
           {
             "text": "No",
-            "image": "statics/images/monster-no.png"
+            "image": "statics/images/mascot/mother-no.png"
           }
         ],
         "answer": null
       },
       {
         "template": "one-input",
-        "text": "Ooops! Not too fast fellow adventure-seeker! Before we open the gate, it'll be nice to know your name and where are you from. (example: Cris of Barangay San Vicente)",
-        "image": "statics/images/monster-hi.png",
+        "text": "Oops! Not so fast, adventurer. Before we begin I'd like to know who you are. What's your name?",
+        "image": "statics/images/mascot/mother-wonder.png",
         "inputType": "text",
         "answer": null
       },
@@ -39,17 +39,17 @@
       },
       {
         "template": "instructions",
-        "text": "Hello there (name)! It's great to have you here at the Amazing Land of Adventures. Remember: you need to earn five values badges so you will officially earn your adventure-seeker trophy. Carry on each stage with an honest heart and a strong mind!",
-        "image": "statics/images/monster.png"
+        "text": "Nice to meet you, {name}! My name is ADA. I will be your guide in this amazing world of adventures! For you to earn the ADVENTURER TROPHY, we'll need to collect five badges throughout our adventure. Keep your heart honest and your mind strong.",
+        "image": "statics/images/mascot/mother-happy.png"
       },
       {
         "template": "instructions",
-        "text": "Ready? But oh... what do we have here...another gate? Oops looks like there are a couple more questions you need to answer to open the other gate.",
-        "image": "statics/images/monster.png"
+        "text": "Ready? Oh! What's this? Another gate? Looks like we need to open a few more questions to proceed.",
+        "image": "statics/images/mascot/mother-shock.png"
       },
       {
         "template": "multi-single-imaged",
-        "text": "Are you…? Just click your answer!",
+        "text": "Are you a…?",
         "image": "",
         "choices": [
           {
@@ -71,25 +71,35 @@
             "text": "Lesbian",
             "value": "lesbian",
             "image": "statics/images/lesbian.png"
-          },
-          {
-            "text": "Transgender",
-            "value": "transgender",
-            "image": "statics/images/transgender.png"
           }
         ],
         "answer": null
       },
       {
         "template": "one-input",
-        "text": "And if you don't mind, can you type in your age? I mean, how old are you?",
-        "image": "statics/images/monster-hi.png",
+        "text": "You look very young. How old are you?",
+        "image": "statics/images/mascot/mother-wonder.png",
         "inputType": "number",
         "answer": null
       },
       {
+        "template": "instructions",
+        "text": "Tadaa! The gate opened. Let's hurry inside.",
+        "image": "statics/images/red-gate.png"
+      },
+      {
+        "template": "instructions",
+        "text": "The Amazing Land of Adventures has five stages. For each stage, there are questions that will be asked of you. No worries! There are no right or wrong answers, Only honest ones!",
+        "image": "statics/images/mascot/mother-teach.png"
+      },
+      {
+        "template": "instructions",
+        "text": "Before we move to the first stage, let’s get our gears ready first.",
+        "image": "statics/images/mascot/mother-introduce.png"
+      },
+      {
         "template": "multi-multi-imaged",
-        "text": "Just choose the right answers for you to complete your gears before you begin the first stage!",
+        "text": "For a little warm-up let's start with something simple. Which of the following describes you?",
         "image": "",
         "choices": [
           {
@@ -127,7 +137,7 @@
       },
       {
         "template": "multi-multi-text",
-        "text": "Oh wow! You have your clothes, boots and cap complete. All you need is the backpack for all your essentials. Check everything here so we know what to put in your backpack.",
+        "text": "Easy, right? Here's another one for good luck. Choose everything that you like!",
         "image": "",
         "choices": [
           {
@@ -173,17 +183,22 @@
   {
     "stage": 1,
     "stageName": "Family Town",
-    "theme": "",
+    "theme": "family-town",
     "questions": [
       {
+        "template": "instructions",
+        "text": "You're all set. Let's now head to the first stage, FAMILY TOWN!",
+        "image": "statics/images/mascot/mother-cheer.png"
+      },
+      {
         "template": "banner",
-        "text": "(Family Town Banner) Looks like you’re all set to enter stage 1… Family Town!",
+        "text": "Family Town",
         "image": "statics/images/family.png"
       },
       {
         "template": "instructions",
-        "text": "Earn your love badge here when you complete all the questions.",
-        "image": "statics/images/monster.png"
+        "text": "Completing the questions in this stage will earn you the LOVE BADGE!.",
+        "image": "statics/images/mascot/mother-info.png"
       },
       {
         "template": "two-choices",
@@ -192,11 +207,11 @@
         "choices": [
           {
             "text": "Yes",
-            "image": "statics/images/monster-yes.png"
+            "image": "statics/images/mascot/mother-yes.png"
           },
           {
             "text": "No",
-            "image": "statics/images/monster-no.png"
+            "image": "statics/images/mascot/mother-no.png"
           }
         ],
         "answer": null
@@ -226,12 +241,12 @@
         "answer": null
       },
       {
-        "templage": "multi-single-text",
-        "text": "Does you parents live with you at home? Just click on your answer.",
+        "template": "multi-single-text",
+        "text": "Does you parents live with you at home?",
         "image": "",
         "choices": [
           {
-            "text": "Both parents live with me at home",
+            "text": "Both parents live with me",
             "image": ""
           },
           {
@@ -246,17 +261,45 @@
         "answer": null
       },
       {
-        "templage": "two-choices",
+        "template": "multi-single-text",
+        "text": "Let’s play a quick numbers game. How many siblings do you have?",
+        "image": "",
+        "choices": [
+          {
+            "text": "None!",
+            "image": ""
+          },
+          {
+            "text": "1",
+            "image": ""
+          },
+          {
+            "text": "2",
+            "image": ""
+          },
+          {
+            "text": "3",
+            "image": ""
+          },
+          {
+            "text": "More than 3!",
+            "image": ""
+          }
+        ],
+        "answer": null
+      },
+      {
+        "template": "two-choices",
         "text": "Do you get along with your siblings?",
         "image": "",
         "choices": [
           {
             "text": "Yes",
-            "image": "statics/images/monster-yes.png"
+            "image": "statics/images/mascot/mother-yes.png"
           },
           {
             "text": "No",
-            "image": "statics/images/monster-no.png"
+            "image": "statics/images/mascot/mother-no.png"
           }
         ],
         "answer": null
@@ -268,18 +311,18 @@
         "choices": [
           {
             "text": "Yes",
-            "image": "statics/images/monster-yes.png"
+            "image": "statics/images/mascot/mother-yes.png"
           },
           {
             "text": "No",
-            "image": "statics/images/monster-no.png"
+            "image": "statics/images/mascot/mother-no.png"
           }
         ],
         "answer": null
       },
       {
         "template": "multi-multi-imaged",
-        "text": "If you have fihts, what kind?",
+        "text": "If you have fights, what kind?",
         "image": "",
         "choices": [
           {
@@ -299,7 +342,7 @@
             "image": ""
           },
           {
-            "text": "My parents do not care about their children",
+            "text": "My parents do not care about their kids",
             "image": ""
           },
           {
@@ -335,7 +378,7 @@
             "image": ""
           },
           {
-            "text": "My relatives are not nice to me",
+            "text": "My relatives are mean to me",
             "image": ""
           },
           {
@@ -347,14 +390,13 @@
       },
       {
         "template": "banner",
-        "text": "(Love Badge) Congratulations! You have earned your “love badge” from Family Town!",
-        "image": "statics/images/monster.png"
+        "text": "Congratulations! You just earned the LOVE BADGE!",
+        "image": "statics/images/love.png"
       },
       {
-        "template": "one-input",
-        "text": "Ready to step inside the next stage. Can you guess what is it? It’s the place where you go to so you can learn how to read and write. Type your answer!!!",
-        "image": "statics/images/monster-hi.png",
-        "answer": null
+        "template": "instructions",
+        "text": "Can you guess where the next stage is? It' sa place where you learn how to read and write. Type in your answer!",
+        "image": "statics/images/mascot/mother-wonder.png"
       }
     ]
   },
@@ -365,46 +407,47 @@
     "questions": [
       {
         "template": "banner",
-        "text": "(School Point Banner) Yes!!! It’s school! And you are on your way to stage 2 here at the Amazing Land of Adventures! Let’s go to… School Point!",
+        "text": "Correct! It's at school. The second stage of adventure takes place in... SCHOOL POINT!",
         "image": "statics/images/school.png"
       },
       {
         "template": "two-choices",
-        "text": "Are you in school?",
+        "text": "Do you go to school?",
         "image": "",
         "choices": [
           {
             "text": "Yes",
-            "image": "statics/images/monster-yes.png"
+            "image": "statics/images/mascot/mother-yes.png"
           },
           {
             "text": "No",
-            "image": "statics/images/monster-no.png"
+            "image": "statics/images/mascot/mother-no.png"
           }
         ],
         "answer": null
       },
       {
         "template": "one-input",
-        "text": "If yes, what school do you go to?",
-        "image":"statics/images/question.png",
+        "text": "Yes? Which school do you go to?",
+        "image":"statics/images/mascot/mother-wonder.png",
+        "inputType": "text",
         "answer": null
       },
       {
         "template": "multi-single-imaged",
-        "text": "I’m sad that you’re not in school. Can you share why you’re not in school?",
+        "text": "No? That's sad. Can you tell me why you're not in school?",
         "image": "",
         "choices": [
           {
-            "text": "My parents don't have money",
+            "text": "We don't have money",
             "image": "statics/images/money.png"
           },
           {
-            "text": "I decided to stop on my own",
+            "text": "I wanted to stop",
             "image": "statics/images/boy.png"
           },
           {
-            "text": "There are kids who bully me",
+            "text": "There are bullies in school",
             "image": "statics/images/bully.png"
           },
           {
@@ -412,7 +455,7 @@
             "image": "statics/images/work.png"
           },
           {
-            "text": "I find school boring",
+            "text": "School is boring",
             "image": "statics/images/idiot.png"
           }
         ],
@@ -425,18 +468,18 @@
         "choices": [
           {
             "text": "Yes",
-            "image": "statics/images/monster-yes.png"
+            "image": "statics/images/mascot/mother-yes.png"
           },
           {
             "text": "No",
-            "image": "statics/images/monster-no.png"
+            "image": "statics/images/mascot/mother-no.png"
           }
         ],
         "answer": null
       },
       {
         "template": "multi-multi-text",
-        "text": "High five! Why do you like school? Check everything you like about school!",
+        "text": "Awesome! Why do you like school? Choose everything you like about it.",
         "condition": "Yes",
         "image": "",
         "choices": [
@@ -461,7 +504,7 @@
       },
       {
         "template": "multi-multi-text",
-        "text": "I don’t like school because… check everything that applies to you.",
+        "text": "Can you choose the reasons why you don't like school?",
         "condition": "No",
         "image": "",
         "choices": [
@@ -486,16 +529,16 @@
       },
       {
         "template": "two-choices",
-        "text": "A smart person once said that “a friend is someone who reached for your hand and touched your heart.” It’s great to have friends! Do you have any friends in school?",
+        "text": "Friends are people who make you smile brighter, laugh louder, and live better. Do you have friends like these in school?",
         "image": "",
         "choices": [
           {
             "text": "Yes",
-            "image": "statics/images/monster-yes.png"
+            "image": "statics/images/mascot/mother-yes.png"
           },
           {
             "text": "No",
-            "image": "statics/images/monster-no.png"
+            "image": "statics/images/mascot/mother-no.png"
           }
         ],
         "answer": null
@@ -503,13 +546,14 @@
       {
         "template": "one-input",
         "text": "What are the names of you friends?",
-        "image": "statics/images/monster-hi.png",
+        "image": "statics/images/mascot/mother-investigate.png",
         "condition": "Yes",
+        "inputType": "text",
         "answer": null
       },
       {
         "template": "multi-multi-text",
-        "text": "What do you like to do with them? Check as many as possible.",
+        "text": "What do you like to do with them? Choose as many as possible.",
         "image": "",
         "choices": [
           {
@@ -537,13 +581,13 @@
       },
       {
         "template": "banner",
-        "text": "Great job! You just got your “hard work badge!” Continue to work hard and work smart.",
+        "text": "Great job! You just earned yourself a shiny HARD WORK BADGE! Keep up the good work.",
         "image": "statics/images/work.png"
       },
       {
         "template": "instructions",
         "text": "Was that hard? Well I am sure you got that just right! Ready for stage 3. Breathe in, breathe out!",
-        "image": "statics/images/monster.png"
+        "image": "statics/images/mascot/mother-info.png"
       }
     ]
   },
@@ -553,8 +597,13 @@
     "theme": "",
     "questions": [
       {
-        "template": "banner",
+        "template": "instructions",
         "text": "Re-check your gears because we’re about to enter… Internet Village!",
+        "image": "statics/images/mascot/mother-cheer.png"
+      },
+      {
+        "template": "banner",
+        "text": "Internet Village",
         "image": "statics/images/internet.png"
       },
       {
@@ -567,15 +616,15 @@
             "image": "statics/images/android.png"
           },
           {
-            "text": "I have access to computer",
+            "text": "I have access to a computer",
             "image": "statics/images/computer.png"
           },
           {
-            "text": "I have access to internet",
+            "text": "I have access to the internet",
             "image": "statics/images/internet-globe.png"
           },
           {
-            "text": "I have access to the internet through Peso-net",
+            "text": "I access the internet through the Piso-net",
             "image": "statics/images/peso.png"
           }
         ],
@@ -588,11 +637,11 @@
         "choices": [
           {
             "text": "Yes",
-            "image": "statics/images/monster-yes.png"
+            "image": "statics/images/mascot/mother-yes.png"
           },
           {
             "text": "No",
-            "image": "statics/images/monster-no.png"
+            "image": "statics/images/mascot/mother-no.png"
           }
         ],
         "answer": null
@@ -640,8 +689,8 @@
       },
       {
         "template": "instructions",
-        "text": "Thanks for your honesty! Now with the next questions, all you need to do is to answer YES or NO.",
-        "image": "statics/images/monster.png"
+        "text": "Thank you for being honest. For the next questions you only need to answer yes or no. Just keep calm and answer on!",
+        "image": "statics/images/mascot/mother-info.png"
       },
       {
         "template": "two-choices",
@@ -650,11 +699,11 @@
         "choices": [
           {
             "text": "Yes",
-            "image": "statics/images/monster-yes.png"
+            "image": "statics/images/mascot/mother-yes.png"
           },
           {
             "text": "No",
-            "image": "statics/images/monster-no.png"
+            "image": "statics/images/mascot/mother-no.png"
           }
         ],
         "answer": null
@@ -666,11 +715,11 @@
         "choices": [
           {
             "text": "Yes",
-            "image": "statics/images/monster-yes.png"
+            "image": "statics/images/mascot/mother-yes.png"
           },
           {
             "text": "No",
-            "image": "statics/images/monster-no.png"
+            "image": "statics/images/mascot/mother-no.png"
           }
         ],
         "answer": null
@@ -682,11 +731,11 @@
         "choices": [
           {
             "text": "Yes",
-            "image": "statics/images/monster-yes.png"
+            "image": "statics/images/mascot/mother-yes.png"
           },
           {
             "text": "No",
-            "image": "statics/images/monster-no.png"
+            "image": "statics/images/mascot/mother-no.png"
           }
         ],
         "answer": null
@@ -698,11 +747,11 @@
         "choices": [
           {
             "text": "Yes",
-            "image": "statics/images/monster-yes.png"
+            "image": "statics/images/mascot/mother-yes.png"
           },
           {
             "text": "No",
-            "image": "statics/images/monster-no.png"
+            "image": "statics/images/mascot/mother-no.png"
           }
         ],
         "answer": null
@@ -714,11 +763,11 @@
         "choices": [
           {
             "text": "Yes",
-            "image": "statics/images/monster-yes.png"
+            "image": "statics/images/mascot/mother-yes.png"
           },
           {
             "text": "No",
-            "image": "statics/images/monster-no.png"
+            "image": "statics/images/mascot/mother-no.png"
           }
         ],
         "answer": null
@@ -738,12 +787,17 @@
       {
         "template": "instructions",
         "text": "And now… try to relax. Breathe in, breathe out. Stretch your arms and count 1 to 10. Breathe in, breathe out. Feeling much better? Good! Because we’re about to enter The Sad Zone.",
+        "image": "statics/images/mascot/mother-cheer.png"
+      },
+      {
+        "template": "banner",
+        "text": "Sad Zone",
         "image": "statics/images/sad.png"
       },
       {
         "template": "instructions",
         "text": "We feel different emotions. We can be happy, angry, disgusted. We can also be sad, especially when we experience bad things in life. Sometimes the bad experience stays on. Want to know a secret? Bad experiences can slowly go away when you share you experience with people you trust who can help you become better.",
-        "image": "statics/images/monster.png"
+        "image": "statics/images/mascot/mother-cry.png"
       },
       {
         "template": "two-choices",
@@ -752,11 +806,11 @@
         "choices": [
           {
             "text": "Yes",
-            "image": "statics/images/monster-yes.png"
+            "image": "statics/images/mascot/mother-yes.png"
           },
           {
             "text": "No",
-            "image": "statics/images/monster-no.png"
+            "image": "statics/images/mascot/mother-no.png"
           }
         ],
         "answer": null
@@ -768,11 +822,11 @@
         "choices": [
           {
             "text": "Yes",
-            "image": "statics/images/monster-yes.png"
+            "image": "statics/images/mascot/mother-yes.png"
           },
           {
             "text": "No",
-            "image": "statics/images/monster-no.png"
+            "image": "statics/images/mascot/mother-no.png"
           }
         ],
         "answer": null
@@ -836,16 +890,16 @@
       },
       {
         "template": "two-choices",
-        "text": "Were your private parts touched by strangers?",
+        "text": "Did strangers touch you private parts?",
         "image": "",
         "choices": [
           {
             "text": "Yes",
-            "image": "statics/images/monster-yes.png"
+            "image": "statics/images/mascot/mother-yes.png"
           },
           {
             "text": "No",
-            "image": "statics/images/monster-no.png"
+            "image": "statics/images/mascot/mother-no.png"
           }
         ],
         "answer": null
@@ -857,11 +911,11 @@
         "choices": [
           {
             "text": "Yes",
-            "image": "statics/images/monster-yes.png"
+            "image": "statics/images/mascot/mother-yes.png"
           },
           {
             "text": "No",
-            "image": "statics/images/monster-no.png"
+            "image": "statics/images/mascot/mother-no.png"
           }
         ],
         "answer": null
@@ -897,8 +951,8 @@
       },
       {
         "template": "instructions",
-        "text": "Thank you for your honesty, you brave warrior! Now, answer the following with just yes or no. Ready?",
-        "image": "statics/images/monster.png"
+        "text": "Thank you for your honesty, brave warrior! Now, just say yes or no to the following. Ready?",
+        "image": "statics/images/mascot/mother-happy.png"
       },
       {
         "template": "two-choices",
@@ -907,11 +961,11 @@
         "choices": [
           {
             "text": "Yes",
-            "image": "statics/images/monster-yes.png"
+            "image": "statics/images/mascot/mother-yes.png"
           },
           {
             "text": "No",
-            "image": "statics/images/monster-no.png"
+            "image": "statics/images/mascot/mother-no.png"
           }
         ],
         "answer": null
@@ -923,11 +977,11 @@
         "choices": [
           {
             "text": "Yes",
-            "image": "statics/images/monster-yes.png"
+            "image": "statics/images/mascot/mother-yes.png"
           },
           {
             "text": "No",
-            "image": "statics/images/monster-no.png"
+            "image": "statics/images/mascot/mother-no.png"
           }
         ],
         "answer": null
@@ -939,11 +993,11 @@
         "choices": [
           {
             "text": "Yes",
-            "image": "statics/images/monster-yes.png"
+            "image": "statics/images/mascot/mother-yes.png"
           },
           {
             "text": "No",
-            "image": "statics/images/monster-no.png"
+            "image": "statics/images/mascot/mother-no.png"
           }
         ],
         "answer": null
@@ -955,18 +1009,18 @@
         "choices": [
           {
             "text": "Yes",
-            "image": "statics/images/monster-yes.png"
+            "image": "statics/images/mascot/mother-yes.png"
           },
           {
             "text": "No",
-            "image": "statics/images/monster-no.png"
+            "image": "statics/images/mascot/mother-no.png"
           }
         ],
         "answer": null
       },
       {
         "template": "banner",
-        "text": "What a courageous heart you have! Thank you for braving that stage. You are indeed worthy to be called… brave warrior. For completing stage 4, here is your courage badge!",
+        "text": "What a courageous heart you have! You are worthy of being called a brave warrior. Here's your COURAGE BADGE!",
         "image": "statics/images/courage.png"
       }
     ]
@@ -978,12 +1032,17 @@
       {
         "template": "instructions",
         "text": "One more badge from stage 5 and you will be officially declared as adventure-seeker and join a community of lifelong learners. Check your gears because this is your final stage.",
-        "image": "statics/images/monster.png"
+        "image": "statics/images/mascot/mother-angry.png"
       },
       {
         "template": "banner",
-        "text": "This is stage 5 and it’s called… the Dream District. Here, you’re free to share what do you want to be and how you see yourself in the future.",
+        "text": "Dream Land",
         "image": "statics/images/dream.png"
+      },
+      {
+        "template": "instructions",
+        "text": "This is stage 5 and it’s called… the Dream District. Here, you’re free to share what do you want to be and how you see yourself in the future.",
+        "image": "statics/images/mascot/mother-introduce.png"
       },
       {
         "template": "two-choices",
@@ -992,11 +1051,11 @@
         "choices": [
           {
             "text": "Yes",
-            "image": "statics/images/monster-yes.png"
+            "image": "statics/images/mascot/mother-yes.png"
           },
           {
             "text": "No",
-            "image": "statics/images/monster-no.png"
+            "image": "statics/images/mascot/mother-no.png"
           }
         ],
         "answer": null
@@ -1008,11 +1067,11 @@
         "choices": [
           {
             "text": "Yes",
-            "image": "statics/images/monster-yes.png"
+            "image": "statics/images/mascot/mother-yes.png"
           },
           {
             "text": "No",
-            "image": "statics/images/monster-no.png"
+            "image": "statics/images/mascot/mother-no.png"
           }
         ],
         "answer": null
@@ -1024,11 +1083,11 @@
         "choices": [
           {
             "text": "Yes",
-            "image": "statics/images/monster-yes.png"
+            "image": "statics/images/mascot/mother-yes.png"
           },
           {
             "text": "No",
-            "image": "statics/images/monster-no.png"
+            "image": "statics/images/mascot/mother-no.png"
           }
         ],
         "answer": null
@@ -1040,24 +1099,29 @@
         "choices": [
           {
             "text": "Yes",
-            "image": "statics/images/monster-yes.png"
+            "image": "statics/images/mascot/mother-yes.png"
           },
           {
             "text": "No",
-            "image": "statics/images/monster-no.png"
+            "image": "statics/images/mascot/mother-no.png"
           }
         ],
         "answer": null
       },
       {
         "template": "one-input",
-        "text": "In the future, I want to be a...",
+        "text": "When I grow up, I want to be a...",
         "image": "statics/images/work.png",
         "answer": null
       },
       {
+        "template": "instructions",
+        "text": "Congratulations on completing the final stage! Here's you HOPE BADGE, adventurer.",
+        "image": "statics/images/mascot/mother-happy.png"
+      },
+      {
         "template": "banner",
-        "text": "Congratulations for completing Stage 5. You have earned your fifth and final badge! Your hope badge!",
+        "text": "Finish Line",
         "image": "statics/images/finish-line.png"
       }
     ]
@@ -1067,14 +1131,14 @@
     "stageName": "Finish Line",
     "questions": [
       {
-        "template": "banner",
-        "text": "You are officially elevated to the hall of adventure seekers and you will join a community of lifelong learners who is always excited to study, read, listen and learn! Here’s your trophy!",
-        "image": "statics/images/trophy.png"
+        "template": "instructions",
+        "text": "I'm so proud of you for making it this far! This ADVENTURER TROPHY is rightfully yours. May you continue to study, learn and enjoy life to the fullest!",
+        "image": "statics/images/mascot/mother-happy.png"
       },
       {
         "template": "banner",
         "text": "Your love, hard work, honesty, courage, and hope badges were earned because of your commitment. Use them very wisely . Carry your trophy with humility and remember to never stop learning. Go, grow and glow!",
-        "image": "statics/images/monster-hi.png"
+        "image": "statics/images/mascot/mother-ok.png"
       }
     ]
   }

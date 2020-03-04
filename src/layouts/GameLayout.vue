@@ -43,6 +43,7 @@
       <two-choices-page v-if="game.question.template === 'two-choices'" />
       <one-input-page v-if="game.question.template === 'one-input'" />
       <multi-single-imaged-page v-if="game.question.template === 'multi-single-imaged'" />
+      <multi-single-text-page v-if="game.question.template === 'multi-single-text'" />
       <multi-multi-imaged-page v-if="game.question.template === 'multi-multi-imaged'" />
       <multi-multi-text-page v-if="game.question.template === 'multi-multi-text'" />
     </q-page-container>
@@ -75,6 +76,7 @@ import InstructionsPage from '../pages/InstructionsPage'
 import TwoChoicesPage from '../pages/TwoChoicesPage'
 import OneInputPage from '../pages/OneInputPage'
 import MultiSingleImagedPage from '../pages/MultiSingleImagedPage'
+import MultiSingleTextPage from '../pages/MultiSingleTextPage'
 import MultiMultiImagedPage from '../pages/MultiMultiImagedPage'
 import MultiMultiTextPage from '../pages/MultiMultiTextPage'
 
@@ -86,6 +88,7 @@ export default {
     TwoChoicesPage,
     OneInputPage,
     MultiSingleImagedPage,
+    MultiSingleTextPage,
     MultiMultiImagedPage,
     MultiMultiTextPage
   },

@@ -5,7 +5,7 @@
       style="min-height: 400px; max-width: 400px"
     >
       <div class="q-pa-lg">
-        <q-img src="statics/images/monster-yes.png"></q-img>
+        <q-img src="statics/images/mascot/mother-cheer.png"></q-img>
       </div>
       <div class="rowjustify-center">
         <div class="col q-gutter-sm">

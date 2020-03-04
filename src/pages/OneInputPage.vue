@@ -1,27 +1,38 @@
 <template>
-  <q-page padding class="row full-width full-height items-center">
-    <div class="col-12 text-center">
-      <div class="text-grey-8 text-subtitle1">
-          {{ current.question.text }}
+  <q-page padding class="row full-width items-center fixed">
+    <div class="col-12">
+      <div class="row">
+        <div class="col-12 text-center">
+          <div class="text-grey-8 text-h6">
+              {{ current.question.text }}
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="col-12 text-center">
-      <q-img :src="current.question.image" style="max-heiht: 300px;">
-        <q-input
-          standout="bg-secondary text-white"
-          rounded
-          autofocus
-          :type="current.question.inputType"
-          v-model="model"
-          @input="inputChanged"
-          input-class="text-right"
-          class="q-ma-lg"
-        >
-          <template v-slot:prepend>
-            <q-icon name="person" />
-          </template>
-        </q-input>
-      </q-img>
+
+      <div class="row">
+        <div class="col-12 text-center">
+          <q-input
+            standout="bg-secondary text-white"
+            rounded
+            autofocus
+            :type="current.question.inputType"
+            v-model="model"
+            @input="inputChanged"
+            input-class="text-right"
+            class="q-ma-md"
+          >
+            <template v-slot:prepend>
+              <q-icon name="person" />
+            </template>
+          </q-input>
+        </div>
+      </div>
+
+      <div class="row justify-center items-center">
+        <div class="col-10">
+          <q-img :src="current.question.image"></q-img>
+        </div>
+      </div>
     </div>
   </q-page>
 </template>

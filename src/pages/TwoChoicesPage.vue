@@ -1,16 +1,16 @@
 <template>
-  <q-page padding class="row fit items-center">
-    <div class = "col-12">
-      <div class = "row">
+  <q-page padding class="row full-width fixed items-center">
+    <div class="col">
+      <div class="row items-center" style="min-height: 150px">
         <div class="col-12 text-center">
           <div class="text-grey-8 text-h6">
               {{ current.question.text }}
           </div>
         </div>
       </div>
-      <div class="row wrap q-ma-md justify-center items center">
+      <div class="row wrap q-ma-md items-center items-center" style="min-height: 250px">
         <div
-          class="col-5 q-ma-sm"
+          class="col-6"
           v-for="[index, choice] of current.question.choices.entries()"
           :key="index"
         >
@@ -19,7 +19,7 @@
               v-bind:class="[active === index ? activeClass : inactiveClass]"
               @click="answerClicked(index)"
             >
-              <img :src="choice.image" style="height: 100px; width: 100px; object" />
+              <img :src="choice.image" style="min-height: 120px; width: 110px;" />
               <span class="text-subtitle1 text-center">{{ choice.text }}</span>
             </q-btn>
           </div>
@@ -43,6 +43,9 @@ export default {
       activeClass: 'bg-secondary text-white',
       inactiveClass: 'bg-white text-secondary'
     }
+  },
+  created () {
+    this.active = null
   },
   methods: {
     ...call('game/*'),

@@ -35,7 +35,7 @@ import { sync, call } from 'vuex-pathify'
 export default {
   name: 'MultiSingleTextPage',
   computed: {
-    current: sync('game/*')
+    current: sync('game/active')
   },
   data () {
     return {
@@ -43,6 +43,9 @@ export default {
       activeClass: 'bg-secondary text-white',
       inactiveClass: 'bg-white text-secondary'
     }
+  },
+  created () {
+    console.log(this.current)
   },
   methods: {
     ...call('game/*'),

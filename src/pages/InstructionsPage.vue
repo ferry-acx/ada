@@ -1,12 +1,16 @@
 <template>
-  <q-page padding class="row full-width full-height items-center">
-    <div class="col-12 text-center">
-      <div class="text-grey-8 text-subtitle1">
+  <q-page padding class="row full-width items-center fixed">
+    <div class="col-12">
+      <div class="row" style="min-height: 100px">
+        <div class="col-12 text-center text-h6">
           {{ current.question.text }}
+        </div>
       </div>
-    </div>
-    <div class="col-12 text-center">
-      <q-img :src="current.question.image"></q-img>
+      <div class="row justify-center items-center full-height">
+        <div class="col-9 text-center">
+          <q-img :src="current.question.image" ></q-img>
+        </div>
+      </div>
     </div>
   </q-page>
 </template>
