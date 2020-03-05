@@ -7,7 +7,8 @@
       {
         "template": "instructions",
         "text": "Welcome to the Amazing Land of Adventures! You’re here because you’re excited to play games, learn something new, and meet other adventure-seekers. Everybody is welcomed! No need to be shy!",
-        "image": "statics/images/mascot/mother-info.png"
+        "image": "statics/images/mascot/mother-info.png",
+        "audio": "statics/audio/meow.mp3"
       },
       {
         "template": "two-choices",

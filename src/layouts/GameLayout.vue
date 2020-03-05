@@ -26,13 +26,15 @@
           >
           </q-linear-progress>
         </div>
-        <div class="col-2 q-ma-md">
-          <q-icon
-            name="volume_up"
-            color="secondary"
-            size="md"
-          >
-          </q-icon>
+        <div class="col-2 q-ma-md" @click="playAudio()">
+          <q-btn flat round>
+            <q-icon
+              name="volume_up"
+              color="secondary"
+              size="md"
+            >
+            </q-icon>
+          </q-btn>
         </div>
       </q-toolbar>
     </q-header>
@@ -94,6 +96,7 @@ export default {
   },
   data () {
     return {
+      audio: null,
       buttonLabel: 'Next Question'
     }
   },
@@ -116,8 +119,19 @@ export default {
       this.$router.push('/')
     },
     submit () {
+      if (this.audio) {
+        this.audio.pause()
+        this.audio = null
+      }
+
       this.storeAnswer()
       this.nextQuestion()
+    },
+    playAudio () {
+      if (this.game.question.audio) {
+        this.audio = new Audio(this.game.question.audio)
+        this.audio.play()
+      }
     }
   }
 }

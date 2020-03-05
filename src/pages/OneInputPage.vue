@@ -19,7 +19,7 @@
             v-model="model"
             @input="inputChanged"
             input-class="text-right"
-            class="q-ma-md"
+            class="q-ma-md q-my-xl"
           >
             <template v-slot:prepend>
               <q-icon name="person" />

@@ -1,7 +1,7 @@
 <template>
   <q-page padding class="row full-width items-center fixed">
     <div class="col-12">
-      <div class="row" style="min-height: 100px">
+      <div class="row q-my-md" style="min-height: 100px">
         <div class="col-12 text-center text-h6">
           {{ current.question.text }}
         </div>
