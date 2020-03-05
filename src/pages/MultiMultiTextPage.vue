@@ -3,7 +3,7 @@
     <div class="col-12">
       <div class="row q-ma-lg">
         <div class="col-12 text-center">
-          <div class="text-grey-8 text-subtitle1">
+          <div class="text-grey-8 text-h6">
               {{ current.question.text }}
           </div>
         </div>
