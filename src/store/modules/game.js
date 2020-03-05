@@ -7,7 +7,9 @@ const state = {
   active: {
     stage: GAME_CONTENT[0],
     question: GAME_CONTENT[0].questions[0],
-    progress: 0
+    progress: 0,
+    singleAnswer: null,
+    multiAnswers: []
   }
 }
 
@@ -37,7 +39,9 @@ export default {
           const active = {
             stage: state.active.stage,
             question: state.active.stage.questions[nextIndex],
-            progress: (nextIndex / state.active.stage.questions.length)
+            progress: (nextIndex / state.active.stage.questions.length),
+            singleAnswer: null,
+            multiAnswers: []
           }
 
           commit('SET_ACTIVE', active)

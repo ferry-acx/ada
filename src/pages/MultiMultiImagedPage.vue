@@ -16,11 +16,9 @@
         >
           <div class="row justify-center full-height full-width text-center">
             <q-btn
-              v-bind:class="[active.includes(index) ? activeClass : inactiveClass]"
+              v-bind:class="[current.multiAnswers.includes(index) ? activeClass : inactiveClass]"
               @click="answerClicked(index)"
             >
-              <!-- <img :src="choice.image" style="height: 100px; width: 100px; object" />
-              <span class="text-caption text-center">{{ choice.text }}</span> -->
               <template>
                 <div class="full-width">
                   <div class="row justify-center">
@@ -53,7 +51,7 @@ export default {
   },
   data () {
     return {
-      active: [],
+      // active: [],
       activeClass: 'bg-secondary text-white',
       inactiveClass: 'bg-white text-secondary'
     }
@@ -61,14 +59,22 @@ export default {
   methods: {
     ...call('game/*'),
     answerClicked (index) {
-      if (this.active.includes(index)) {
-        this.active = this.active.filter(value => index !== value)
+      let multiAnswers = this.current.multiAnswers
+      if (multiAnswers.includes(index)) {
+        multiAnswers = multiAnswers.filter(value => index !== value)
       } else {
-        this.active.push(index)
+        multiAnswers.push(index)
       }
 
+      const currentActive = {
+        ...this.current,
+        multiAnswers: multiAnswers
+      }
+
+      this.setActive(currentActive)
+
       let answers = []
-      for (const id of this.active) {
+      for (const id of this.current.multiAnswers) {
         answers.push({
           id,
           value: this.current.question.choices[id].text

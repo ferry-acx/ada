@@ -17,7 +17,7 @@
           <div class="row justify-center full-height full-width text-center">
             <q-btn
               class="full-width"
-              v-bind:class="[active === index ? activeClass : inactiveClass]"
+              v-bind:class="[current.singleAnswer === index ? activeClass : inactiveClass]"
               @click="answerClicked(index)"
             >
               <div class="text-body">{{ choice.text }}</div>
@@ -39,18 +39,19 @@ export default {
   },
   data () {
     return {
-      active: 0,
       activeClass: 'bg-secondary text-white',
       inactiveClass: 'bg-white text-secondary'
     }
   },
-  created () {
-    console.log(this.current)
-  },
   methods: {
     ...call('game/*'),
     answerClicked (index) {
-      this.active = index
+      const currentActive = {
+        ...this.current,
+        singleAnswer: index
+      }
+
+      this.setActive(currentActive)
 
       const answer = {
         id: index,

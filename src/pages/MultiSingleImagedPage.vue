@@ -16,7 +16,7 @@
         >
           <div class="row justify-center full-height full-width text-center">
             <q-btn
-              v-bind:class="[active === index ? activeClass : inactiveClass]"
+              v-bind:class="[current.singleAnswer === index ? activeClass : inactiveClass]"
               @click="answerClicked(index)"
             >
               <template>
@@ -51,7 +51,6 @@ export default {
   },
   data () {
     return {
-      active: null,
       activeClass: 'bg-secondary text-white',
       inactiveClass: 'bg-white text-secondary'
     }
@@ -59,7 +58,12 @@ export default {
   methods: {
     ...call('game/*'),
     answerClicked (index) {
-      this.active = index
+      const currentActive = {
+        ...this.current,
+        singleAnswer: index
+      }
+
+      this.setActive(currentActive)
 
       const answer = {
         id: index,

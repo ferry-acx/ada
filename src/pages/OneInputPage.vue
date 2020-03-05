@@ -16,7 +16,7 @@
             rounded
             autofocus
             :type="current.question.inputType"
-            v-model="model"
+            v-model="current.singleAnswer"
             @input="inputChanged"
             input-class="text-right"
             class="q-ma-md q-my-xl"
@@ -47,14 +47,13 @@ export default {
   },
   data () {
     return {
-      model: null
     }
   },
   methods: {
     ...call('game/*'),
     inputChanged () {
       const answer = {
-        value: this.model
+        value: this.current.singleAnswer
       }
 
       this.setAnswer(answer)
