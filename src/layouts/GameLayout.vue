@@ -28,7 +28,7 @@
           </q-linear-progress>
           <!-- <q-icon ref="progressIcon" name="mood" color="secondary" size="lg" v-bind:style="{ left: progressIconPosition }" /> -->
           <!-- <q-icon ref="progressIcon" name="mood" color="secondary" size="lg" v-bind:style="iconClassObject" /> -->
-          <q-img :src="imgSrc" ref="progressIcon" name="mood" color="secondary" style="width: 50px; height: 50px;" v-bind:style="iconClassObject" />
+          <q-img :src="progressIconSrc" ref="progressIcon" name="mood" color="secondary" style="width: 50px; height: 50px;" v-bind:style="iconClassObject" />
         </div>
         <div class="col-2 q-ma-md" @click="playAudio()">
           <q-btn flat round>
@@ -144,9 +144,8 @@ export default {
     iconClassObject () {
       if (this.progressEl && this.progressIconEl) {
         // const progress = this.game.progress ? this.game.progress : 0
-        const left = this.progressEl.offsetLeft - (this.progressIconEl.clientWidth / 2) + (this.progressEl.clientWidth * this.game.progress)
-
-        console.log(left)
+        const progress = this.game.progress ? this.game.progress : 0
+        const left = this.progressEl.offsetLeft - (this.progressIconEl.clientWidth / 2) + (this.progressEl.clientWidth * progress)
 
         const classObject = {
           position: 'absolute',
@@ -154,24 +153,26 @@ export default {
           top: `${this.top}px`,
           left: `${left}px`
         }
-        console.log('classObject:', classObject)
         return classObject
       }
       return {}
+    },
+    progressIconSrc () {
+      if (this.config.gender === 'Boy') {
+        return 'statics/images/running-boy.png'
+      } else if (this.config.gender === 'Girl') {
+        return 'statics/images/running-girl.png'
+      } else {
+        return ''
+      }
     }
   },
   created () {
-    if (this.config.gender === 'm') {
-      this.imgSrc = 'statics/images/running-boy.png'
-    } else if (this.config.gender === 'f') {
-      this.imgSrc = 'statics/images/running-girl.png'
-    }
   },
   mounted () {
     this.progressEl = this.$refs.linearProgress.$el
     this.progressIconEl = this.$refs.progressIcon.$el
     this.top = this.progressEl.offsetTop
-    console.log(this.$refs.linearProgress)
   },
   methods: {
     ...call('game/*'),
@@ -185,8 +186,18 @@ export default {
         this.audio.pause()
         this.audio = null
       }
-
       this.storeAnswer()
+      console.log(this.game.question)
+      if (this.game.question.config && this.game.question.config === 'gender') {
+        const gender = this.game.question.answer.value
+        const newConfig = {
+          ...this.config,
+          gender
+        }
+
+        this.setConfigActive(newConfig)
+      }
+
       this.nextQuestion()
     },
     playAudio () {

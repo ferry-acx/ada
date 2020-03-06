@@ -52,6 +52,7 @@
         "template": "multi-single-imaged",
         "text": "Are you a…?",
         "image": "",
+        "config": "gender",
         "choices": [
           {
             "text": "Boy",

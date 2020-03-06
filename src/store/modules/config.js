@@ -3,7 +3,7 @@ import { make } from 'vuex-pathify'
 const state = {
   list: [],
   active: {
-    gender: 'm'
+    gender: ''
   }
 }
 
@@ -12,5 +12,10 @@ export default {
   state,
   getters: make.getters(state),
   mutations: make.mutations(state),
-  actions: make.actions(state)
+  actions: {
+    ...make.actions(state),
+    setConfigActive ({ commit, state }, active) {
+      commit('SET_ACTIVE', active)
+    }
+  }
 }
