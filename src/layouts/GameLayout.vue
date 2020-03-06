@@ -17,6 +17,7 @@
         </div>
         <div class="col-8 q-my-md">
           <q-linear-progress
+            ref="linearProgress"
             stripe
             rounded
             class="q-ma-none"
@@ -25,6 +26,9 @@
             :value="game.progress"
           >
           </q-linear-progress>
+          <!-- <q-icon ref="progressIcon" name="mood" color="secondary" size="lg" v-bind:style="{ left: progressIconPosition }" /> -->
+          <!-- <q-icon ref="progressIcon" name="mood" color="secondary" size="lg" v-bind:style="iconClassObject" /> -->
+          <q-img :src="imgSrc" ref="progressIcon" name="mood" color="secondary" style="width: 50px; height: 50px;" v-bind:style="iconClassObject" />
         </div>
         <div class="col-2 q-ma-md" @click="playAudio()">
           <q-btn flat round>
@@ -40,14 +44,16 @@
     </q-header>
 
     <q-page-container>
-      <banner-page v-if="game.question.template === 'banner'" />
-      <instructions-page v-if="game.question.template === 'instructions'" />
-      <two-choices-page v-if="game.question.template === 'two-choices'" />
-      <one-input-page v-if="game.question.template === 'one-input'" />
-      <multi-single-imaged-page v-if="game.question.template === 'multi-single-imaged'" />
-      <multi-single-text-page v-if="game.question.template === 'multi-single-text'" />
-      <multi-multi-imaged-page v-if="game.question.template === 'multi-multi-imaged'" />
-      <multi-multi-text-page v-if="game.question.template === 'multi-multi-text'" />
+      <transition name="slide-fade">
+        <banner-page v-if="game.question.template === 'banner'" />
+        <instructions-page v-if="game.question.template === 'instructions'" />
+        <two-choices-page v-if="game.question.template === 'two-choices'" />
+        <one-input-page v-if="game.question.template === 'one-input'" />
+        <multi-single-imaged-page v-if="game.question.template === 'multi-single-imaged'" />
+        <multi-single-text-page v-if="game.question.template === 'multi-single-text'" />
+        <multi-multi-imaged-page v-if="game.question.template === 'multi-multi-imaged'" />
+        <multi-multi-text-page v-if="game.question.template === 'multi-multi-text'" />
+      </transition>
     </q-page-container>
 
     <q-footer class="bg-white text-white">
@@ -97,23 +103,79 @@ export default {
   data () {
     return {
       audio: null,
-      buttonLabel: 'Next Question'
+      top: 0,
+      progressEl: null,
+      progressIconEl: null,
+      imgSrc: null
     }
   },
   computed: {
     game: sync('game/active'),
+    config: sync('config/active'),
     disabledNext () {
       if ((this.game.question.choices || this.game.question.inputType) && !this.game.question.answer) {
         return true
       } else {
         return false
       }
+    },
+    buttonLabel () {
+      const nonQuestions = ['instructions', 'banner']
+      if (nonQuestions.includes(this.game.question.template)) {
+        return 'Continue'
+      }
+      return 'Next Question'
+    },
+    progressIconPosition () {
+      if (this.progressEl && this.progressIconEl) {
+        const iconWidth = this.progressIconEl.clientWidth ? this.progressIconEl.clientWidth : 0
+        const clientWidth = this.progressEl.clientWidth ? this.progressEl.clientWidth : 0
+        const progress = this.game.progress ? this.game.progress : 0
+        const position = (clientWidth * progress) - (iconWidth / 2)
+        return `${position}px`
+      } else {
+        if (this.progressIconEl) {
+          const iconWidth = (this.progressIconEl.clientWidth) / 2 * -1
+          return `${iconWidth}px`
+        }
+      }
+      return '0px'
+    },
+    iconClassObject () {
+      if (this.progressEl && this.progressIconEl) {
+        // const progress = this.game.progress ? this.game.progress : 0
+        const left = this.progressEl.offsetLeft - (this.progressIconEl.clientWidth / 2) + (this.progressEl.clientWidth * this.game.progress)
+
+        console.log(left)
+
+        const classObject = {
+          position: 'absolute',
+          display: 'inline-block',
+          top: `${this.top}px`,
+          left: `${left}px`
+        }
+        console.log('classObject:', classObject)
+        return classObject
+      }
+      return {}
     }
   },
   created () {
+    if (this.config.gender === 'm') {
+      this.imgSrc = 'statics/images/running-boy.png'
+    } else if (this.config.gender === 'f') {
+      this.imgSrc = 'statics/images/running-girl.png'
+    }
+  },
+  mounted () {
+    this.progressEl = this.$refs.linearProgress.$el
+    this.progressIconEl = this.$refs.progressIcon.$el
+    this.top = this.progressEl.offsetTop
+    console.log(this.$refs.linearProgress)
   },
   methods: {
     ...call('game/*'),
+    ...call('config/*'),
     goHome () {
       this.resetGame()
       this.$router.push('/')
@@ -139,4 +201,14 @@ export default {
 <style lang="sass" scoped>
 .game-header .game-footer
   min-height: 100px
+
+.slide-fade-enter-active
+  transition: all .3s
+
+.slide-fade-leave-active
+  transition: all .1s cubic-bezier(1.0, 0.5, 0.8, 1.0)
+
+.slide-fade-enter, .slide-fade-leave-to
+  transform: translateX(-10px)
+  opacity: 0
 </style>

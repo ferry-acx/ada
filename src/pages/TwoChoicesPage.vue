@@ -56,8 +56,6 @@ export default {
 
       this.setActive(currentActive)
 
-      console.log(this.current)
-
       const answer = {
         id: index,
         value: this.current.question.choices[index].text
