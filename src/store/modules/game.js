@@ -32,13 +32,24 @@ export default {
 
       commit('SET_ACTIVE', newActive)
     },
-    nextQuestion ({ commit, state, dispatch }) {
+    nextQuestion ({ commit, state, dispatch, rootState }) {
       try {
         const nextIndex = state.active.stage.questions.indexOf(state.active.question) + 1
         if (nextIndex < state.active.stage.questions.length) {
+          let nextQuestion = state.active.stage.questions[nextIndex]
+          let text = nextQuestion.text
+          if (text && text.includes('{name}')) {
+            const name = rootState.config.active.name ? rootState.config.active.name : ''
+            if (name && name.length > 0) {
+              text = text.replace('{name}', name)
+            }
+          }
+
+          nextQuestion.text = text
+
           const active = {
             stage: state.active.stage,
-            question: state.active.stage.questions[nextIndex],
+            question: nextQuestion,
             progress: (nextIndex / state.active.stage.questions.length),
             singleAnswer: null,
             multiAnswers: []

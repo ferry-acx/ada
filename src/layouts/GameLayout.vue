@@ -179,6 +179,7 @@ export default {
     ...call('config/*'),
     goHome () {
       this.resetGame()
+      this.resetConfig()
       this.$router.push('/')
     },
     submit () {
@@ -187,18 +188,17 @@ export default {
         this.audio = null
       }
       this.storeAnswer()
-      console.log(this.game.question)
-      if (this.game.question.config && this.game.question.config === 'gender') {
-        const gender = this.game.question.answer.value
-        const newConfig = {
-          ...this.config,
-          gender
-        }
-
+      this.checkConfig()
+      this.nextQuestion()
+    },
+    checkConfig () {
+      if (this.game.question.config) {
+        const key = this.game.question.config
+        const value = this.game.question.answer.value
+        const newConfig = { ...this.config }
+        newConfig[key] = value
         this.setConfigActive(newConfig)
       }
-
-      this.nextQuestion()
     },
     playAudio () {
       if (this.game.question.audio) {

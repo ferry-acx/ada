@@ -20,8 +20,8 @@
             "image": "statics/images/mascot/mother-yes.png"
           },
           {
-            "text": "No",
-            "image": "statics/images/mascot/mother-no.png"
+            "text": "Yes",
+            "image": "statics/images/mascot/mother-cheer.png"
           }
         ],
         "answer": null
@@ -31,7 +31,8 @@
         "text": "Oops! Not so fast, adventurer. Before we begin I'd like to know who you are. What's your name?",
         "image": "statics/images/mascot/mother-wonder.png",
         "inputType": "text",
-        "answer": null
+        "answer": null,
+        "config": "name"
       },
       {
         "template": "banner",
