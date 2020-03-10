@@ -1,33 +1,32 @@
 <template>
-  <q-page padding class="row full-width items-center fixed">
-    <div class="col-12">
-      <div class="row">
+    <q-page padding class="row full-width items-center fixed">
         <div class="col-12">
-          <q-img :src="current.question.image" ratio="1" />
+            <div class="row">
+                <div class="col-12">
+                    <q-img :src="current.question.image" ratio="1" />
+                </div>
+            </div>
+            <div class="row q-ma-lg items-center" style="min-height: 80px">
+                <div class="col-12 text-center text-h4">
+                    {{ current.question.text }}
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="row q-ma-lg items-center" style="min-height: 80px">
-        <div class="col-12 text-center text-h4">
-          {{ current.question.text }}
-        </div>
-      </div>
-    </div>
-  </q-page>
+    </q-page>
 </template>
 
 <script>
-import { sync } from 'vuex-pathify'
+import { sync } from 'vuex-pathify';
 
 export default {
-  name: 'BannerPage',
-  computed: {
-    current: sync('game/active')
-  },
-  data () {
-    return {
+    name: 'BannerPage',
+    computed: {
+        current: sync('game/active')
+    },
+    data() {
+        return {};
     }
-  }
-}
+};
 </script>
 <style lang="sass" scoped>
 .body-text

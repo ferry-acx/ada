@@ -1,29 +1,29 @@
 <template>
-  <q-page padding class="row full-width items-center fixed">
-    <div class="col-12">
-      <div class="row q-my-md" style="min-height: 100px">
-        <div class="col-12 text-center text-h6">
-          {{ current.question.text }}
+    <q-page padding class="row full-width items-center fixed">
+        <div class="col-12">
+            <div class="row q-my-md" style="min-height: 100px">
+                <div class="col-12 text-center text-h6">
+                    {{ current.question.text }}
+                </div>
+            </div>
+            <div class="row justify-center items-center full-height">
+                <div class="col-9 text-center">
+                    <q-img :src="current.question.image"></q-img>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="row justify-center items-center full-height">
-        <div class="col-9 text-center">
-          <q-img :src="current.question.image" ></q-img>
-        </div>
-      </div>
-    </div>
-  </q-page>
+    </q-page>
 </template>
 
 <script>
-import { sync } from 'vuex-pathify'
+import { sync } from 'vuex-pathify';
 
 export default {
-  name: 'InstructionsPage',
-  computed: {
-    current: sync('game/active')
-  }
-}
+    name: 'InstructionsPage',
+    computed: {
+        current: sync('game/active')
+    }
+};
 </script>
 <style lang="sass" scoped>
 .body-text
