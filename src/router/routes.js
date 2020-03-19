@@ -4,6 +4,7 @@ import BannerLayout from 'layouts/BannerLayout';
 
 import MainMenu from 'pages/MainMenu';
 import SetupPage from 'pages/SetupPage';
+import ExportPage from 'pages/ExportPage';
 import BannerPage from 'pages/BannerPage';
 
 const routes = [
@@ -18,6 +19,10 @@ const routes = [
             {
                 path: 'setup',
                 component: SetupPage
+            },
+            {
+                path: 'export',
+                component: ExportPage
             }
         ]
     },

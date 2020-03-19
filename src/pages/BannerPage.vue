@@ -7,9 +7,7 @@
                 </div>
             </div>
             <div class="row q-ma-lg items-center" style="min-height: 80px">
-                <div class="col-12 text-center text-h4">
-                    {{ current.question.text }}
-                </div>
+                <div class="col-12 text-center text-h6">{{ current.question.text }}</div>
             </div>
         </div>
     </q-page>
@@ -30,7 +28,7 @@ export default {
 </script>
 <style lang="sass" scoped>
 .body-text
-  font-size: 16px
-  font-weight: bold
-  position: relative
+    font-size: 16px
+    font-weight: bold
+    position: relative
 </style>

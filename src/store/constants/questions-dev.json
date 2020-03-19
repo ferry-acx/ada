@@ -1,0 +1,186 @@
+[
+    {
+        "stage": 0,
+        "stageName": "Introductions",
+        "theme": "",
+        "questions": [
+            {
+                "template": "instructions",
+                "text": "Welcome to the Amazing Land of Adventures! You’re here because you’re excited to play games, learn something new, and meet other adventure-seekers. Everybody is welcomed! No need to be shy!",
+                "image": "statics/images/mascot/mother-info.png",
+                "audio": "statics/audio/meow.mp3"
+            },
+            {
+                "template": "two-choices",
+                "text": "The gates will be opened to let you experience a brand-new adventure. Are you ready?",
+                "image": "",
+                "choices": [
+                    {
+                        "text": "Yes",
+                        "image": "statics/images/mascot/mother-yes.png"
+                    },
+                    {
+                        "text": "Yes",
+                        "image": "statics/images/mascot/mother-cheer.png"
+                    }
+                ],
+                "answer": null
+            },
+            {
+                "template": "one-input",
+                "text": "Oops! Not so fast, adventurer. Before we begin I'd like to know who you are. What's your name?",
+                "image": "statics/images/mascot/mother-wonder.png",
+                "inputType": "text",
+                "answer": null,
+                "config": "name"
+            },
+            {
+                "template": "banner",
+                "text": "Red Gate Open",
+                "image": "statics/images/red-gate.png"
+            },
+            {
+                "template": "instructions",
+                "text": "Nice to meet you, {name}! My name is ADA. I will be your guide in this amazing world of adventures! For you to earn the ADVENTURER TROPHY, we'll need to collect five badges throughout our adventure. Keep your heart honest and your mind strong.",
+                "image": "statics/images/mascot/mother-happy.png"
+            },
+            {
+                "template": "instructions",
+                "text": "Ready? Oh! What's this? Another gate? Looks like we need to open a few more questions to proceed.",
+                "image": "statics/images/mascot/mother-shock.png"
+            },
+            {
+                "template": "multi-single-imaged",
+                "text": "Are you a…?",
+                "image": "",
+                "config": "gender",
+                "choices": [
+                    {
+                        "text": "Boy",
+                        "value": "boy",
+                        "image": "statics/images/boy.png"
+                    },
+                    {
+                        "text": "Girl",
+                        "value": "girl",
+                        "image": "statics/images/girl.png"
+                    },
+                    {
+                        "text": "Gay",
+                        "value": "gay",
+                        "image": "statics/images/gay.png"
+                    },
+                    {
+                        "text": "Lesbian",
+                        "value": "lesbian",
+                        "image": "statics/images/lesbian.png"
+                    }
+                ],
+                "answer": null
+            },
+            {
+                "template": "one-input",
+                "text": "You look very young. How old are you?",
+                "image": "statics/images/mascot/mother-wonder.png",
+                "inputType": "number",
+                "answer": null
+            },
+            {
+                "template": "instructions",
+                "text": "Tadaa! The gate opened. Let's hurry inside.",
+                "image": "statics/images/red-gate.png"
+            },
+            {
+                "template": "instructions",
+                "text": "The Amazing Land of Adventures has five stages. For each stage, there are questions that will be asked of you. No worries! There are no right or wrong answers, Only honest ones!",
+                "image": "statics/images/mascot/mother-teach.png"
+            },
+            {
+                "template": "instructions",
+                "text": "Before we move to the first stage, let’s get our gears ready first.",
+                "image": "statics/images/mascot/mother-introduce.png"
+            },
+            {
+                "template": "multi-multi-text",
+                "text": "For a little warm-up let's start with something simple. Which of the following describes you?",
+                "image": "",
+                "choices": [
+                    {
+                        "text": "I am a happy person",
+                        "value": "happy",
+                        "image": "statics/images/boy.png"
+                    },
+                    {
+                        "text": "I am always excited to try new things",
+                        "value": "excited",
+                        "image": "statics/images/girl.png"
+                    },
+                    {
+                        "text": "I prefer to be alone",
+                        "value": "alone",
+                        "image": "statics/images/gay.png"
+                    },
+                    {
+                        "text": "I like having friends",
+                        "value": "friends",
+                        "image": "statics/images/lesbian.png"
+                    },
+                    {
+                        "text": "I like myself",
+                        "value": "myself",
+                        "image": "statics/images/transgender.png"
+                    },
+                    {
+                        "text": "I do not like myself",
+                        "value": "noself",
+                        "image": "statics/images/idiot.png"
+                    }
+                ],
+                "answer": null
+            },
+            {
+                "template": "multi-multi-text",
+                "text": "Easy, right? Here's another one for good luck. Choose everything that you like!",
+                "image": "",
+                "choices": [
+                    {
+                        "text": "I like to hang out with friends",
+                        "value": "friends",
+                        "image": ""
+                    },
+                    {
+                        "text": "I like to stay home with my family",
+                        "value": "family",
+                        "image": ""
+                    },
+                    {
+                        "text": "I like to be in school",
+                        "value": "school",
+                        "image": ""
+                    },
+                    {
+                        "text": "I like to go out in the streets",
+                        "value": "streets",
+                        "image": ""
+                    },
+                    {
+                        "text": "I like to play",
+                        "value": "play",
+                        "image": ""
+                    },
+                    {
+                        "text": "I like to read",
+                        "value": "read",
+                        "image": ""
+                    },
+                    {
+                        "text": "I like to listen to music",
+                        "value": "music",
+                        "image": ""
+                    }
+                ],
+                "answer": null
+            }
+        ]
+    }
+]

@@ -14,8 +14,7 @@
                         color="secondary"
                         size="15px"
                         :value="game.progress"
-                    >
-                    </q-linear-progress>
+                    ></q-linear-progress>
                     <q-img
                         :src="progressIconSrc"
                         ref="progressIcon"
@@ -27,7 +26,7 @@
                 </div>
                 <div class="col-2 q-ma-md" @click="playAudio()">
                     <q-btn flat round>
-                        <q-icon name="volume_up" color="secondary" size="md"> </q-icon>
+                        <q-icon name="volume_up" color="secondary" size="md"></q-icon>
                     </q-btn>
                 </div>
             </q-toolbar>
@@ -56,9 +55,7 @@
                         size="lg"
                         @click="submit"
                         :disable="disabledNext"
-                    >
-                        {{ buttonLabel }}
-                    </q-btn>
+                    >{{ buttonLabel }}</q-btn>
                 </div>
             </q-toolbar>
         </q-footer>
@@ -202,15 +199,15 @@ export default {
 </script>
 <style lang="sass" scoped>
 .game-header .game-footer
-  min-height: 100px
+    min-height: 100px
 
 .slide-fade-enter-active
-  transition: all .3s
+    transition: all .3s
 
 .slide-fade-leave-active
-  transition: all .1s cubic-bezier(1.0, 0.5, 0.8, 1.0)
+    transition: all .1s cubic-bezier(1.0, 0.5, 0.8, 1.0)
 
 .slide-fade-enter, .slide-fade-leave-to
-  transform: translateX(-10px)
-  opacity: 0
+    transform: translateX(-10px)
+    opacity: 0
 </style>

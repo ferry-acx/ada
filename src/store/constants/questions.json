@@ -101,7 +101,7 @@
                 "image": "statics/images/mascot/mother-introduce.png"
             },
             {
-                "template": "multi-multi-imaged",
+                "template": "multi-multi-text",
                 "text": "For a little warm-up let's start with something simple. Which of the following describes you?",
                 "image": "",
                 "choices": [
@@ -245,7 +245,7 @@
             },
             {
                 "template": "multi-single-text",
-                "text": "Does you parents live with you at home?",
+                "text": "Does your parents live with you at home?",
                 "image": "",
                 "choices": [
                     {

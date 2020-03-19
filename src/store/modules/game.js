@@ -1,6 +1,7 @@
 import { make } from 'vuex-pathify';
 
-const GAME_FILE = require('../constants/questions.json');
+const GAME_FILE = require('../constants/questions-dev.json');
+// const GAME_FILE = require('../constants/questions.json');
 const GAME_CONTENT = JSON.parse(JSON.stringify(GAME_FILE));
 const state = {
     list: GAME_CONTENT,
@@ -34,17 +35,12 @@ export default {
         },
         nextQuestion({ commit, state, dispatch, rootState }) {
             try {
-                const nextIndex =
-                    state.active.stage.questions.indexOf(
-                        state.active.question
-                    ) + 1;
+                const nextIndex = state.active.stage.questions.indexOf(state.active.question) + 1;
                 if (nextIndex < state.active.stage.questions.length) {
                     let nextQuestion = state.active.stage.questions[nextIndex];
                     let text = nextQuestion.text;
                     if (text && text.includes('{name}')) {
-                        const name = rootState.config.active.name
-                            ? rootState.config.active.name
-                            : '';
+                        const name = rootState.config.active.name ? rootState.config.active.name : '';
                         if (name && name.length > 0) {
                             text = text.replace('{name}', name);
                         }
@@ -55,8 +51,7 @@ export default {
                     const active = {
                         stage: state.active.stage,
                         question: nextQuestion,
-                        progress:
-                            nextIndex / state.active.stage.questions.length,
+                        progress: nextIndex / state.active.stage.questions.length,
                         singleAnswer: null,
                         multiAnswers: []
                     };
@@ -82,7 +77,8 @@ export default {
 
                     commit('SET_ACTIVE', active);
                 } else {
-                    dispatch('resetGame');
+                    // dispatch('resetGame');
+                    this.$router.push('/export');
                 }
             } catch (e) {
                 console.error(e);
@@ -102,9 +98,7 @@ export default {
             try {
                 const { stage, question } = state.active;
                 const stageIndex = state.list.indexOf(stage);
-                const questionIndex = state.list[stageIndex].questions.indexOf(
-                    question
-                );
+                const questionIndex = state.list[stageIndex].questions.indexOf(question);
                 const newList = state.list;
 
                 newList[stageIndex].questions[questionIndex] = question;
