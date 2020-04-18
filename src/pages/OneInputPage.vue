@@ -1,16 +1,10 @@
 <template>
-    <q-page padding class="row full-width items-center fixed">
-        <div class="col-12">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <div class="text-grey-8 text-h6">
-                        {{ current.question.text }}
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-12 text-center">
+    <q-page padding class="one-input-container row items-center">
+        <div class="col-12 justify-center">
+            <h5 class="text-center xs">{{ current.question.text }}</h5>
+            <h2 class="text-center gt-xs">{{ current.question.text }}</h2>
+            <div class="row wrap q-ma-md items-center">
+                <div class="col-12 text-center justify-center">
                     <q-input
                         standout="bg-secondary text-white"
                         rounded
@@ -19,7 +13,7 @@
                         v-model="current.singleAnswer"
                         @input="inputChanged"
                         input-class="text-right"
-                        class="q-ma-md q-my-xl"
+                        class="q-pa-sm"
                     >
                         <template v-slot:prepend>
                             <q-icon name="person" />
@@ -27,10 +21,9 @@
                     </q-input>
                 </div>
             </div>
-
-            <div class="row justify-center items-center">
-                <div class="col-10">
-                    <q-img :src="current.question.image"></q-img>
+            <div class="row wrap q-ma-md items-center full-width">
+                <div class="col-12 justify-center text-center">
+                    <q-img class="image" :src="current.question.image" basic />
                 </div>
             </div>
         </div>
@@ -60,9 +53,29 @@ export default {
     }
 };
 </script>
-<style lang="sass" scoped>
-.body-text
-  font-size: 16px
-  font-weight: bold
-  position: relative
+<style lang="scss" scoped>
+.one-input-container {
+    padding: 30px 30px;
+
+    h5 {
+        margin-top: 5px;
+        font-size: 16px;
+    }
+
+    h2 {
+        margin-top: 5px;
+        font-size: 24px;
+    }
+
+    .image {
+        max-width: 62%;
+        margin: 20px;
+    }
+}
+
+.body-text {
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+}
 </style>

@@ -1,15 +1,20 @@
 <template>
-    <q-page padding class="row full-width full-height items-center justify-center">
+    <q-page
+        padding
+        class="multi-multi-text-container row full-width full-height items-center justify-center"
+    >
         <div class="col-12">
             <div class="row q-ma-lg">
                 <div class="col-12 text-center">
-                    <div class="text-grey-8 text-h6">
-                        {{ current.question.text }}
-                    </div>
+                    <div class="text-grey-8 text-h6">{{ current.question.text }}</div>
                 </div>
             </div>
             <div class="row wrap q-ma-md justify-center items center">
-                <div class="col-12 q-ma-sm" v-for="[index, choice] of current.question.choices.entries()" :key="index">
+                <div
+                    class="col-12 q-ma-sm"
+                    v-for="[index, choice] of current.question.choices.entries()"
+                    :key="index"
+                >
                     <div class="row justify-center full-height full-width text-center">
                         <q-btn
                             class="full-width"
@@ -69,16 +74,30 @@ export default {
     }
 };
 </script>
-<style lang="sass" scoped>
-.body-text
-  font-size: 16px
-  font-weight: bold
-  position: relative
+<style lang="scss" scoped>
+.multi-multi-text-container {
+    padding: 30px 30px;
 
-.button-text
-  position: absolute
-  width: 100%
-  bottom: 0
-  height: 25%
-  background: rgba(0, 0, 0, 0.3)
+    h5 {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+}
+
+.body-text {
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+}
+
+.button-text {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 25%;
+    background: rgba(0, 0, 0, 0.3);
+}
 </style>

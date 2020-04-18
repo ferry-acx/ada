@@ -1,15 +1,10 @@
 <template>
-    <q-page padding class="row full-width items-center fixed">
-        <div class="col-12">
-            <div class="row q-my-md" style="min-height: 100px">
-                <div class="col-12 text-center text-h6">
-                    {{ current.question.text }}
-                </div>
-            </div>
-            <div class="row justify-center items-center full-height">
-                <div class="col-9 text-center">
-                    <q-img :src="current.question.image"></q-img>
-                </div>
+    <q-page class="instructions-container row items-center">
+        <div class="col-12 justify-center">
+            <h5 class="text-center xs">{{ current.question.text }}</h5>
+            <h2 class="text-center gt-xs">{{ current.question.text }}</h2>
+            <div class="row justify-center">
+                <q-img class="image" :src="current.question.image" basic />
             </div>
         </div>
     </q-page>
@@ -22,12 +17,28 @@ export default {
     name: 'InstructionsPage',
     computed: {
         current: sync('game/active')
+    },
+    created() {
+        console.log(this.current.question.image);
     }
 };
 </script>
-<style lang="sass" scoped>
-.body-text
-  font-size: 16px
-  font-weight: bold
-  position: relative
+<style lang="scss" scoped>
+.instructions-container {
+    padding: 30px 30px;
+
+    h5 {
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .image {
+        max-width: 55%;
+        margin: 20px;
+    }
+}
 </style>

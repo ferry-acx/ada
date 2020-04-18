@@ -1,21 +1,20 @@
 <template>
-    <q-page padding class="row full-width fixed items-center">
-        <div class="col">
-            <div class="row items-center" style="min-height: 150px">
-                <div class="col-12 text-center">
-                    <div class="text-grey-8 text-h6">
-                        {{ current.question.text }}
-                    </div>
-                </div>
-            </div>
-            <div class="row wrap q-ma-md items-center items-center" style="min-height: 250px">
-                <div class="col-6" v-for="[index, choice] of current.question.choices.entries()" :key="index">
+    <q-page class="two-choices-container row items-center">
+        <div class="col-12 justify-center">
+            <h5 class="text-center xs">{{ current.question.text }}</h5>
+            <h2 class="text-center gt-xs">{{ current.question.text }}</h2>
+            <div class="row wrap q-ma-md items-center justify-center">
+                <div
+                    class="col-5 choice-container"
+                    v-for="[index, choice] of current.question.choices.entries()"
+                    :key="index"
+                >
                     <div class="row justify-center full-height full-width text-center">
                         <q-btn
                             v-bind:class="[current.singleAnswer === index ? activeClass : inactiveClass]"
                             @click="answerClicked(index)"
                         >
-                            <img :src="choice.image" style="min-height: 120px; width: 110px;" />
+                            <img :src="choice.image" class="image" />
                             <span class="text-subtitle1 text-center">{{ choice.text }}</span>
                         </q-btn>
                     </div>
@@ -61,9 +60,24 @@ export default {
     }
 };
 </script>
-<style lang="sass" scoped>
-.body-text
-  font-size: 16px
-  font-weight: bold
-  position: relative
+<style lang="scss" scoped>
+.two-choices-container {
+    padding: 30px 30px;
+
+    h5 {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .choice-container {
+        margin: 10px auto;
+    }
+
+    .image {
+        max-width: 80%;
+    }
+}
 </style>

@@ -58,22 +58,22 @@
                     {
                         "text": "Boy",
                         "value": "boy",
-                        "image": "statics/images/boy.png"
+                        "image": "statics/images/mascot/mother-cheer.png"
                     },
                     {
                         "text": "Girl",
                         "value": "girl",
-                        "image": "statics/images/girl.png"
+                        "image": "statics/images/mascot/mother-cheer.png"
                     },
                     {
                         "text": "Gay",
                         "value": "gay",
-                        "image": "statics/images/gay.png"
+                        "image": "statics/images/mascot/mother-cheer.png"
                     },
                     {
                         "text": "Lesbian",
                         "value": "lesbian",
-                        "image": "statics/images/lesbian.png"
+                        "image": "statics/images/mascot/mother-cheer.png"
                     }
                 ],
                 "answer": null
@@ -108,7 +108,7 @@
                     {
                         "text": "I am a happy person",
                         "value": "happy",
-                        "image": "statics/images/boy.png"
+                        "image": "statics/images/mascot/mother-cheer.png"
                     },
                     {
                         "text": "I am always excited to try new things",
