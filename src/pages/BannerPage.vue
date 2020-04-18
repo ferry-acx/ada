@@ -3,7 +3,7 @@
         <div class="col-12">
             <div class="row">
                 <div class="col-12">
-                    <q-img :src="current.question.image" basic />
+                    <q-img :src="current.question.image" />
                 </div>
             </div>
             <div class="row q-ma-lg items-center">

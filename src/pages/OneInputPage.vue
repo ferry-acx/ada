@@ -23,7 +23,7 @@
             </div>
             <div class="row wrap q-ma-md items-center full-width">
                 <div class="col-12 justify-center text-center">
-                    <q-img class="image" :src="current.question.image" basic />
+                    <q-img class="image" :src="current.question.image" />
                 </div>
             </div>
         </div>
