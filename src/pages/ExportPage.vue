@@ -36,6 +36,9 @@
                 </q-card-actions>
             </q-card>
         </q-dialog>
+        <q-inner-loading :showing="visible">
+            <q-spinner-gears size="50px" color="primary" />
+        </q-inner-loading>
     </q-page>
 </template>
 
@@ -48,27 +51,52 @@ export default {
     data() {
         return {
             alert: false,
-            alertMessage: ''
+            alertMessage: '',
+            visible: false
         };
     },
     computed: {
-        game: sync('game/list')
+        config: sync('config/active'),
+        answersList: sync('answers/list')
     },
     methods: {
-        ...call('game/*'),
-        ...call('config/*'),
+        resetGame: call('game/resetGame'),
+        resetConfig: call('config/resetConfig'),
+        resetAnswerList: call('answers/resetAnswerList'),
         goHome() {
             this.resetGame();
             this.resetConfig();
+            this.resetAnswerList();
             this.$router.push('/');
         },
         async exportData() {
-            const status = await exportFile('tmp.json', JSON.stringify(this.game));
+            this.showLoading();
+
+            const data = {
+                userInfo: {
+                    userId: this.config.userId,
+                    fname: this.config.fname,
+                    lname: this.config.lname
+                },
+                qanda: this.answersList
+            };
+
+            const status = await exportFile('tmp.json', JSON.stringify(data));
 
             if (!status) {
                 this.alertMessage = status;
                 this.alert = true;
             }
+
+            await this.hideLoading();
+        },
+        showLoading() {
+            this.visible = true;
+        },
+        hideLoading() {
+            setTimeout(() => {
+                this.visible = false;
+            }, 1000);
         }
     }
 };

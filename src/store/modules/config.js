@@ -4,6 +4,8 @@ const state = {
     list: [],
     active: {
         userId: '',
+        fname: '',
+        lname: '',
         gender: '',
         name: ''
     }
@@ -17,13 +19,13 @@ export default {
     actions: {
         ...make.actions(state),
         resetConfig({ commit, state }) {
-            const newActive = {
+            const active = {
                 userId: '',
                 gender: '',
                 name: ''
             };
 
-            commit('SET_ACTIVE', newActive);
+            commit('SET_ACTIVE', active);
         },
         setConfigActive({ commit, state }, active) {
             commit('SET_ACTIVE', active);

@@ -169,9 +169,11 @@ export default {
     methods: {
         ...call('game/*'),
         ...call('config/*'),
+        resetAnswerList: call('answers/resetAnswerList'),
         goHome() {
             this.resetGame();
             this.resetConfig();
+            this.resetAnswerList();
             this.$router.push('/');
         },
         submit() {

@@ -85,16 +85,22 @@ export default {
                 dispatch('resetGame');
             }
         },
-        setAnswer({ commit, state }, answer) {
+        setAnswer({ commit, state, dispatch }, answer) {
             try {
                 const active = state.active;
                 active.question.answer = answer;
                 commit('SET_ACTIVE', active);
+
+                const payload = {
+                    question: active.question.text,
+                    answer: answer.value
+                };
+                dispatch('answers/setQandA', payload, { root: true });
             } catch (e) {
                 console.error(e);
             }
         },
-        storeAnswer({ commit, state }) {
+        storeAnswer({ commit, dispatch, state }) {
             try {
                 const { stage, question } = state.active;
                 const stageIndex = state.list.indexOf(stage);
@@ -104,6 +110,7 @@ export default {
                 newList[stageIndex].questions[questionIndex] = question;
 
                 commit('SET_LIST', newList);
+                dispatch('answers/storeQandA', null, { root: true });
             } catch (e) {
                 console.error(e);
             }

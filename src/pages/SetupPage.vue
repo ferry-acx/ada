@@ -36,6 +36,42 @@
                             </q-input>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-12 item-label">FIRST NAME</div>
+                    </div>
+                    <div class="row full-width">
+                        <div class="col-12">
+                            <q-input
+                                standout="bg-secondary text-white"
+                                dense
+                                type="text"
+                                v-model="fname"
+                                input-class="text-right"
+                            >
+                                <template v-slot:prepend>
+                                    <q-icon name="person" />
+                                </template>
+                            </q-input>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 item-label">LAST NAME</div>
+                    </div>
+                    <div class="row full-width">
+                        <div class="col-12">
+                            <q-input
+                                standout="bg-secondary text-white"
+                                dense
+                                type="text"
+                                v-model="lname"
+                                input-class="text-right"
+                            >
+                                <template v-slot:prepend>
+                                    <q-icon name="person" />
+                                </template>
+                            </q-input>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -63,6 +99,8 @@ export default {
     data() {
         return {
             userId: '',
+            fname: '',
+            lname: '',
             gender: ''
         };
     },
@@ -75,7 +113,9 @@ export default {
         saveConfig() {
             const active = {
                 ...this.config,
-                userId: this.userId
+                userId: this.userId,
+                fname: this.fname,
+                lname: this.lname
             };
 
             this.setActive(active);
