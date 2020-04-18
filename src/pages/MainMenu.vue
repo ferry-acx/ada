@@ -30,7 +30,7 @@
                                 color="secondary"
                                 class="full-width"
                                 style="min-height: 50px"
-                                to="game"
+                                @click="startGame"
                             >
                                 <q-icon left size="2em" name="sports_esports" />
                                 <div>Start</div>
@@ -44,8 +44,25 @@
 </template>
 
 <script>
+import { sync, call } from 'vuex-pathify';
+
 export default {
-    name: 'MainMenuPage'
+    name: 'MainMenuPage',
+    computed: {
+        config: sync('config/active')
+    },
+    methods: {
+        setConfigActive: call('config/setActive'),
+        startGame() {
+            const active = {
+                ...this.config,
+                gender: '',
+                name: ''
+            };
+            this.setConfigActive(active);
+            this.$router.push('game');
+        }
+    }
 };
 </script>
 <style lang="sass" scoped>

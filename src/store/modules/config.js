@@ -3,6 +3,7 @@ import { make } from 'vuex-pathify';
 const state = {
     list: [],
     active: {
+        userId: '',
         gender: '',
         name: ''
     }
@@ -17,6 +18,7 @@ export default {
         ...make.actions(state),
         resetConfig({ commit, state }) {
             const newActive = {
+                userId: '',
                 gender: '',
                 name: ''
             };

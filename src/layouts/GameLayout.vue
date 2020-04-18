@@ -151,6 +151,10 @@ export default {
                 return 'statics/images/running-boy.png';
             } else if (this.config.gender === 'Girl') {
                 return 'statics/images/running-girl.png';
+            } else if (this.config.gender === 'Gay') {
+                return 'statics/images/idiot.png';
+            } else if (this.config.gender === 'Lesbian') {
+                return 'statics/images/idiot.png';
             } else {
                 return '';
             }
