@@ -14,6 +14,9 @@ export default {
     mutations: make.mutations(state),
     actions: {
         ...make.actions(state),
+        resetAnswerList({ commit, state }) {
+            commit('SET_LIST', []);
+        },
         resetAnswers({ commit, state }) {
             const active = {
                 qanda: {}

@@ -208,7 +208,7 @@ export default {
     min-height: 100px
 
 .slide-fade-enter-active
-    transition: all .3s
+    transition: all .5s
 
 .slide-fade-leave-active
     transition: all .1s cubic-bezier(1.0, 0.5, 0.8, 1.0)
