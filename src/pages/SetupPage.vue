@@ -24,7 +24,6 @@
                         <div class="col-12">
                             <q-input
                                 standout="bg-secondary text-white"
-                                autofocus
                                 dense
                                 type="text"
                                 v-model="userId"

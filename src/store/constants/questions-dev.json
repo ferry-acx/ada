@@ -20,8 +20,8 @@
                         "image": "statics/images/mascot/mother-yes.png"
                     },
                     {
-                        "text": "Yes",
-                        "image": "statics/images/mascot/mother-cheer.png"
+                        "text": "No",
+                        "image": "statics/images/mascot/mother-no.png"
                     }
                 ],
                 "answer": null
@@ -180,6 +180,123 @@
                     }
                 ],
                 "answer": null
+            }
+        ]
+    },
+    {
+        "stage": 4,
+        "stageName": "Dream Land",
+        "questions": [
+            {
+                "template": "instructions",
+                "text": "One more badge from stage 5 and you will be officially declared as adventure-seeker and join a community of lifelong learners. Check your gears because this is your final stage.",
+                "image": "statics/images/mascot/mother-angry.png"
+            },
+            {
+                "template": "banner",
+                "text": "Dream Land",
+                "image": "statics/images/dream.png"
+            },
+            {
+                "template": "instructions",
+                "text": "This is stage 5 and it’s called… the Dream District. Here, you’re free to share what do you want to be and how you see yourself in the future.",
+                "image": "statics/images/mascot/mother-introduce.png"
+            },
+            {
+                "template": "two-choices",
+                "text": "I think I have a bright future ahead of me",
+                "image": "",
+                "choices": [
+                    {
+                        "text": "Yes",
+                        "image": "statics/images/mascot/mother-yes.png"
+                    },
+                    {
+                        "text": "No",
+                        "image": "statics/images/mascot/mother-no.png"
+                    }
+                ],
+                "answer": null
+            },
+            {
+                "template": "two-choices",
+                "text": "I want to graduate from college",
+                "image": "",
+                "choices": [
+                    {
+                        "text": "Yes",
+                        "image": "statics/images/mascot/mother-yes.png"
+                    },
+                    {
+                        "text": "No",
+                        "image": "statics/images/mascot/mother-no.png"
+                    }
+                ],
+                "answer": null
+            },
+            {
+                "template": "two-choices",
+                "text": "I want to help my parents in the future",
+                "image": "",
+                "choices": [
+                    {
+                        "text": "Yes",
+                        "image": "statics/images/mascot/mother-yes.png"
+                    },
+                    {
+                        "text": "No",
+                        "image": "statics/images/mascot/mother-no.png"
+                    }
+                ],
+                "answer": null
+            },
+            {
+                "template": "two-choices",
+                "text": "I have nothing to look forward to in the future",
+                "image": "",
+                "choices": [
+                    {
+                        "text": "Yes",
+                        "image": "statics/images/mascot/mother-yes.png"
+                    },
+                    {
+                        "text": "No",
+                        "image": "statics/images/mascot/mother-no.png"
+                    }
+                ],
+                "answer": null
+            },
+            {
+                "template": "one-input",
+                "text": "When I grow up, I want to be a...",
+                "image": "statics/images/work.png",
+                "answer": null
+            },
+            {
+                "template": "instructions",
+                "text": "Congratulations on completing the final stage! Here's you HOPE BADGE, adventurer.",
+                "image": "statics/images/mascot/mother-happy.png"
+            },
+            {
+                "template": "banner",
+                "text": "Finish Line",
+                "image": "statics/images/finish-line.png"
+            }
+        ]
+    },
+    {
+        "stage": 5,
+        "stageName": "Finish Line",
+        "questions": [
+            {
+                "template": "instructions",
+                "text": "I'm so proud of you for making it this far! This ADVENTURER TROPHY is rightfully yours. May you continue to study, learn and enjoy life to the fullest!",
+                "image": "statics/images/mascot/mother-happy.png"
+            },
+            {
+                "template": "banner",
+                "text": "Your love, hard work, honesty, courage, and hope badges were earned because of your commitment. Use them very wisely . Carry your trophy with humility and remember to never stop learning. Go, grow and glow!",
+                "image": "statics/images/mascot/mother-ok.png"
             }
         ]
     }

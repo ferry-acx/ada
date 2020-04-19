@@ -1,9 +1,9 @@
 <template>
     <q-page padding class="banner-container row items-center">
         <div class="col-12">
-            <div class="row">
-                <div class="col-12">
-                    <q-img :src="current.question.image" />
+            <div class="row items-center">
+                <div class="col-12 justify-center text-center">
+                    <q-img class="image" :src="current.question.image" />
                 </div>
             </div>
             <div class="row q-ma-lg items-center">
@@ -31,16 +31,21 @@ export default {
 </script>
 <style lang="scss" scoped>
 .banner-container {
-    padding: 30px 30px;
+    padding: 0px 30px 30px;
 
     h5 {
         // margin-top: 5px;
-        font-size: 28px;
+        font-size: 18px;
     }
 
     h2 {
         // margin-top: 5px;
-        font-size: 40px;
+        font-size: 32px;
+    }
+
+    .image {
+        max-width: 45%;
+        margin: 20px;
     }
 }
 

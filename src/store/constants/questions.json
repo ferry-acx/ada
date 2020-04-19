@@ -20,8 +20,8 @@
                         "image": "statics/images/mascot/mother-yes.png"
                     },
                     {
-                        "text": "Yes",
-                        "image": "statics/images/mascot/mother-cheer.png"
+                        "text": "No",
+                        "image": "statics/images/mascot/mother-no.png"
                     }
                 ],
                 "answer": null

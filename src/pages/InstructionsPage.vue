@@ -25,7 +25,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .instructions-container {
-    padding: 30px 30px;
+    padding: 0px 30px 30px;
 
     h5 {
         margin-top: 10px;

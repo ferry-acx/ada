@@ -8,7 +8,6 @@
                     <q-input
                         standout="bg-secondary text-white"
                         rounded
-                        autofocus
                         :type="current.question.inputType"
                         v-model="current.singleAnswer"
                         @input="inputChanged"
