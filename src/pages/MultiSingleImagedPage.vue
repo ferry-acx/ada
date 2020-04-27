@@ -3,12 +3,7 @@
         <div class="col-12 justify-center">
             <h5 class="text-center xs">{{ current.question.text }}</h5>
             <h2 class="text-center gt-xs">{{ current.question.text }}</h2>
-            <!-- <div class="row items-center" style="min-height: 80px">
-                <div class="col-12 text-center">
-                    <div class="text-grey-8 text-h6">{{ current.question.text }}</div>
-                </div>
-            </div>-->
-            <div class="row wrap q-ma-md items-center justify-center">
+            <div class="choice-row row wrap q-ma-md items-center justify-center">
                 <div
                     class="col-5 choice-container"
                     v-for="[index, choice] of current.question.choices.entries()"
@@ -19,49 +14,22 @@
                             v-bind:class="[current.singleAnswer === index ? activeClass : inactiveClass]"
                             @click="answerClicked(index)"
                         >
-                            <img :src="choice.image" class="image" />
-                            <span class="text-subtitle1 text-center">{{ choice.text }}</span>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="row">
+                                        <img :src="choice.image" class="image" />
+                                    </div>
+                                    <div class="row choice-label">
+                                        <div class="col text-center">
+                                            <span class="text-caption text-center">{{ choice.text }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </q-btn>
                     </div>
                 </div>
             </div>
-            <!-- <div class="row wrap q-ma-md justify-center items center">
-                <div
-                    class="col-5 q-ma-sm"
-                    v-for="[index, choice] of current.question.choices.entries()"
-                    :key="index"
-                >
-                    <div class="row justify-center full-height full-width text-center">
-                        <q-btn
-                            class="full-width"
-                            v-bind:class="[current.singleAnswer === index ? activeClass : inactiveClass]"
-                            @click="answerClicked(index)"
-                        >
-                            <template>
-                                <div class="row full-width">
-                                    <div class="col">
-                                        <div class="row justify-center">
-                                            <div class="col-12">
-                                                <img
-                                                    :src="choice.image"
-                                                    style="height: 100px; width: 100px;"
-                                                />
-                                            </div>
-                                        </div>
-                                        <div class="row full-width">
-                                            <div class="col-12">
-                                                <span
-                                                    class="text-caption text-center"
-                                                >{{ choice.text }}</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </template>
-                        </q-btn>
-                    </div>
-                </div>
-            </div>-->
         </div>
     </q-page>
 </template>
@@ -114,10 +82,21 @@ export default {
 
     .choice-container {
         margin: 10px auto;
-    }
 
-    .image {
-        max-width: 80%;
+        .choice-label {
+            min-height: 40px;
+            margin: 5px 0px;
+            align-items: center;
+
+            .text-caption {
+                font-size: 0.8em;
+            }
+        }
+
+        .image {
+            max-width: 100px;
+            max-height: 100px;
+        }
     }
 }
 

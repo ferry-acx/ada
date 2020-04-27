@@ -86,7 +86,7 @@
                 "answer": null
             },
             {
-                "template": "instructions",
+                "template": "banner",
                 "text": "Tadaa! The gate opened. Let's hurry inside.",
                 "image": "statics/images/red-gate.png"
             },
@@ -324,15 +324,10 @@
                 "answer": null
             },
             {
-                "template": "multi-multi-imaged",
+                "template": "one-input",
                 "text": "If you have fights, what kind?",
-                "image": "",
-                "choices": [
-                    {
-                        "text": "What?",
-                        "image": "statics/images/idiot.png"
-                    }
-                ],
+                "image": "statics/images/mascot/mother-wonder.png",
+                "inputType": "text",
                 "answer": null
             },
             {
@@ -443,23 +438,23 @@
                 "choices": [
                     {
                         "text": "We don't have money",
-                        "image": "statics/images/money.png"
+                        "image": "statics/images/mascot/mother-investigate.png"
                     },
                     {
                         "text": "I wanted to stop",
                         "image": "statics/images/mascot/mother-cheer.png"
                     },
                     {
-                        "text": "There are bullies in school",
-                        "image": "statics/images/bully.png"
+                        "text": "There are bullies",
+                        "image": "statics/images/mascot/mother-tired.png"
                     },
                     {
                         "text": "I have to work",
-                        "image": "statics/images/work.png"
+                        "image": "statics/images/mascot/mother-teach.png"
                     },
                     {
                         "text": "School is boring",
-                        "image": "statics/images/idiot.png"
+                        "image": "statics/images/mascot/mother-no.png"
                     }
                 ],
                 "answer": null

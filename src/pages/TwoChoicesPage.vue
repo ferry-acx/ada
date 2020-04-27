@@ -15,7 +15,7 @@
                             @click="answerClicked(index)"
                         >
                             <img :src="choice.image" class="image" />
-                            <span class="text-subtitle1 text-center">{{ choice.text }}</span>
+                            <span class="choice-label text-caption text-center">{{ choice.text }}</span>
                         </q-btn>
                     </div>
                 </div>
@@ -74,10 +74,17 @@ export default {
 
     .choice-container {
         margin: 10px auto;
-    }
 
-    .image {
-        max-width: 80%;
+        .choice-label {
+            font-size: 1em;
+            // min-height: 20px;
+            margin: 10px 0px 5px 0px;
+        }
+
+        .image {
+            max-width: 110px;
+            max-height: 110px;
+        }
     }
 }
 </style>
