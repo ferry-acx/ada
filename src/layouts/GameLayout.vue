@@ -166,6 +166,11 @@ export default {
         this.progressIconEl = this.$refs.progressIcon.$el;
         this.top = this.progressEl.offsetTop;
     },
+    beforeDestroy() {
+        if (this.audio) {
+            this.audio.pause();
+        }
+    },
     methods: {
         ...call('game/*'),
         ...call('config/*'),
@@ -196,6 +201,7 @@ export default {
         },
         playAudio() {
             if (this.game.question.audio) {
+                if (this.audio) this.audio.pause();
                 this.audio = new Audio(this.game.question.audio);
                 this.audio.play();
             }

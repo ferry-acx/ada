@@ -1,6 +1,6 @@
 import { make } from 'vuex-pathify';
 
-const GAME_FILE = require('../constants/questions-dev.json');
+const GAME_FILE = require('../constants/questions.json');
 // const GAME_FILE = require('../constants/questions.json');
 const GAME_CONTENT = JSON.parse(JSON.stringify(GAME_FILE));
 const state = {
@@ -92,6 +92,7 @@ export default {
                 commit('SET_ACTIVE', active);
 
                 const payload = {
+                    questionId: active.question.id,
                     question: active.question.text,
                     answer: answer.value
                 };
