@@ -1,5 +1,5 @@
 <template>
-    <q-page class="multi-single-imaged-container row items-center">
+    <q-page class="theme-multi-single-imaged multi-single-imaged-container row items-center">
         <div class="col-12 justify-center">
             <h5 class="text-center xs">{{ current.question.text }}</h5>
             <h2 class="text-center gt-xs">{{ current.question.text }}</h2>
@@ -11,7 +11,7 @@
                 >
                     <div class="row justify-center full-height full-width text-center">
                         <q-btn
-                            v-bind:class="[current.singleAnswer === index ? activeClass : inactiveClass]"
+                            v-bind:class="[current.singleAnswer === index ? 'active-choice' : 'inactive-choice']"
                             @click="answerClicked(index)"
                         >
                             <div class="row">
@@ -43,10 +43,7 @@ export default {
         current: sync('game/active')
     },
     data() {
-        return {
-            activeClass: 'bg-secondary text-white',
-            inactiveClass: 'bg-white text-secondary'
-        };
+        return {};
     },
     methods: {
         ...call('game/*'),
@@ -69,6 +66,13 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+@import '../css/themes/primary.scss';
+@import '../css/themes/family-town.scss';
+@import '../css/themes/school-point.scss';
+@import '../css/themes/internet-village.scss';
+@import '../css/themes/sad-zone.scss';
+@import '../css/themes/dream-district.scss';
+
 .multi-single-imaged-container {
     padding: 30px 30px;
 
@@ -98,19 +102,5 @@ export default {
             max-height: 100px;
         }
     }
-}
-
-.body-text {
-    font-size: 16px;
-    font-weight: bold;
-    position: relative;
-}
-
-.button-text {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    height: 25%;
-    background: rgba(0, 0, 0, 0.3);
 }
 </style>

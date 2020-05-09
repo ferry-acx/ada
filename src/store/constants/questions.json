@@ -2,7 +2,7 @@
     {
         "stage": 0,
         "stageName": "Introductions",
-        "theme": "",
+        "theme": "theme-primary",
         "questions": [
             {
                 "id": "S0Q001",
@@ -200,7 +200,7 @@
     {
         "stage": 1,
         "stageName": "Family Town",
-        "theme": "family-town",
+        "theme": "theme-family-town",
         "questions": [
             {
                 "id": "S1Q001",
@@ -427,7 +427,7 @@
     {
         "stage": 2,
         "stageName": "School Town",
-        "theme": "",
+        "theme": "theme-school-point",
         "questions": [
             {
                 "id": "S2Q001",
@@ -630,7 +630,7 @@
     {
         "stage": 3,
         "stageName": "Internet Village",
-        "theme": "",
+        "theme": "theme-internet-village",
         "questions": [
             {
                 "id": "S3Q001",
@@ -830,7 +830,7 @@
     {
         "stage": 4,
         "stageName": "Sad Zone",
-        "theme": "",
+        "theme": "theme-sad-zone",
         "questions": [
             {
                 "id": "S4Q001",
@@ -1092,6 +1092,7 @@
     {
         "stage": 5,
         "stageName": "Dream Land",
+        "theme": "theme-dream-district",
         "questions": [
             {
                 "id": "S5Q001",
@@ -1203,6 +1204,7 @@
     {
         "stage": 6,
         "stageName": "Finish Line",
+        "theme": "primary",
         "questions": [
             {
                 "id": "S6Q001",

@@ -1,18 +1,18 @@
 <template>
-    <q-page padding class="one-input-container row items-center">
+    <q-page padding class="theme-one-input one-input-container row items-center">
         <div class="col-12 justify-center">
             <h5 class="text-center xs">{{ current.question.text }}</h5>
             <h2 class="text-center gt-xs">{{ current.question.text }}</h2>
             <div class="row wrap q-ma-md items-center">
                 <div class="col-12 text-center justify-center">
                     <q-input
-                        standout="bg-secondary text-white"
+                        standout
                         rounded
                         :type="current.question.inputType"
                         v-model="current.singleAnswer"
                         @input="inputChanged"
                         input-class="text-right"
-                        class="q-pa-sm"
+                        class="input-field q-pa-sm"
                     >
                         <template v-slot:prepend>
                             <q-icon name="person" />
@@ -52,7 +52,14 @@ export default {
     }
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
+@import '../css/themes/primary.scss';
+@import '../css/themes/family-town.scss';
+@import '../css/themes/school-point.scss';
+@import '../css/themes/internet-village.scss';
+@import '../css/themes/sad-zone.scss';
+@import '../css/themes/dream-district.scss';
+
 .one-input-container {
     padding: 30px 30px;
 

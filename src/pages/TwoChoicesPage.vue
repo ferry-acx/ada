@@ -1,5 +1,5 @@
 <template>
-    <q-page class="two-choices-container row items-center">
+    <q-page class="theme-two-choices two-choices-container row items-center">
         <div class="col-12 justify-center">
             <h5 class="text-center xs">{{ current.question.text }}</h5>
             <h2 class="text-center gt-xs">{{ current.question.text }}</h2>
@@ -11,7 +11,7 @@
                 >
                     <div class="row justify-center full-height full-width text-center">
                         <q-btn
-                            v-bind:class="[current.singleAnswer === index ? activeClass : inactiveClass]"
+                            v-bind:class="[current.singleAnswer === index ? 'active-choice' : 'inactive-choice']"
                             @click="answerClicked(index)"
                         >
                             <img :src="choice.image" class="image" />
@@ -33,11 +33,7 @@ export default {
         current: sync('game/active')
     },
     data() {
-        return {
-            // active: null,
-            activeClass: 'bg-secondary text-white',
-            inactiveClass: 'bg-white text-secondary'
-        };
+        return {};
     },
     created() {},
     methods: {
@@ -61,6 +57,13 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+@import '../css/themes/primary.scss';
+@import '../css/themes/family-town.scss';
+@import '../css/themes/school-point.scss';
+@import '../css/themes/internet-village.scss';
+@import '../css/themes/sad-zone.scss';
+@import '../css/themes/dream-district.scss';
+
 .two-choices-container {
     padding: 30px 30px;
 

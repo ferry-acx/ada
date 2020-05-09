@@ -1,5 +1,5 @@
 <template>
-    <q-page padding class="banner-container row items-center">
+    <q-page padding class="theme-banner banner-container row items-center">
         <div class="col-12">
             <div class="row items-center">
                 <div class="col-12 justify-center text-center">
@@ -30,6 +30,13 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+@import '../css/themes/primary.scss';
+@import '../css/themes/family-town.scss';
+@import '../css/themes/school-point.scss';
+@import '../css/themes/internet-village.scss';
+@import '../css/themes/sad-zone.scss';
+@import '../css/themes/dream-district.scss';
+
 .banner-container {
     padding: 0px 30px 30px;
 

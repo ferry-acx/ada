@@ -1,17 +1,16 @@
 <template>
-    <q-layout view="hHh lpR fFf" no-scroll>
-        <q-header class="bg-white text-white">
-            <q-toolbar class="row justify-between items-center">
+    <q-layout view="hHh lpR fFf" no-scroll :class="getTheme()">
+        <q-header class="theme-header">
+            <q-toolbar class="home-container row justify-between items-center">
                 <div class="col-2 q-my-md">
-                    <q-btn dense round flat icon="home" size="lg" color="grey-8" @click="goHome"></q-btn>
+                    <q-btn dense round flat icon="home" size="lg" class="home-icon" @click="goHome"></q-btn>
                 </div>
-                <div class="col-8 q-my-md">
+                <div class="progress-container col-8 q-my-md">
                     <q-linear-progress
                         ref="linearProgress"
                         stripe
                         rounded
-                        class="q-ma-none"
-                        color="secondary"
+                        class="progress-bar q-ma-none"
                         size="15px"
                         :value="game.progress"
                     ></q-linear-progress>
@@ -19,14 +18,13 @@
                         :src="progressIconSrc"
                         ref="progressIcon"
                         name="mood"
-                        color="secondary"
                         style="width: 50px; height: 50px;"
                         v-bind:style="iconClassObject"
                     />
                 </div>
-                <div class="col-2 q-ma-md" @click="playAudio()">
+                <div class="sound-container col-2 q-ma-md" @click="playAudio()">
                     <q-btn flat round>
-                        <q-icon name="volume_up" color="secondary" size="md"></q-icon>
+                        <q-icon name="volume_up" class="sound-icon" size="md"></q-icon>
                     </q-btn>
                 </div>
             </q-toolbar>
@@ -45,17 +43,22 @@
             </transition>
         </q-page-container>
 
-        <q-footer class="bg-white text-white">
+        <q-footer class="theme-footer">
             <q-toolbar class="row justify-center full-width text-center">
                 <div class="col-12 q-ma-sm q-mb-lg q-px-sm">
                     <q-btn
+                        v-if="disabledNext"
                         push
                         class="full-width"
-                        :color="disabledNext ? 'grey' : 'secondary'"
+                        color="grey"
                         size="lg"
                         @click="submit"
                         :disable="disabledNext"
-                    >{{ buttonLabel }}</q-btn>
+                        >{{ buttonLabel }}</q-btn
+                    >
+                    <q-btn v-else push class="next-button full-width" size="lg" @click="submit">{{
+                        buttonLabel
+                    }}</q-btn>
                 </div>
             </q-toolbar>
         </q-footer>
@@ -160,7 +163,6 @@ export default {
             }
         }
     },
-    created() {},
     mounted() {
         this.progressEl = this.$refs.linearProgress.$el;
         this.progressIconEl = this.$refs.progressIcon.$el;
@@ -175,6 +177,22 @@ export default {
         ...call('game/*'),
         ...call('config/*'),
         resetAnswerList: call('answers/resetAnswerList'),
+        getTheme() {
+            console.log(this.game.stage.theme);
+            if (this.game.stage.theme === 'theme-family-town') {
+                return 'theme-family-town';
+            } else if (this.game.stage.theme === 'theme-school-point') {
+                return 'theme-school-point';
+            } else if (this.game.stage.theme === 'theme-internet-village') {
+                return 'theme-internet-village';
+            } else if (this.game.stage.theme === 'theme-sad-zone') {
+                return 'theme-sad-zone';
+            } else if (this.game.stage.theme === 'theme-dream-district') {
+                return 'theme-dream-district';
+            } else {
+                return 'theme-primary';
+            }
+        },
         goHome() {
             this.resetGame();
             this.resetConfig();
@@ -209,17 +227,25 @@ export default {
     }
 };
 </script>
-<style lang="sass" scoped>
-.game-header .game-footer
-    min-height: 100px
+<style lang="scss" scoped>
+@import '../css/themes/primary.scss';
+@import '../css/themes/family-town.scss';
+@import '../css/themes/school-point.scss';
+@import '../css/themes/internet-village.scss';
+@import '../css/themes/sad-zone.scss';
+@import '../css/themes/dream-district.scss';
 
-.slide-fade-enter-active
-    transition: all .5s
+.slide-fade-enter-active {
+    transition: all 0.5s;
+}
 
-.slide-fade-leave-active
-    transition: all .1s cubic-bezier(1.0, 0.5, 0.8, 1.0)
+.slide-fade-leave-active {
+    transition: all 0.1s cubic-bezier(1, 0.5, 0.8, 1);
+}
 
-.slide-fade-enter, .slide-fade-leave-to
-    transform: translateX(-10px)
-    opacity: 0
+.slide-fade-enter,
+.slide-fade-leave-to {
+    transform: translateX(-10px);
+    opacity: 0;
+}
 </style>

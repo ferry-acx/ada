@@ -1,5 +1,5 @@
 <template>
-    <q-page class="instructions-container row items-center">
+    <q-page class="theme-instruction instructions-container row items-center">
         <div class="col-12 justify-center">
             <h5 class="text-center xs">{{ current.question.text }}</h5>
             <h2 class="text-center gt-xs">{{ current.question.text }}</h2>
@@ -24,6 +24,13 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+@import '../css/themes/primary.scss';
+@import '../css/themes/family-town.scss';
+@import '../css/themes/school-point.scss';
+@import '../css/themes/internet-village.scss';
+@import '../css/themes/sad-zone.scss';
+@import '../css/themes/dream-district.scss';
+
 .instructions-container {
     padding: 0px 30px 30px;
 
