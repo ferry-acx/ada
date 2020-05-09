@@ -36,7 +36,6 @@ export default {
             const list = state.list;
 
             if (qanda.question && qanda.answer) {
-                console.log('qanda:', qanda);
                 list.push(qanda);
                 commit('SET_LIST', list);
                 dispatch('answers/resetAnswers', null, { root: true });

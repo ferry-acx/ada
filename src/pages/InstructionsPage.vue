@@ -18,9 +18,7 @@ export default {
     computed: {
         current: sync('game/active')
     },
-    created() {
-        console.log(this.current.question.image);
-    }
+    created() {}
 };
 </script>
 <style lang="scss" scoped>

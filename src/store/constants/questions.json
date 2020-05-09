@@ -36,7 +36,7 @@
                 "text": "Oops! Not so fast, adventurer. Before we begin I'd like to know who you are. What's your name?",
                 "image": "statics/images/mascot/mother-wonder.png",
                 "audio": [
-                    "statics/audio/questions/S0Q003"
+                    "statics/audio/questions/S0Q003.mp3"
                 ],
                 "inputType": "text",
                 "answer": null,

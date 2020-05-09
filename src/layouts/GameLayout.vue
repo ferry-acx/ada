@@ -54,11 +54,12 @@
                         size="lg"
                         @click="submit"
                         :disable="disabledNext"
-                        >{{ buttonLabel }}</q-btn
-                    >
-                    <q-btn v-else push class="next-button full-width" size="lg" @click="submit">{{
+                    >{{ buttonLabel }}</q-btn>
+                    <q-btn v-else push class="next-button full-width" size="lg" @click="submit">
+                        {{
                         buttonLabel
-                    }}</q-btn>
+                        }}
+                    </q-btn>
                 </div>
             </q-toolbar>
         </q-footer>
@@ -167,6 +168,8 @@ export default {
         this.progressEl = this.$refs.linearProgress.$el;
         this.progressIconEl = this.$refs.progressIcon.$el;
         this.top = this.progressEl.offsetTop;
+
+        this.playAudio();
     },
     beforeDestroy() {
         if (this.audio) {
@@ -178,7 +181,6 @@ export default {
         ...call('config/*'),
         resetAnswerList: call('answers/resetAnswerList'),
         getTheme() {
-            console.log(this.game.stage.theme);
             if (this.game.stage.theme === 'theme-family-town') {
                 return 'theme-family-town';
             } else if (this.game.stage.theme === 'theme-school-point') {
@@ -207,6 +209,7 @@ export default {
             this.storeAnswer();
             this.checkConfig();
             this.nextQuestion();
+            this.playAudio();
         },
         checkConfig() {
             if (this.game.question.config) {
