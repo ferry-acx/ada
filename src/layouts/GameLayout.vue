@@ -220,7 +220,21 @@ export default {
         playAudio() {
             if (this.game.question.audio) {
                 if (this.audio) this.audio.pause();
-                this.audio = new Audio(this.game.question.audio);
+                const playlist = this.game.question.audio;
+                let i = 0;
+
+                this.audio = new Audio();
+
+                this.audio.addEventListener('ended', () => {
+                    i = ++i < playlist.length ? i : -1;
+                    if (i >= 0) {
+                        this.audio.src = playlist[i];
+                        this.audio.play();
+                    }
+                });
+
+                this.audio.loop = false;
+                this.audio.src = playlist[i];
                 this.audio.play();
             }
         }

@@ -9,7 +9,9 @@
                 "template": "instructions",
                 "text": "Welcome to the Amazing Land of Adventures! You’re here because you’re excited to play games, learn something new, and meet other adventure-seekers. Everybody is welcomed! No need to be shy!",
                 "image": "statics/images/mascot/mother-info.png",
-                "audio": "statics/audio/questions/S0Q001.mp3"
+                "audio": [
+                    "statics/audio/questions/S0Q001.mp3"
+                ]
             },
             {
                 "id": "S0Q002",
@@ -33,6 +35,9 @@
                 "template": "one-input",
                 "text": "Oops! Not so fast, adventurer. Before we begin I'd like to know who you are. What's your name?",
                 "image": "statics/images/mascot/mother-wonder.png",
+                "audio": [
+                    "statics/audio/questions/S0Q003"
+                ],
                 "inputType": "text",
                 "answer": null,
                 "config": "name"
@@ -48,19 +53,27 @@
                 "template": "instructions",
                 "text": "Nice to meet you, {name}! My name is ADA. I will be your guide in this amazing world of adventures! For you to earn the ADVENTURER TROPHY, we'll need to collect five badges throughout our adventure. Keep your heart honest and your mind strong.",
                 "image": "statics/images/mascot/mother-happy.png",
-                "audio": "statics/audio/questions/S0Q005.mp3"
+                "audio": [
+                    "statics/audio/questions/S0Q005.mp3"
+                ]
             },
             {
                 "id": "S0Q006",
                 "template": "instructions",
                 "text": "Ready? Oh! What's this? Another gate? Looks like we need to open a few more questions to proceed.",
-                "image": "statics/images/mascot/mother-shock.png"
+                "image": "statics/images/mascot/mother-shock.png",
+                "audio": [
+                    "statics/audio/questions/S0Q006.mp3"
+                ]
             },
             {
                 "id": "S0Q007",
                 "template": "multi-single-imaged",
-                "text": "Are you a…?",
+                "text": "Can you tell me your gender?",
                 "image": "",
+                "audio": [
+                    "statics/audio/questions/S0Q007.mp3"
+                ],
                 "config": "gender",
                 "choices": [
                     {
@@ -91,6 +104,9 @@
                 "template": "one-input",
                 "text": "You look very young. How old are you?",
                 "image": "statics/images/mascot/mother-wonder.png",
+                "audio": [
+                    "statics/audio/questions/S0Q008.mp3"
+                ],
                 "inputType": "number",
                 "answer": null
             },
@@ -98,25 +114,37 @@
                 "id": "S0Q009",
                 "template": "banner",
                 "text": "Tadaa! The gate opened. Let's hurry inside.",
-                "image": "statics/images/red-gate.png"
+                "image": "statics/images/red-gate.png",
+                "audio": [
+                    "statics/audio/questions/S0Q009.mp3"
+                ]
             },
             {
                 "id": "S0Q010",
                 "template": "instructions",
                 "text": "The Amazing Land of Adventures has five stages. For each stage, there are questions that will be asked of you. No worries! There are no right or wrong answers, Only honest ones!",
-                "image": "statics/images/mascot/mother-teach.png"
+                "image": "statics/images/mascot/mother-teach.png",
+                "audio": [
+                    "statics/audio/questions/S0Q010.mp3"
+                ]
             },
             {
                 "id": "S0Q011",
                 "template": "instructions",
                 "text": "Before we move to the first stage, let’s get our gears ready first.",
-                "image": "statics/images/mascot/mother-introduce.png"
+                "image": "statics/images/mascot/mother-introduce.png",
+                "audio": [
+                    "statics/audio/questions/S0Q011.mp3"
+                ]
             },
             {
                 "id": "S0Q012",
                 "template": "multi-multi-text",
                 "text": "For a little warm-up let's start with something simple. Which of the following describes you?",
                 "image": "",
+                "audio": [
+                    "statics/audio/questions/S0Q012.mp3"
+                ],
                 "choices": [
                     {
                         "text": "I am a happy person",
@@ -155,6 +183,9 @@
                 "id": "S0Q013",
                 "template": "multi-multi-text",
                 "text": "Easy, right? Here's another one for good luck. Choose everything that you like!",
+                "audio": [
+                    "statics/audio/questions/S0Q013.mp3"
+                ],
                 "image": "",
                 "choices": [
                     {
@@ -206,7 +237,10 @@
                 "id": "S1Q001",
                 "template": "instructions",
                 "text": "You're all set. Let's now head to the first stage, FAMILY TOWN!",
-                "image": "statics/images/mascot/mother-cheer.png"
+                "image": "statics/images/mascot/mother-cheer.png",
+                "audio": [
+                    "statics/audio/questions/S1Q001.mp3"
+                ]
             },
             {
                 "id": "S1Q002",
