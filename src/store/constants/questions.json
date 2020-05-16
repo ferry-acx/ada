@@ -18,6 +18,10 @@
                 "template": "two-choices",
                 "text": "The gates will be opened to let you experience a brand-new adventure. Are you ready?",
                 "image": "",
+                "audio": [
+                    "statics/audio/answers/yes.mp3",
+                    "statics/audio/answers/no.mp3"
+                ],
                 "choices": [
                     {
                         "text": "Yes",
@@ -252,13 +256,21 @@
                 "id": "S1Q003",
                 "template": "instructions",
                 "text": "Completing the questions in this stage will earn you the LOVE BADGE!.",
-                "image": "statics/images/mascot/mother-info.png"
+                "image": "statics/images/mascot/mother-info.png",
+                "audio": [
+                    "statics/audio/questions/S1Q003.mp3"
+                ]
             },
             {
                 "id": "S1Q004",
                 "template": "two-choices",
                 "text": "They say home is where the heart is. Do you live at home with your family?",
                 "image": "",
+                "audio": [
+                    "statics/audio/questions/S1Q004.mp3",
+                    "statics/audio/answers/yes.mp3",
+                    "statics/audio/answers/no.mp3"
+                ],
                 "choices": [
                     {
                         "text": "Yes",
@@ -276,6 +288,10 @@
                 "template": "multi-single-text",
                 "text": "If you’re not with your family, where do you live?",
                 "image": "",
+                "audio": [
+                    "statics/audio/questions/S1Q005.mp3",
+                    "statics/audio/answers/S1Q005.mp3"
+                ],
                 "choices": [
                     {
                         "text": "With my grandparents",
@@ -301,6 +317,10 @@
                 "template": "multi-single-text",
                 "text": "Does your parents live with you at home?",
                 "image": "",
+                "audio": [
+                    "statics/audio/questions/S1Q006.mp3",
+                    "statics/audio/answers/S1Q006.mp3"
+                ],
                 "choices": [
                     {
                         "text": "Both parents live with me",
@@ -322,6 +342,9 @@
                 "template": "multi-single-text",
                 "text": "Let’s play a quick numbers game. How many siblings do you have?",
                 "image": "",
+                "audio": [
+                    "statics/audio/questions/S1Q007.mp3"
+                ],
                 "choices": [
                     {
                         "text": "None!",
@@ -351,6 +374,11 @@
                 "template": "two-choices",
                 "text": "Do you get along with your siblings?",
                 "image": "",
+                "audio": [
+                    "statics/audio/questions/S1Q008.mp3",
+                    "statics/audio/answers/yes.mp3",
+                    "statics/audio/answers/no.mp3"
+                ],
                 "choices": [
                     {
                         "text": "Yes",
@@ -368,6 +396,11 @@
                 "template": "two-choices",
                 "text": "Do you have quarrels or arguments",
                 "image": "",
+                "audio": [
+                    "statics/audio/questions/S1Q009.mp3",
+                    "statics/audio/answers/yes.mp3",
+                    "statics/audio/answers/no.mp3"
+                ],
                 "choices": [
                     {
                         "text": "Yes",
@@ -385,6 +418,9 @@
                 "template": "one-input",
                 "text": "If you have fights, what kind?",
                 "image": "statics/images/mascot/mother-wonder.png",
+                "audio": [
+                    "statics/audio/questions/S1Q010.mp3"
+                ],
                 "inputType": "text",
                 "answer": null
             },
@@ -393,6 +429,10 @@
                 "template": "multi-multi-text",
                 "text": "Honesty is the best policy so we ask you to click on the answers that best applies to you, okay?",
                 "image": "",
+                "audio": [
+                    "statics/audio/questions/S1Q011.mp3",
+                    "statics/audio/answers/S1Q011.mp3"
+                ],
                 "choices": [
                     {
                         "text": "My parents care for me",
@@ -449,12 +489,19 @@
                 "id": "S1Q012",
                 "template": "banner",
                 "text": "Congratulations! You just earned the LOVE BADGE!",
-                "image": "statics/images/love.png"
+                "image": "statics/images/love.png",
+                "audio": [
+                    "statics/audio/questions/S1Q012.mp3"
+                ]
             },
             {
+                "id": "S1Q013",
                 "template": "one-input",
-                "text": "Can you guess where the next stage is? It' sa place where you learn how to read and write. Type in your answer!",
-                "image": "statics/images/mascot/mother-wonder.png"
+                "text": "Can you guess where the next stage is? It' sa place where you learn how to read and write.",
+                "image": "statics/images/mascot/mother-wonder.png",
+                "audio": [
+                    "statics/audio/questions/S1Q013.mp3"
+                ]
             }
         ]
     },
@@ -467,13 +514,21 @@
                 "id": "S2Q001",
                 "template": "banner",
                 "text": "Correct! It's at school. The second stage of adventure takes place in... SCHOOL POINT!",
-                "image": "statics/images/school.png"
+                "image": "statics/images/school.png",
+                "audio": [
+                    "statics/audio/questions/S2Q001.mp3"
+                ]
             },
             {
                 "id": "S2Q002",
                 "template": "two-choices",
                 "text": "Do you go to school?",
                 "image": "",
+                "audio": [
+                    "statics/audio/questions/S2Q002.mp3",
+                    "statics/audio/answers/yes.mp3",
+                    "statics/audio/answers/no.mp3"
+                ],
                 "choices": [
                     {
                         "text": "Yes",
@@ -491,6 +546,9 @@
                 "template": "one-input",
                 "text": "Yes? Which school do you go to?",
                 "image": "statics/images/mascot/mother-wonder.png",
+                "audio": [
+                    "statics/audio/questions/S2Q003.mp3"
+                ],
                 "inputType": "text",
                 "answer": null
             },
@@ -528,6 +586,10 @@
                 "template": "two-choices",
                 "text": "Do you like going to school?",
                 "image": "",
+                "audio": [
+                    "statics/audio/answers/yes.mp3",
+                    "statics/audio/answers/no.mp3"
+                ],
                 "choices": [
                     {
                         "text": "Yes",
@@ -597,6 +659,10 @@
                 "template": "two-choices",
                 "text": "Friends are people who make you smile brighter, laugh louder, and live better. Do you have friends like these in school?",
                 "image": "",
+                "audio": [
+                    "statics/audio/answers/yes.mp3",
+                    "statics/audio/answers/no.mp3"
+                ],
                 "choices": [
                     {
                         "text": "Yes",
@@ -708,6 +774,10 @@
                 "template": "two-choices",
                 "text": "Do you like to surf the internet?",
                 "image": "",
+                "audio": [
+                    "statics/audio/answers/yes.mp3",
+                    "statics/audio/answers/no.mp3"
+                ],
                 "choices": [
                     {
                         "text": "Yes",
@@ -773,6 +843,10 @@
                 "template": "two-choices",
                 "text": "Have you been sent lewd photographs by strangers through the internet?",
                 "image": "",
+                "audio": [
+                    "statics/audio/answers/yes.mp3",
+                    "statics/audio/answers/no.mp3"
+                ],
                 "choices": [
                     {
                         "text": "Yes",
@@ -790,6 +864,10 @@
                 "template": "two-choices",
                 "text": "Have you been asked by a stranger to give your nude photo?",
                 "image": "",
+                "audio": [
+                    "statics/audio/answers/yes.mp3",
+                    "statics/audio/answers/no.mp3"
+                ],
                 "choices": [
                     {
                         "text": "Yes",
@@ -807,6 +885,10 @@
                 "template": "two-choices",
                 "text": "Have someone sent you videos of them performing sexual acts?",
                 "image": "",
+                "audio": [
+                    "statics/audio/answers/yes.mp3",
+                    "statics/audio/answers/no.mp3"
+                ],
                 "choices": [
                     {
                         "text": "Yes",
@@ -824,6 +906,10 @@
                 "template": "two-choices",
                 "text": "Have you accessed pornographic sites?",
                 "image": "",
+                "audio": [
+                    "statics/audio/answers/yes.mp3",
+                    "statics/audio/answers/no.mp3"
+                ],
                 "choices": [
                     {
                         "text": "Yes",
@@ -841,6 +927,10 @@
                 "template": "two-choices",
                 "text": "Has someone offered you money in exchange for sexual acts online?",
                 "image": "",
+                "audio": [
+                    "statics/audio/answers/yes.mp3",
+                    "statics/audio/answers/no.mp3"
+                ],
                 "choices": [
                     {
                         "text": "Yes",
@@ -889,6 +979,10 @@
                 "template": "two-choices",
                 "text": "At the end of this stage, you’ll get a courage badge. So, are you ready to be brave?",
                 "image": "",
+                "audio": [
+                    "statics/audio/answers/yes.mp3",
+                    "statics/audio/answers/no.mp3"
+                ],
                 "choices": [
                     {
                         "text": "Yes",
@@ -906,6 +1000,10 @@
                 "template": "two-choices",
                 "text": "Have your parents or guardians hit you physically?",
                 "image": "",
+                "audio": [
+                    "statics/audio/answers/yes.mp3",
+                    "statics/audio/answers/no.mp3"
+                ],
                 "choices": [
                     {
                         "text": "Yes",
@@ -982,6 +1080,10 @@
                 "template": "two-choices",
                 "text": "Did strangers touch you private parts?",
                 "image": "",
+                "audio": [
+                    "statics/audio/answers/yes.mp3",
+                    "statics/audio/answers/no.mp3"
+                ],
                 "choices": [
                     {
                         "text": "Yes",
@@ -999,6 +1101,10 @@
                 "template": "two-choices",
                 "text": "Has anyone attempted to force you to have sex with them?",
                 "image": "",
+                "audio": [
+                    "statics/audio/answers/yes.mp3",
+                    "statics/audio/answers/no.mp3"
+                ],
                 "choices": [
                     {
                         "text": "Yes",
@@ -1052,6 +1158,10 @@
                 "template": "two-choices",
                 "text": "I have friends who get paid for sex",
                 "image": "",
+                "audio": [
+                    "statics/audio/answers/yes.mp3",
+                    "statics/audio/answers/no.mp3"
+                ],
                 "choices": [
                     {
                         "text": "Yes",
@@ -1069,6 +1179,10 @@
                 "template": "two-choices",
                 "text": "I have experienced being paid for sex",
                 "image": "",
+                "audio": [
+                    "statics/audio/answers/yes.mp3",
+                    "statics/audio/answers/no.mp3"
+                ],
                 "choices": [
                     {
                         "text": "Yes",
@@ -1086,6 +1200,10 @@
                 "template": "two-choices",
                 "text": "I have friends who get paid for cybersex",
                 "image": "",
+                "audio": [
+                    "statics/audio/answers/yes.mp3",
+                    "statics/audio/answers/no.mp3"
+                ],
                 "choices": [
                     {
                         "text": "Yes",
@@ -1103,6 +1221,10 @@
                 "template": "two-choices",
                 "text": "I know someone who pimps children for sex",
                 "image": "",
+                "audio": [
+                    "statics/audio/answers/yes.mp3",
+                    "statics/audio/answers/no.mp3"
+                ],
                 "choices": [
                     {
                         "text": "Yes",
@@ -1151,6 +1273,10 @@
                 "template": "two-choices",
                 "text": "I think I have a bright future ahead of me",
                 "image": "",
+                "audio": [
+                    "statics/audio/answers/yes.mp3",
+                    "statics/audio/answers/no.mp3"
+                ],
                 "choices": [
                     {
                         "text": "Yes",
@@ -1168,6 +1294,10 @@
                 "template": "two-choices",
                 "text": "I want to graduate from college",
                 "image": "",
+                "audio": [
+                    "statics/audio/answers/yes.mp3",
+                    "statics/audio/answers/no.mp3"
+                ],
                 "choices": [
                     {
                         "text": "Yes",
@@ -1185,6 +1315,10 @@
                 "template": "two-choices",
                 "text": "I want to help my parents in the future",
                 "image": "",
+                "audio": [
+                    "statics/audio/answers/yes.mp3",
+                    "statics/audio/answers/no.mp3"
+                ],
                 "choices": [
                     {
                         "text": "Yes",
@@ -1202,6 +1336,10 @@
                 "template": "two-choices",
                 "text": "I have nothing to look forward to in the future",
                 "image": "",
+                "audio": [
+                    "statics/audio/answers/yes.mp3",
+                    "statics/audio/answers/no.mp3"
+                ],
                 "choices": [
                     {
                         "text": "Yes",
