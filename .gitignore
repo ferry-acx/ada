@@ -9,6 +9,9 @@ node_modules
 .quasar
 /dist
 
+# Mobile build
+/android
+
 # Cordova related directories and files
 /src-cordova/node_modules
 /src-cordova/platforms

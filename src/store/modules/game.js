@@ -6,7 +6,7 @@ const GAME_CONTENT = JSON.parse(JSON.stringify(GAME_FILE));
 const state = {
     list: GAME_CONTENT,
     active: {
-        stage: GAME_CONTENT[0],
+        stage: GAME_CONTENT[4],
         question: GAME_CONTENT[0].questions[0],
         progress: 0,
         singleAnswer: null,

@@ -12,6 +12,9 @@
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
+    "@capacitor/android": "^2.1.0",
+    "@capacitor/cli": "^2.1.0",
+    "@capacitor/core": "^2.1.0",
     "@quasar/extras": "^1.5.2",
     "node-sass": "^4.14.1",
     "quasar": "^1.9.7",
