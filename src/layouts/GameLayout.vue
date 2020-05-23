@@ -232,13 +232,13 @@ export default {
                     i = ++i < playlist.length ? i : -1;
                     if (i >= 0) {
                         this.audio.src = playlist[i];
-                        this.audio.play();
+                        // this.audio.play();
                     }
                 });
 
                 this.audio.loop = false;
                 this.audio.src = playlist[i];
-                this.audio.play();
+                // this.audio.play();
             }
         }
     }

@@ -340,7 +340,7 @@
             {
                 "id": "S1Q007",
                 "template": "multi-single-text",
-                "text": "Let’s play a quick numbers game. How many siblings do you have?",
+                "text": "Let’s play a quick numbers game here. How many siblings do you have?",
                 "image": "",
                 "audio": [
                     "statics/audio/questions/S1Q007.mp3"
@@ -427,7 +427,7 @@
             {
                 "id": "S1Q011",
                 "template": "multi-multi-text",
-                "text": "Honesty is the best policy so we ask you to click on the answers that best applies to you, okay?",
+                "text": "Honesty is the best policy so we ask you to click on the answers that best applies to you. Okay?",
                 "image": "",
                 "audio": [
                     "statics/audio/questions/S1Q011.mp3",
@@ -557,6 +557,10 @@
                 "template": "multi-single-imaged",
                 "text": "No? That's sad. Can you tell me why you're not in school?",
                 "image": "",
+                "audio": [
+                    "statics/audio/questions/S2Q004.mp3",
+                    "statics/audio/answers/S2Q004.mp3"
+                ],
                 "choices": [
                     {
                         "text": "We don't have money",
@@ -587,6 +591,7 @@
                 "text": "Do you like going to school?",
                 "image": "",
                 "audio": [
+                    "statics/audio/questions/S2Q005.mp3",
                     "statics/audio/answers/yes.mp3",
                     "statics/audio/answers/no.mp3"
                 ],
@@ -608,6 +613,10 @@
                 "text": "Awesome! Why do you like school? Choose everything you like about it.",
                 "condition": "Yes",
                 "image": "",
+                "audio": [
+                    "statics/audio/answers/S2Q006.mp3",
+                    "statics/audio/answers/S2Q006.mp3"
+                ],
                 "choices": [
                     {
                         "text": "I do well in school",
@@ -634,6 +643,10 @@
                 "text": "Can you choose the reasons why you don't like school?",
                 "condition": "No",
                 "image": "",
+                "audio": [
+                    "statics/audio/answers/S2Q007.mp3",
+                    "statics/audio/answers/S2Q007.mp3"
+                ],
                 "choices": [
                     {
                         "text": "I don't understand the lessons",
@@ -660,6 +673,7 @@
                 "text": "Friends are people who make you smile brighter, laugh louder, and live better. Do you have friends like these in school?",
                 "image": "",
                 "audio": [
+                    "statics/audio/questions/S2Q008.mp3",
                     "statics/audio/answers/yes.mp3",
                     "statics/audio/answers/no.mp3"
                 ],
@@ -680,6 +694,9 @@
                 "template": "one-input",
                 "text": "What are the names of you friends?",
                 "image": "statics/images/mascot/mother-investigate.png",
+                "audio": [
+                    "statics/audio/questions/S2Q009.mp3"
+                ],
                 "condition": "Yes",
                 "inputType": "text",
                 "answer": null
@@ -689,6 +706,10 @@
                 "template": "multi-multi-text",
                 "text": "What do you like to do with them? Choose as many as possible.",
                 "image": "",
+                "audio": [
+                    "statics/audio/questions/S2Q010.mp3",
+                    "statics/audio/answers/S2Q010.mp3"
+                ],
                 "choices": [
                     {
                         "text": "We cut classes",
@@ -716,14 +737,20 @@
             {
                 "id": "S2Q011",
                 "template": "banner",
-                "text": "Great job! You just earned yourself a shiny HARD WORK BADGE! Keep up the good work.",
-                "image": "statics/images/work.png"
+                "text": "Great job! You just earned yourself a shiny HARD WORK BADGE! Keep up the good work!",
+                "image": "statics/images/work.png",
+                "audio": [
+                    "statics/audio/questions/S2Q011.mp3"
+                ]
             },
             {
                 "id": "S2Q012",
                 "template": "instructions",
                 "text": "Was that hard? Well I am sure you got that just right! Ready for stage 3. Breathe in, breathe out!",
-                "image": "statics/images/mascot/mother-info.png"
+                "image": "statics/images/mascot/mother-info.png",
+                "audio": [
+                    "statics/audio/questions/S2Q012.mp3"
+                ]
             }
         ]
     },
@@ -736,7 +763,10 @@
                 "id": "S3Q001",
                 "template": "instructions",
                 "text": "Re-check your gears because we’re about to enter… Internet Village!",
-                "image": "statics/images/mascot/mother-cheer.png"
+                "image": "statics/images/mascot/mother-cheer.png",
+                "audio": [
+                    "statics/audio/questions/S3Q001.mp3"
+                ]
             },
             {
                 "id": "S3Q002",
@@ -749,6 +779,10 @@
                 "template": "multi-multi-imaged",
                 "text": "Okay! Let’s check what gadgets you have! If you have more than one, then go ahead check them!",
                 "image": "",
+                "audio": [
+                    "statics/audio/questions/S3Q003.mp3",
+                    "statics/audio/answers/S3Q003.mp3"
+                ],
                 "choices": [
                     {
                         "text": "I have an android phone",
@@ -775,6 +809,7 @@
                 "text": "Do you like to surf the internet?",
                 "image": "",
                 "audio": [
+                    "statics/audio/questions/S3Q004.mp3",
                     "statics/audio/answers/yes.mp3",
                     "statics/audio/answers/no.mp3"
                 ],
@@ -796,6 +831,10 @@
                 "text": "So when you’re connected to the internet, which sites do you go to?",
                 "condition": "Yes",
                 "image": "",
+                "audio": [
+                    "statics/audio/questions/S3Q005.mp3",
+                    "statics/audio/answers/S3Q005.mp3"
+                ],
                 "choices": [
                     {
                         "text": "I use my email",
@@ -836,7 +875,10 @@
                 "id": "S3Q006",
                 "template": "instructions",
                 "text": "Thank you for being honest. For the next questions you only need to answer yes or no. Just keep calm and answer on!",
-                "image": "statics/images/mascot/mother-info.png"
+                "image": "statics/images/mascot/mother-info.png",
+                "audio": [
+                    "statics/audio/questions/S3Q006.mp3"
+                ]
             },
             {
                 "id": "S3Q007",
@@ -844,6 +886,7 @@
                 "text": "Have you been sent lewd photographs by strangers through the internet?",
                 "image": "",
                 "audio": [
+                    "statics/audio/questions/S3Q007.mp3",
                     "statics/audio/answers/yes.mp3",
                     "statics/audio/answers/no.mp3"
                 ],
@@ -865,6 +908,7 @@
                 "text": "Have you been asked by a stranger to give your nude photo?",
                 "image": "",
                 "audio": [
+                    "statics/audio/questions/S3Q008.mp3",
                     "statics/audio/answers/yes.mp3",
                     "statics/audio/answers/no.mp3"
                 ],
@@ -907,6 +951,7 @@
                 "text": "Have you accessed pornographic sites?",
                 "image": "",
                 "audio": [
+                    "statics/audio/questions/S3Q010.mp3",
                     "statics/audio/answers/yes.mp3",
                     "statics/audio/answers/no.mp3"
                 ],
@@ -928,6 +973,7 @@
                 "text": "Has someone offered you money in exchange for sexual acts online?",
                 "image": "",
                 "audio": [
+                    "statics/audio/questions/S3Q011.mp3",
                     "statics/audio/answers/yes.mp3",
                     "statics/audio/answers/no.mp3"
                 ],
@@ -946,8 +992,11 @@
             {
                 "id": "S3Q012",
                 "template": "banner",
-                "text": "WOW! That wasn’t easy! But you did it because of your honesty! And for that, here’s your much deserved badge.",
-                "image": "statics/images/honesty.png"
+                "text": "WOW! That wasn’t easy. But you did it because of your honesty! And for that, here’s your much deserved badge.",
+                "image": "statics/images/honesty.png",
+                "audio": [
+                    "statics/audio/questions/S3Q012.mp3"
+                ]
             }
         ]
     },

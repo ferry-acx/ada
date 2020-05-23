@@ -1,13 +1,15 @@
 import { make } from 'vuex-pathify';
 
+// const GAME_FILE = require('../constants/questions-dev.json');
 const GAME_FILE = require('../constants/questions.json');
-// const GAME_FILE = require('../constants/questions.json');
 const GAME_CONTENT = JSON.parse(JSON.stringify(GAME_FILE));
+const INITIAL_STAGE = 1;
+const INITIAL_QUESTION = 3;
 const state = {
     list: GAME_CONTENT,
     active: {
-        stage: GAME_CONTENT[4],
-        question: GAME_CONTENT[0].questions[0],
+        stage: GAME_CONTENT[INITIAL_STAGE],
+        question: GAME_CONTENT[INITIAL_STAGE].questions[INITIAL_QUESTION],
         progress: 0,
         singleAnswer: null,
         multiAnswers: []
