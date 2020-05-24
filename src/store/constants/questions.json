@@ -274,11 +274,13 @@
                 "choices": [
                     {
                         "text": "Yes",
-                        "image": "statics/images/mascot/mother-yes.png"
+                        "image": "statics/images/mascot/mother-yes.png",
+                        "skip": 1
                     },
                     {
                         "text": "No",
-                        "image": "statics/images/mascot/mother-no.png"
+                        "image": "statics/images/mascot/mother-no.png",
+                        "skip": 0
                     }
                 ],
                 "answer": null
@@ -295,19 +297,23 @@
                 "choices": [
                     {
                         "text": "With my grandparents",
-                        "image": ""
+                        "image": "",
+                        "skip": 1
                     },
                     {
                         "text": "With my aunt/uncle",
-                        "image": ""
+                        "image": "",
+                        "skip": 1
                     },
                     {
                         "text": "With my siblings",
-                        "image": ""
+                        "image": "",
+                        "skip": 1
                     },
                     {
                         "text": "On the street with other kids",
-                        "image": ""
+                        "image": "",
+                        "skip": 1
                     }
                 ],
                 "answer": null
@@ -348,23 +354,28 @@
                 "choices": [
                     {
                         "text": "None!",
-                        "image": ""
+                        "image": "",
+                        "skip": 3
                     },
                     {
                         "text": "1",
-                        "image": ""
+                        "image": "",
+                        "skip": 0
                     },
                     {
                         "text": "2",
-                        "image": ""
+                        "image": "",
+                        "skip": 0
                     },
                     {
                         "text": "3",
-                        "image": ""
+                        "image": "",
+                        "skip": 0
                     },
                     {
                         "text": "More than 3!",
-                        "image": ""
+                        "image": "",
+                        "skip": 0
                     }
                 ],
                 "answer": null
@@ -382,11 +393,13 @@
                 "choices": [
                     {
                         "text": "Yes",
-                        "image": "statics/images/mascot/mother-yes.png"
+                        "image": "statics/images/mascot/mother-yes.png",
+                        "skip": 2
                     },
                     {
                         "text": "No",
-                        "image": "statics/images/mascot/mother-no.png"
+                        "image": "statics/images/mascot/mother-no.png",
+                        "skip": 0
                     }
                 ],
                 "answer": null
@@ -404,11 +417,13 @@
                 "choices": [
                     {
                         "text": "Yes",
-                        "image": "statics/images/mascot/mother-yes.png"
+                        "image": "statics/images/mascot/mother-yes.png",
+                        "skip": 0
                     },
                     {
                         "text": "No",
-                        "image": "statics/images/mascot/mother-no.png"
+                        "image": "statics/images/mascot/mother-no.png",
+                        "skip": 1
                     }
                 ],
                 "answer": null
@@ -532,57 +547,64 @@
                 "choices": [
                     {
                         "text": "Yes",
-                        "image": "statics/images/mascot/mother-yes.png"
+                        "image": "statics/images/mascot/mother-yes.png",
+                        "skip": 1
                     },
                     {
                         "text": "No",
-                        "image": "statics/images/mascot/mother-no.png"
+                        "image": "statics/images/mascot/mother-no.png",
+                        "skip": 0
                     }
                 ],
                 "answer": null
             },
             {
                 "id": "S2Q003",
-                "template": "one-input",
-                "text": "Yes? Which school do you go to?",
-                "image": "statics/images/mascot/mother-wonder.png",
-                "audio": [
-                    "statics/audio/questions/S2Q003.mp3"
-                ],
-                "inputType": "text",
-                "answer": null
-            },
-            {
-                "id": "S2Q004",
                 "template": "multi-single-imaged",
                 "text": "No? That's sad. Can you tell me why you're not in school?",
                 "image": "",
                 "audio": [
-                    "statics/audio/questions/S2Q004.mp3",
-                    "statics/audio/answers/S2Q004.mp3"
+                    "statics/audio/questions/S2Q003.mp3",
+                    "statics/audio/answers/S2Q003.mp3"
                 ],
                 "choices": [
                     {
                         "text": "We don't have money",
-                        "image": "statics/images/mascot/mother-investigate.png"
+                        "image": "statics/images/mascot/mother-investigate.png",
+                        "skip": 1
                     },
                     {
                         "text": "I wanted to stop",
-                        "image": "statics/images/mascot/mother-cheer.png"
+                        "image": "statics/images/mascot/mother-cheer.png",
+                        "skip": 1
                     },
                     {
                         "text": "There are bullies",
-                        "image": "statics/images/mascot/mother-tired.png"
+                        "image": "statics/images/mascot/mother-tired.png",
+                        "skip": 1
                     },
                     {
                         "text": "I have to work",
-                        "image": "statics/images/mascot/mother-teach.png"
+                        "image": "statics/images/mascot/mother-teach.png",
+                        "skip": 1
                     },
                     {
                         "text": "School is boring",
-                        "image": "statics/images/mascot/mother-no.png"
+                        "image": "statics/images/mascot/mother-no.png",
+                        "skip": 1
                     }
                 ],
+                "answer": null
+            },
+            {
+                "id": "S2Q004",
+                "template": "one-input",
+                "text": "Yes? Which school do you go to?",
+                "image": "statics/images/mascot/mother-wonder.png",
+                "audio": [
+                    "statics/audio/questions/S2Q004.mp3"
+                ],
+                "inputType": "text",
                 "answer": null
             },
             {
@@ -598,11 +620,13 @@
                 "choices": [
                     {
                         "text": "Yes",
-                        "image": "statics/images/mascot/mother-yes.png"
+                        "image": "statics/images/mascot/mother-yes.png",
+                        "skip": 0
                     },
                     {
                         "text": "No",
-                        "image": "statics/images/mascot/mother-no.png"
+                        "image": "statics/images/mascot/mother-no.png",
+                        "skip": 1
                     }
                 ],
                 "answer": null
@@ -614,25 +638,29 @@
                 "condition": "Yes",
                 "image": "",
                 "audio": [
-                    "statics/audio/answers/S2Q006.mp3",
+                    "statics/audio/questions/S2Q006.mp3",
                     "statics/audio/answers/S2Q006.mp3"
                 ],
                 "choices": [
                     {
                         "text": "I do well in school",
-                        "image": ""
+                        "image": "",
+                        "skip": 1
                     },
                     {
                         "text": "I have a lot of friends in school",
-                        "image": ""
+                        "image": "",
+                        "skip": 1
                     },
                     {
                         "text": "I like to study",
-                        "image": ""
+                        "image": "",
+                        "skip": 1
                     },
                     {
                         "text": "My teachers are very nice to me",
-                        "image": ""
+                        "image": "",
+                        "skip": 1
                     }
                 ],
                 "answer": null
@@ -644,7 +672,7 @@
                 "condition": "No",
                 "image": "",
                 "audio": [
-                    "statics/audio/answers/S2Q007.mp3",
+                    "statics/audio/questions/S2Q007.mp3",
                     "statics/audio/answers/S2Q007.mp3"
                 ],
                 "choices": [
@@ -680,11 +708,13 @@
                 "choices": [
                     {
                         "text": "Yes",
-                        "image": "statics/images/mascot/mother-yes.png"
+                        "image": "statics/images/mascot/mother-yes.png",
+                        "skip": 0
                     },
                     {
                         "text": "No",
-                        "image": "statics/images/mascot/mother-no.png"
+                        "image": "statics/images/mascot/mother-no.png",
+                        "skip": 2
                     }
                 ],
                 "answer": null
@@ -699,7 +729,8 @@
                 ],
                 "condition": "Yes",
                 "inputType": "text",
-                "answer": null
+                "answer": null,
+                "skip": 0
             },
             {
                 "id": "S2Q010",
@@ -1056,11 +1087,13 @@
                 "choices": [
                     {
                         "text": "Yes",
-                        "image": "statics/images/mascot/mother-yes.png"
+                        "image": "statics/images/mascot/mother-yes.png",
+                        "skip": 0
                     },
                     {
                         "text": "No",
-                        "image": "statics/images/mascot/mother-no.png"
+                        "image": "statics/images/mascot/mother-no.png",
+                        "skip": 1
                     }
                 ],
                 "answer": null
@@ -1069,7 +1102,6 @@
                 "id": "S4Q006",
                 "template": "multi-multi-text",
                 "text": "In what manner were you hurt?",
-                "condition": "Yes",
                 "image": "",
                 "choices": [
                     {
@@ -1157,11 +1189,13 @@
                 "choices": [
                     {
                         "text": "Yes",
-                        "image": "statics/images/mascot/mother-yes.png"
+                        "image": "statics/images/mascot/mother-yes.png",
+                        "skip": 0
                     },
                     {
                         "text": "No",
-                        "image": "statics/images/mascot/mother-no.png"
+                        "image": "statics/images/mascot/mother-no.png",
+                        "skip": 1
                     }
                 ],
                 "answer": null

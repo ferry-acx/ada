@@ -57,7 +57,8 @@ export default {
 
             const answer = {
                 id: index,
-                value: this.current.question.choices[index].text
+                value: this.current.question.choices[index].text,
+                skip: this.current.question.choices[index].skip
             };
 
             this.setAnswer(answer);

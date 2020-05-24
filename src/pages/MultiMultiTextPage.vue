@@ -10,7 +10,11 @@
                 </div>
             </div>
             <div class="row wrap q-ma-md justify-center items center">
-                <div class="col-12 q-ma-sm" v-for="[index, choice] of current.question.choices.entries()" :key="index">
+                <div
+                    class="col-12 q-ma-sm"
+                    v-for="[index, choice] of current.question.choices.entries()"
+                    :key="index"
+                >
                     <div class="row justify-center full-height full-width text-center">
                         <q-btn
                             class="full-width"
@@ -58,7 +62,8 @@ export default {
             for (const id of this.current.multiAnswers) {
                 answers.push({
                     id,
-                    value: this.current.question.choices[id].text
+                    value: this.current.question.choices[id].text,
+                    skip: this.current.question.choices[id].skip
                 });
             }
 

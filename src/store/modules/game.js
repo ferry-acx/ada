@@ -3,8 +3,8 @@ import { make } from 'vuex-pathify';
 // const GAME_FILE = require('../constants/questions-dev.json');
 const GAME_FILE = require('../constants/questions.json');
 const GAME_CONTENT = JSON.parse(JSON.stringify(GAME_FILE));
-const INITIAL_STAGE = 1;
-const INITIAL_QUESTION = 3;
+const INITIAL_STAGE = 5;
+const INITIAL_QUESTION = 0;
 const state = {
     list: GAME_CONTENT,
     active: {
@@ -37,7 +37,25 @@ export default {
         },
         nextQuestion({ commit, state, dispatch, rootState }) {
             try {
-                const nextIndex = state.active.stage.questions.indexOf(state.active.question) + 1;
+                console.log(state.active.question);
+                let skip = 0;
+                if (state.active.question && state.active.question.answer) {
+                    let answer;
+                    // if multi answer, just get the first skip
+                    if (Array.isArray(state.active.question.answer)) {
+                        answer = state.active.question.answer[0];
+                        skip = answer.skip ? answer.skip : 0;
+                    } else if (state.active.question.inputType) {
+                        skip = state.active.question.skip ? state.active.question.skip : 0;
+                    } else {
+                        answer = state.active.question.answer;
+                        skip = answer.skip ? answer.skip : 0;
+                    }
+
+                    console.log('skip:', skip);
+                }
+                const currentIndex = state.active.stage.questions.indexOf(state.active.question);
+                const nextIndex = currentIndex + 1 + skip;
                 if (nextIndex < state.active.stage.questions.length) {
                     let nextQuestion = state.active.stage.questions[nextIndex];
                     let text = nextQuestion.text;
@@ -96,9 +114,9 @@ export default {
                 const payload = {
                     questionId: active.question.id,
                     question: active.question.text,
-                    answer: answer.value
+                    answer: answer
                 };
-                dispatch('answers/setQandA', payload, { root: true });
+                dispatch('answers/setCurrentQandA', payload, { root: true });
             } catch (e) {
                 console.error(e);
             }
