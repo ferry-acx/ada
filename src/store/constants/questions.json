@@ -508,7 +508,7 @@
                 "id": "S1Q012",
                 "template": "banner",
                 "text": "Congratulations! You just earned the LOVE BADGE!",
-                "image": "statics/images/love.png",
+                "image": "statics/images/badges/Love.png",
                 "audio": [
                     "statics/audio/questions/S1Q012.mp3"
                 ]
@@ -773,7 +773,7 @@
                 "id": "S2Q011",
                 "template": "banner",
                 "text": "Great job! You just earned yourself a shiny HARD WORK BADGE! Keep up the good work!",
-                "image": "statics/images/work.png",
+                "image": "statics/images/badges/Hardwork.png",
                 "audio": [
                     "statics/audio/questions/S2Q011.mp3"
                 ]
@@ -1029,7 +1029,7 @@
                 "id": "S3Q012",
                 "template": "banner",
                 "text": "WOW! That wasn’t easy. But you did it because of your honesty! And for that, here’s your much deserved badge.",
-                "image": "statics/images/honesty.png",
+                "image": "statics/images/badges/Honesty.png",
                 "audio": [
                     "statics/audio/questions/S3Q012.mp3"
                 ]
@@ -1358,7 +1358,7 @@
                 "id": "S4Q016",
                 "template": "banner",
                 "text": "What a courageous heart you have! You are worthy of being called a brave warrior. Here's your COURAGE BADGE!",
-                "image": "statics/images/courage.png",
+                "image": "statics/images/badges/Courage.png",
                 "audio": [
                     "statics/audio/questions/S4Q016.mp3"
                 ]
@@ -1496,7 +1496,7 @@
                 "id": "S5Q009",
                 "template": "instructions",
                 "text": "Congratulations on completing the final stage! Here's you HOPE BADGE, adventurer.",
-                "image": "statics/images/mascot/mother-happy.png",
+                "image": "statics/images/badges/Hope.png",
                 "audio": [
                     "statics/audio/questions/S5Q009.mp3"
                 ]

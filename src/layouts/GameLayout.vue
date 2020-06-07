@@ -169,6 +169,7 @@ export default {
         this.progressIconEl = this.$refs.progressIcon.$el;
         this.top = this.progressEl.offsetTop;
 
+        this.resetGame();
         this.playAudio();
     },
     beforeDestroy() {
