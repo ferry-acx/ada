@@ -253,7 +253,7 @@
                 "id": "S1Q002",
                 "template": "banner",
                 "text": "Family Town",
-                "image": "statics/images/family.png"
+                "image": "statics/images/banners/family-town.jpg"
             },
             {
                 "id": "S1Q003",
@@ -533,7 +533,7 @@
                 "id": "S2Q001",
                 "template": "banner",
                 "text": "Correct! It's at school. The second stage of adventure takes place in... SCHOOL POINT!",
-                "image": "statics/images/school.png",
+                "image": "statics/images/banners/school.jpg",
                 "audio": [
                     "statics/audio/questions/S2Q001.mp3"
                 ]
@@ -798,7 +798,7 @@
                 "id": "S3Q001",
                 "template": "instructions",
                 "text": "Re-check your gears because we’re about to enter… Internet Village!",
-                "image": "statics/images/mascot/mother-cheer.png",
+                "image": "statics/images/banners/backpack.jpg",
                 "audio": [
                     "statics/audio/questions/S3Q001.mp3"
                 ]
@@ -807,11 +807,11 @@
                 "id": "S3Q002",
                 "template": "banner",
                 "text": "Internet Village",
-                "image": "statics/images/internet.png"
+                "image": "statics/images/banners/internet-village.jpg"
             },
             {
                 "id": "S3Q003",
-                "template": "multi-multi-imaged",
+                "template": "multi-multi-text",
                 "text": "Okay! Let’s check what gadgets you have! If you have more than one, then go ahead check them!",
                 "image": "",
                 "audio": [
@@ -1054,7 +1054,7 @@
                 "id": "S4Q002",
                 "template": "banner",
                 "text": "Sad Zone",
-                "image": "statics/images/sad.png"
+                "image": "statics/images/banners/sad-zone-2.jpg"
             },
             {
                 "id": "S4Q003",
@@ -1383,7 +1383,7 @@
                 "id": "S5Q002",
                 "template": "banner",
                 "text": "Dream Land",
-                "image": "statics/images/dream.png"
+                "image": "statics/images/banners/dream-land.jpg"
             },
             {
                 "id": "S5Q003",
