@@ -36,7 +36,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12 item-label">FIRST NAME</div>
+                        <div class="col-12 item-label">FULL NAME</div>
                     </div>
                     <div class="row full-width">
                         <div class="col-12">
@@ -44,25 +44,7 @@
                                 standout="bg-secondary text-white"
                                 dense
                                 type="text"
-                                v-model="fname"
-                                input-class="text-right"
-                            >
-                                <template v-slot:prepend>
-                                    <q-icon name="person" />
-                                </template>
-                            </q-input>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 item-label">LAST NAME</div>
-                    </div>
-                    <div class="row full-width">
-                        <div class="col-12">
-                            <q-input
-                                standout="bg-secondary text-white"
-                                dense
-                                type="text"
-                                v-model="lname"
+                                v-model="fullname"
                                 input-class="text-right"
                             >
                                 <template v-slot:prepend>
@@ -77,13 +59,7 @@
         <q-footer class="bg-white text-white">
             <q-toolbar class="row justify-center full-width text-center">
                 <div class="col-12 q-ma-sm q-mb-lg q-px-sm">
-                    <q-btn
-                        push
-                        class="full-width"
-                        color="secondary"
-                        size="lg"
-                        @click="saveConfig"
-                    >Save</q-btn>
+                    <q-btn push class="full-width" color="secondary" size="lg" @click="saveConfig">Save</q-btn>
                 </div>
             </q-toolbar>
         </q-footer>
@@ -98,9 +74,7 @@ export default {
     data() {
         return {
             userId: '',
-            fname: '',
-            lname: '',
-            gender: ''
+            fullname: ''
         };
     },
     created() {},
@@ -113,8 +87,7 @@ export default {
             const active = {
                 ...this.config,
                 userId: this.userId,
-                fname: this.fname,
-                lname: this.lname
+                fullname: this.fullname
             };
 
             this.setActive(active);

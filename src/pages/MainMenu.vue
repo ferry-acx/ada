@@ -8,13 +8,7 @@
                 <div class="col q-gutter-sm">
                     <div class="row">
                         <div class="col">
-                            <q-btn
-                                push
-                                color="primary"
-                                class="full-width"
-                                style="min-height: 50px"
-                                to="setup"
-                            >
+                            <q-btn push color="primary" class="full-width" style="min-height: 50px" to="setup">
                                 <q-icon left size="2em" name="settings" />
                                 <div>Setup</div>
                             </q-btn>
@@ -27,7 +21,7 @@
                                 color="secondary"
                                 class="full-width"
                                 style="min-height: 50px"
-                                @click="startGame"
+                                @click="disableStart ? notifyConfig() : startGame()"
                             >
                                 <q-icon left size="2em" name="sports_esports" />
                                 <div>Start</div>
@@ -46,10 +40,20 @@ import { sync, call } from 'vuex-pathify';
 export default {
     name: 'MainMenuPage',
     computed: {
-        config: sync('config/active')
+        config: sync('config/active'),
+        disableStart() {
+            return !(this.config.userId && this.config.fullname);
+        }
     },
     methods: {
         setConfigActive: call('config/setActive'),
+        notifyConfig() {
+            this.$q.notify({
+                type: 'negative',
+                message: 'Fill-up config to start the game!',
+                timeout: 2000
+            });
+        },
         startGame() {
             const active = {
                 ...this.config,

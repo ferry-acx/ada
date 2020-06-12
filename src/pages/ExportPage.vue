@@ -46,6 +46,8 @@
 import { sync, call } from 'vuex-pathify';
 import { exportFile } from 'quasar';
 
+import moment from 'moment';
+
 export default {
     name: 'ExportPage',
     data() {
@@ -73,11 +75,9 @@ export default {
             this.showLoading();
 
             const data = {
-                userInfo: {
-                    userId: this.config.userId,
-                    fname: this.config.fname,
-                    lname: this.config.lname
-                },
+                id: this.config.userId,
+                name: this.config.fullname,
+                dateGenerated: moment().format('L'),
                 qanda: this.answersList
             };
 

@@ -3,8 +3,8 @@ import { make } from 'vuex-pathify';
 // const GAME_FILE = require('../constants/questions-dev.json');
 const GAME_FILE = require('../constants/questions.json');
 const GAME_CONTENT = JSON.parse(JSON.stringify(GAME_FILE));
-const INITIAL_STAGE = 0;
-const INITIAL_QUESTION = 0;
+const INITIAL_STAGE = 5;
+const INITIAL_QUESTION = 8;
 const state = {
     list: GAME_CONTENT,
     active: {
@@ -29,8 +29,8 @@ export default {
             commit('SET_LIST', NEW_COPY);
 
             const newActive = {
-                stage: state.list[0],
-                question: state.list[0].questions[0]
+                stage: state.list[INITIAL_STAGE],
+                question: state.list[INITIAL_STAGE].questions[INITIAL_QUESTION]
             };
 
             commit('SET_ACTIVE', newActive);

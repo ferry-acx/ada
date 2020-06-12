@@ -18,7 +18,7 @@
                         :src="progressIconSrc"
                         ref="progressIcon"
                         name="mood"
-                        style="width: 50px; height: 50px;"
+                        style="width: 50px;"
                         v-bind:style="iconClassObject"
                     />
                 </div>
@@ -54,11 +54,10 @@
                         size="lg"
                         @click="submit"
                         :disable="disabledNext"
-                    >{{ buttonLabel }}</q-btn>
+                        >{{ buttonLabel }}</q-btn
+                    >
                     <q-btn v-else push class="next-button full-width" size="lg" @click="submit">
-                        {{
-                        buttonLabel
-                        }}
+                        {{ buttonLabel }}
                     </q-btn>
                 </div>
             </q-toolbar>
@@ -156,9 +155,9 @@ export default {
             } else if (this.config.gender === 'Girl') {
                 return 'statics/images/running-girl.png';
             } else if (this.config.gender === 'Gay') {
-                return 'statics/images/idiot.png';
+                return 'statics/images/lgbt.png';
             } else if (this.config.gender === 'Lesbian') {
-                return 'statics/images/idiot.png';
+                return 'statics/images/lgbt.png';
             } else {
                 return '';
             }

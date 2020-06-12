@@ -4,8 +4,7 @@ const state = {
     list: [],
     active: {
         userId: '',
-        fname: '',
-        lname: '',
+        fullname: '',
         gender: '',
         name: ''
     }
@@ -21,6 +20,7 @@ export default {
         resetConfig({ commit, state }) {
             const active = {
                 userId: '',
+                fullname: '',
                 gender: '',
                 name: ''
             };
