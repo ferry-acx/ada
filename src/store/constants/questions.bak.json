@@ -19,6 +19,7 @@
                 "text": "The gates will be opened to let you experience a brand-new adventure. Are you ready?",
                 "image": "",
                 "audio": [
+                    "statics/audio/questions/S0Q002.mp3",
                     "statics/audio/answers/yes.mp3",
                     "statics/audio/answers/no.mp3"
                 ],
@@ -147,7 +148,8 @@
                 "text": "For a little warm-up let's start with something simple. Which of the following describes you?",
                 "image": "",
                 "audio": [
-                    "statics/audio/questions/S0Q012.mp3"
+                    "statics/audio/questions/S0Q012.mp3",
+                    "statics/audio/answers/S0Q012.mp3"
                 ],
                 "choices": [
                     {
@@ -188,7 +190,8 @@
                 "template": "multi-multi-text",
                 "text": "Easy, right? Here's another one for good luck. Choose everything that you like!",
                 "audio": [
-                    "statics/audio/questions/S0Q013.mp3"
+                    "statics/audio/questions/S0Q013.mp3",
+                    "statics/audio/answers/S0Q013.mp3"
                 ],
                 "image": "",
                 "choices": [
@@ -250,7 +253,7 @@
                 "id": "S1Q002",
                 "template": "banner",
                 "text": "Family Town",
-                "image": "statics/images/family.png"
+                "image": "statics/images/banners/family-town.jpg"
             },
             {
                 "id": "S1Q003",
@@ -274,11 +277,13 @@
                 "choices": [
                     {
                         "text": "Yes",
-                        "image": "statics/images/mascot/mother-yes.png"
+                        "image": "statics/images/mascot/mother-yes.png",
+                        "skip": 1
                     },
                     {
                         "text": "No",
-                        "image": "statics/images/mascot/mother-no.png"
+                        "image": "statics/images/mascot/mother-no.png",
+                        "skip": 0
                     }
                 ],
                 "answer": null
@@ -295,19 +300,23 @@
                 "choices": [
                     {
                         "text": "With my grandparents",
-                        "image": ""
+                        "image": "",
+                        "skip": 1
                     },
                     {
                         "text": "With my aunt/uncle",
-                        "image": ""
+                        "image": "",
+                        "skip": 1
                     },
                     {
                         "text": "With my siblings",
-                        "image": ""
+                        "image": "",
+                        "skip": 1
                     },
                     {
                         "text": "On the street with other kids",
-                        "image": ""
+                        "image": "",
+                        "skip": 1
                     }
                 ],
                 "answer": null
@@ -343,28 +352,34 @@
                 "text": "Let’s play a quick numbers game here. How many siblings do you have?",
                 "image": "",
                 "audio": [
-                    "statics/audio/questions/S1Q007.mp3"
+                    "statics/audio/questions/S1Q007.mp3",
+                    "statics/audio/answers/S1Q007.mp3"
                 ],
                 "choices": [
                     {
                         "text": "None!",
-                        "image": ""
+                        "image": "",
+                        "skip": 3
                     },
                     {
                         "text": "1",
-                        "image": ""
+                        "image": "",
+                        "skip": 0
                     },
                     {
                         "text": "2",
-                        "image": ""
+                        "image": "",
+                        "skip": 0
                     },
                     {
                         "text": "3",
-                        "image": ""
+                        "image": "",
+                        "skip": 0
                     },
                     {
                         "text": "More than 3!",
-                        "image": ""
+                        "image": "",
+                        "skip": 0
                     }
                 ],
                 "answer": null
@@ -382,11 +397,13 @@
                 "choices": [
                     {
                         "text": "Yes",
-                        "image": "statics/images/mascot/mother-yes.png"
+                        "image": "statics/images/mascot/mother-yes.png",
+                        "skip": 2
                     },
                     {
                         "text": "No",
-                        "image": "statics/images/mascot/mother-no.png"
+                        "image": "statics/images/mascot/mother-no.png",
+                        "skip": 0
                     }
                 ],
                 "answer": null
@@ -404,11 +421,13 @@
                 "choices": [
                     {
                         "text": "Yes",
-                        "image": "statics/images/mascot/mother-yes.png"
+                        "image": "statics/images/mascot/mother-yes.png",
+                        "skip": 0
                     },
                     {
                         "text": "No",
-                        "image": "statics/images/mascot/mother-no.png"
+                        "image": "statics/images/mascot/mother-no.png",
+                        "skip": 1
                     }
                 ],
                 "answer": null
@@ -489,7 +508,7 @@
                 "id": "S1Q012",
                 "template": "banner",
                 "text": "Congratulations! You just earned the LOVE BADGE!",
-                "image": "statics/images/love.png",
+                "image": "statics/images/badges/Love.png",
                 "audio": [
                     "statics/audio/questions/S1Q012.mp3"
                 ]
@@ -514,7 +533,7 @@
                 "id": "S2Q001",
                 "template": "banner",
                 "text": "Correct! It's at school. The second stage of adventure takes place in... SCHOOL POINT!",
-                "image": "statics/images/school.png",
+                "image": "statics/images/banners/school.jpg",
                 "audio": [
                     "statics/audio/questions/S2Q001.mp3"
                 ]
@@ -532,57 +551,64 @@
                 "choices": [
                     {
                         "text": "Yes",
-                        "image": "statics/images/mascot/mother-yes.png"
+                        "image": "statics/images/mascot/mother-yes.png",
+                        "skip": 1
                     },
                     {
                         "text": "No",
-                        "image": "statics/images/mascot/mother-no.png"
+                        "image": "statics/images/mascot/mother-no.png",
+                        "skip": 0
                     }
                 ],
                 "answer": null
             },
             {
                 "id": "S2Q003",
-                "template": "one-input",
-                "text": "Yes? Which school do you go to?",
-                "image": "statics/images/mascot/mother-wonder.png",
-                "audio": [
-                    "statics/audio/questions/S2Q003.mp3"
-                ],
-                "inputType": "text",
-                "answer": null
-            },
-            {
-                "id": "S2Q004",
                 "template": "multi-single-imaged",
                 "text": "No? That's sad. Can you tell me why you're not in school?",
                 "image": "",
                 "audio": [
-                    "statics/audio/questions/S2Q004.mp3",
-                    "statics/audio/answers/S2Q004.mp3"
+                    "statics/audio/questions/S2Q003.mp3",
+                    "statics/audio/answers/S2Q003.mp3"
                 ],
                 "choices": [
                     {
                         "text": "We don't have money",
-                        "image": "statics/images/mascot/mother-investigate.png"
+                        "image": "statics/images/mascot/mother-investigate.png",
+                        "skip": 1
                     },
                     {
                         "text": "I wanted to stop",
-                        "image": "statics/images/mascot/mother-cheer.png"
+                        "image": "statics/images/mascot/mother-cheer.png",
+                        "skip": 1
                     },
                     {
                         "text": "There are bullies",
-                        "image": "statics/images/mascot/mother-tired.png"
+                        "image": "statics/images/mascot/mother-tired.png",
+                        "skip": 1
                     },
                     {
                         "text": "I have to work",
-                        "image": "statics/images/mascot/mother-teach.png"
+                        "image": "statics/images/mascot/mother-teach.png",
+                        "skip": 1
                     },
                     {
                         "text": "School is boring",
-                        "image": "statics/images/mascot/mother-no.png"
+                        "image": "statics/images/mascot/mother-no.png",
+                        "skip": 1
                     }
                 ],
+                "answer": null
+            },
+            {
+                "id": "S2Q004",
+                "template": "one-input",
+                "text": "Yes? Which school do you go to?",
+                "image": "statics/images/mascot/mother-wonder.png",
+                "audio": [
+                    "statics/audio/questions/S2Q004.mp3"
+                ],
+                "inputType": "text",
                 "answer": null
             },
             {
@@ -598,11 +624,13 @@
                 "choices": [
                     {
                         "text": "Yes",
-                        "image": "statics/images/mascot/mother-yes.png"
+                        "image": "statics/images/mascot/mother-yes.png",
+                        "skip": 0
                     },
                     {
                         "text": "No",
-                        "image": "statics/images/mascot/mother-no.png"
+                        "image": "statics/images/mascot/mother-no.png",
+                        "skip": 1
                     }
                 ],
                 "answer": null
@@ -614,25 +642,29 @@
                 "condition": "Yes",
                 "image": "",
                 "audio": [
-                    "statics/audio/answers/S2Q006.mp3",
+                    "statics/audio/questions/S2Q006.mp3",
                     "statics/audio/answers/S2Q006.mp3"
                 ],
                 "choices": [
                     {
                         "text": "I do well in school",
-                        "image": ""
+                        "image": "",
+                        "skip": 1
                     },
                     {
                         "text": "I have a lot of friends in school",
-                        "image": ""
+                        "image": "",
+                        "skip": 1
                     },
                     {
                         "text": "I like to study",
-                        "image": ""
+                        "image": "",
+                        "skip": 1
                     },
                     {
                         "text": "My teachers are very nice to me",
-                        "image": ""
+                        "image": "",
+                        "skip": 1
                     }
                 ],
                 "answer": null
@@ -644,7 +676,7 @@
                 "condition": "No",
                 "image": "",
                 "audio": [
-                    "statics/audio/answers/S2Q007.mp3",
+                    "statics/audio/questions/S2Q007.mp3",
                     "statics/audio/answers/S2Q007.mp3"
                 ],
                 "choices": [
@@ -680,11 +712,13 @@
                 "choices": [
                     {
                         "text": "Yes",
-                        "image": "statics/images/mascot/mother-yes.png"
+                        "image": "statics/images/mascot/mother-yes.png",
+                        "skip": 0
                     },
                     {
                         "text": "No",
-                        "image": "statics/images/mascot/mother-no.png"
+                        "image": "statics/images/mascot/mother-no.png",
+                        "skip": 2
                     }
                 ],
                 "answer": null
@@ -699,7 +733,8 @@
                 ],
                 "condition": "Yes",
                 "inputType": "text",
-                "answer": null
+                "answer": null,
+                "skip": 0
             },
             {
                 "id": "S2Q010",
@@ -738,7 +773,7 @@
                 "id": "S2Q011",
                 "template": "banner",
                 "text": "Great job! You just earned yourself a shiny HARD WORK BADGE! Keep up the good work!",
-                "image": "statics/images/work.png",
+                "image": "statics/images/badges/Hardwork.png",
                 "audio": [
                     "statics/audio/questions/S2Q011.mp3"
                 ]
@@ -763,7 +798,7 @@
                 "id": "S3Q001",
                 "template": "instructions",
                 "text": "Re-check your gears because we’re about to enter… Internet Village!",
-                "image": "statics/images/mascot/mother-cheer.png",
+                "image": "statics/images/banners/internet-village.jpg",
                 "audio": [
                     "statics/audio/questions/S3Q001.mp3"
                 ]
@@ -772,11 +807,11 @@
                 "id": "S3Q002",
                 "template": "banner",
                 "text": "Internet Village",
-                "image": "statics/images/internet.png"
+                "image": "statics/images/banners/internet-village.jpg"
             },
             {
                 "id": "S3Q003",
-                "template": "multi-multi-imaged",
+                "template": "multi-multi-text",
                 "text": "Okay! Let’s check what gadgets you have! If you have more than one, then go ahead check them!",
                 "image": "",
                 "audio": [
@@ -930,6 +965,7 @@
                 "text": "Have someone sent you videos of them performing sexual acts?",
                 "image": "",
                 "audio": [
+                    "statics/audio/questions/S3Q009.mp3",
                     "statics/audio/answers/yes.mp3",
                     "statics/audio/answers/no.mp3"
                 ],
@@ -993,7 +1029,7 @@
                 "id": "S3Q012",
                 "template": "banner",
                 "text": "WOW! That wasn’t easy. But you did it because of your honesty! And for that, here’s your much deserved badge.",
-                "image": "statics/images/honesty.png",
+                "image": "statics/images/badges/Honesty.png",
                 "audio": [
                     "statics/audio/questions/S3Q012.mp3"
                 ]
@@ -1008,20 +1044,26 @@
             {
                 "id": "S4Q001",
                 "template": "instructions",
-                "text": "And now… try to relax. Breathe in, breathe out. Stretch your arms and count 1 to 10. Breathe in, breathe out. Feeling much better? Good! Because we’re about to enter The Sad Zone.",
-                "image": "statics/images/mascot/mother-cheer.png"
+                "text": "Now, try to relax. Breathe in, breathe out. Stretch your arms and count 1 to 10. Breathe in, breathe out. Feeling much better? Good! Because we’re about to enter The Sad Zone.",
+                "image": "statics/images/mascot/mother-cheer.png",
+                "audio": [
+                    "statics/audio/questions/S4Q001.mp3"
+                ]
             },
             {
                 "id": "S4Q002",
                 "template": "banner",
                 "text": "Sad Zone",
-                "image": "statics/images/sad.png"
+                "image": "statics/images/banners/sad-zone-2.jpg"
             },
             {
                 "id": "S4Q003",
                 "template": "instructions",
                 "text": "We feel different emotions. We can be happy, angry, disgusted. We can also be sad, especially when we experience bad things in life. Sometimes the bad experience stays on. Want to know a secret? Bad experiences can slowly go away when you share you experience with people you trust who can help you become better.",
-                "image": "statics/images/mascot/mother-cry.png"
+                "image": "statics/images/mascot/mother-cry.png",
+                "audio": [
+                    "statics/audio/questions/S4Q003.mp3"
+                ]
             },
             {
                 "id": "S4Q004",
@@ -1029,6 +1071,7 @@
                 "text": "At the end of this stage, you’ll get a courage badge. So, are you ready to be brave?",
                 "image": "",
                 "audio": [
+                    "statics/audio/questions/S4Q004.mp3",
                     "statics/audio/answers/yes.mp3",
                     "statics/audio/answers/no.mp3"
                 ],
@@ -1050,17 +1093,20 @@
                 "text": "Have your parents or guardians hit you physically?",
                 "image": "",
                 "audio": [
+                    "statics/audio/questions/S4Q005.mp3",
                     "statics/audio/answers/yes.mp3",
                     "statics/audio/answers/no.mp3"
                 ],
                 "choices": [
                     {
                         "text": "Yes",
-                        "image": "statics/images/mascot/mother-yes.png"
+                        "image": "statics/images/mascot/mother-yes.png",
+                        "skip": 0
                     },
                     {
                         "text": "No",
-                        "image": "statics/images/mascot/mother-no.png"
+                        "image": "statics/images/mascot/mother-no.png",
+                        "skip": 1
                     }
                 ],
                 "answer": null
@@ -1068,9 +1114,12 @@
             {
                 "id": "S4Q006",
                 "template": "multi-multi-text",
-                "text": "In what manner were you hurt?",
-                "condition": "Yes",
+                "text": "How did they hurt you?",
                 "image": "",
+                "audio": [
+                    "statics/audio/questions/S4Q006.mp3",
+                    "statics/audio/answers/S4Q006.mp3"
+                ],
                 "choices": [
                     {
                         "text": "Spanked",
@@ -1108,6 +1157,10 @@
                 "template": "multi-multi-text",
                 "text": "Have you experienced any of the following?",
                 "image": "",
+                "audio": [
+                    "statics/audio/questions/S4Q007.mp3",
+                    "statics/audio/answers/S4Q007.mp3"
+                ],
                 "choices": [
                     {
                         "text": "My parents/guardian shout at me when they are angry.",
@@ -1127,9 +1180,10 @@
             {
                 "id": "S4Q008",
                 "template": "two-choices",
-                "text": "Did strangers touch you private parts?",
+                "text": "Did strangers touch your private parts?",
                 "image": "",
                 "audio": [
+                    "statics/audio/questions/S4Q008.mp3",
                     "statics/audio/answers/yes.mp3",
                     "statics/audio/answers/no.mp3"
                 ],
@@ -1151,17 +1205,20 @@
                 "text": "Has anyone attempted to force you to have sex with them?",
                 "image": "",
                 "audio": [
+                    "statics/audio/questions/S4Q009.mp3",
                     "statics/audio/answers/yes.mp3",
                     "statics/audio/answers/no.mp3"
                 ],
                 "choices": [
                     {
                         "text": "Yes",
-                        "image": "statics/images/mascot/mother-yes.png"
+                        "image": "statics/images/mascot/mother-yes.png",
+                        "skip": 0
                     },
                     {
                         "text": "No",
-                        "image": "statics/images/mascot/mother-no.png"
+                        "image": "statics/images/mascot/mother-no.png",
+                        "skip": 1
                     }
                 ],
                 "answer": null
@@ -1172,6 +1229,10 @@
                 "text": "Who tried to force you?",
                 "condition": "Yes",
                 "image": "",
+                "audio": [
+                    "statics/audio/questions/S4Q010.mp3",
+                    "statics/audio/answers/S4Q010.mp3"
+                ],
                 "choices": [
                     {
                         "text": "Parents",
@@ -1200,7 +1261,10 @@
                 "id": "S4Q011",
                 "template": "instructions",
                 "text": "Thank you for your honesty, brave warrior! Now, just say yes or no to the following. Ready?",
-                "image": "statics/images/mascot/mother-happy.png"
+                "image": "statics/images/mascot/mother-happy.png",
+                "audio": [
+                    "statics/audio/questions/S4Q011.mp3"
+                ]
             },
             {
                 "id": "S4Q012",
@@ -1208,6 +1272,7 @@
                 "text": "I have friends who get paid for sex",
                 "image": "",
                 "audio": [
+                    "statics/audio/questions/S4Q012.mp3",
                     "statics/audio/answers/yes.mp3",
                     "statics/audio/answers/no.mp3"
                 ],
@@ -1229,6 +1294,7 @@
                 "text": "I have experienced being paid for sex",
                 "image": "",
                 "audio": [
+                    "statics/audio/questions/S4Q013.mp3",
                     "statics/audio/answers/yes.mp3",
                     "statics/audio/answers/no.mp3"
                 ],
@@ -1250,6 +1316,7 @@
                 "text": "I have friends who get paid for cybersex",
                 "image": "",
                 "audio": [
+                    "statics/audio/questions/S4Q014.mp3",
                     "statics/audio/answers/yes.mp3",
                     "statics/audio/answers/no.mp3"
                 ],
@@ -1271,6 +1338,7 @@
                 "text": "I know someone who pimps children for sex",
                 "image": "",
                 "audio": [
+                    "statics/audio/questions/S4Q015.mp3",
                     "statics/audio/answers/yes.mp3",
                     "statics/audio/answers/no.mp3"
                 ],
@@ -1290,7 +1358,10 @@
                 "id": "S4Q016",
                 "template": "banner",
                 "text": "What a courageous heart you have! You are worthy of being called a brave warrior. Here's your COURAGE BADGE!",
-                "image": "statics/images/courage.png"
+                "image": "statics/images/badges/Courage.png",
+                "audio": [
+                    "statics/audio/questions/S4Q016.mp3"
+                ]
             }
         ]
     },
@@ -1303,19 +1374,25 @@
                 "id": "S5Q001",
                 "template": "instructions",
                 "text": "One more badge from stage 5 and you will be officially declared as adventure-seeker and join a community of lifelong learners. Check your gears because this is your final stage.",
-                "image": "statics/images/mascot/mother-angry.png"
+                "image": "statics/images/mascot/mother-angry.png",
+                "audio": [
+                    "statics/audio/questions/S5Q001.mp3"
+                ]
             },
             {
                 "id": "S5Q002",
                 "template": "banner",
                 "text": "Dream Land",
-                "image": "statics/images/dream.png"
+                "image": "statics/images/banners/dream-land.jpg"
             },
             {
                 "id": "S5Q003",
                 "template": "instructions",
                 "text": "This is stage 5 and it’s called… the Dream District. Here, you’re free to share what do you want to be and how you see yourself in the future.",
-                "image": "statics/images/mascot/mother-introduce.png"
+                "image": "statics/images/mascot/mother-introduce.png",
+                "audio": [
+                    "statics/audio/questions/S5Q003.mp3"
+                ]
             },
             {
                 "id": "S5Q004",
@@ -1323,6 +1400,7 @@
                 "text": "I think I have a bright future ahead of me",
                 "image": "",
                 "audio": [
+                    "statics/audio/questions/S5Q004.mp3",
                     "statics/audio/answers/yes.mp3",
                     "statics/audio/answers/no.mp3"
                 ],
@@ -1344,6 +1422,7 @@
                 "text": "I want to graduate from college",
                 "image": "",
                 "audio": [
+                    "statics/audio/questions/S5Q005.mp3",
                     "statics/audio/answers/yes.mp3",
                     "statics/audio/answers/no.mp3"
                 ],
@@ -1365,6 +1444,7 @@
                 "text": "I want to help my parents in the future",
                 "image": "",
                 "audio": [
+                    "statics/audio/questions/S5Q006.mp3",
                     "statics/audio/answers/yes.mp3",
                     "statics/audio/answers/no.mp3"
                 ],
@@ -1386,6 +1466,7 @@
                 "text": "I have nothing to look forward to in the future",
                 "image": "",
                 "audio": [
+                    "statics/audio/questions/S5Q007.mp3",
                     "statics/audio/answers/yes.mp3",
                     "statics/audio/answers/no.mp3"
                 ],
@@ -1406,13 +1487,19 @@
                 "template": "one-input",
                 "text": "When I grow up, I want to be a...",
                 "image": "statics/images/work.png",
+                "audio": [
+                    "statics/audio/questions/S5Q008.mp3"
+                ],
                 "answer": null
             },
             {
                 "id": "S5Q009",
                 "template": "instructions",
                 "text": "Congratulations on completing the final stage! Here's you HOPE BADGE, adventurer.",
-                "image": "statics/images/mascot/mother-happy.png"
+                "image": "statics/images/badges/Hope.png",
+                "audio": [
+                    "statics/audio/questions/S5Q009.mp3"
+                ]
             },
             {
                 "id": "S5Q010",
@@ -1431,13 +1518,19 @@
                 "id": "S6Q001",
                 "template": "instructions",
                 "text": "I'm so proud of you for making it this far! This ADVENTURER TROPHY is rightfully yours. May you continue to study, learn and enjoy life to the fullest!",
-                "image": "statics/images/mascot/mother-happy.png"
+                "image": "statics/images/mascot/mother-happy.png",
+                "audio": [
+                    "statics/audio/questions/S6Q001.mp3"
+                ]
             },
             {
                 "id": "S6Q002",
                 "template": "banner",
                 "text": "Your love, hard work, honesty, courage, and hope badges were earned because of your commitment. Use them very wisely . Carry your trophy with humility and remember to never stop learning. Go, grow and glow!",
-                "image": "statics/images/mascot/mother-ok.png"
+                "image": "statics/images/mascot/mother-ok.png",
+                "audio": [
+                    "statics/audio/questions/S6Q002.mp3"
+                ]
             }
         ]
     }

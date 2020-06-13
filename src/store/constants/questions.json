@@ -50,8 +50,8 @@
             {
                 "id": "S0Q004",
                 "template": "banner",
-                "text": "Red Gate Open",
-                "image": "statics/images/red-gate.png"
+                "text": "Gate Open",
+                "image": "statics/images/door-open.png"
             },
             {
                 "id": "S0Q005",
@@ -66,7 +66,7 @@
                 "id": "S0Q006",
                 "template": "instructions",
                 "text": "Ready? Oh! What's this? Another gate? Looks like we need to open a few more questions to proceed.",
-                "image": "statics/images/mascot/mother-shock.png",
+                "image": "statics/images/door-closed.png",
                 "audio": [
                     "statics/audio/questions/S0Q006.mp3"
                 ]
@@ -119,7 +119,7 @@
                 "id": "S0Q009",
                 "template": "banner",
                 "text": "Tadaa! The gate opened. Let's hurry inside.",
-                "image": "statics/images/red-gate.png",
+                "image": "statics/images/door-open.png",
                 "audio": [
                     "statics/audio/questions/S0Q009.mp3"
                 ]
@@ -244,16 +244,10 @@
                 "id": "S1Q001",
                 "template": "instructions",
                 "text": "You're all set. Let's now head to the first stage, FAMILY TOWN!",
-                "image": "statics/images/mascot/mother-cheer.png",
+                "image": "statics/images/banners/family-town.jpg",
                 "audio": [
                     "statics/audio/questions/S1Q001.mp3"
                 ]
-            },
-            {
-                "id": "S1Q002",
-                "template": "banner",
-                "text": "Family Town",
-                "image": "statics/images/banners/family-town.jpg"
             },
             {
                 "id": "S1Q003",
@@ -531,7 +525,7 @@
         "questions": [
             {
                 "id": "S2Q001",
-                "template": "banner",
+                "template": "instructions",
                 "text": "Correct! It's at school. The second stage of adventure takes place in... SCHOOL POINT!",
                 "image": "statics/images/banners/school.jpg",
                 "audio": [
@@ -798,16 +792,10 @@
                 "id": "S3Q001",
                 "template": "instructions",
                 "text": "Re-check your gears because we’re about to enter… Internet Village!",
-                "image": "statics/images/banners/backpack.jpg",
+                "image": "statics/images/banners/internet-village.jpg",
                 "audio": [
                     "statics/audio/questions/S3Q001.mp3"
                 ]
-            },
-            {
-                "id": "S3Q002",
-                "template": "banner",
-                "text": "Internet Village",
-                "image": "statics/images/banners/internet-village.jpg"
             },
             {
                 "id": "S3Q003",
@@ -1045,16 +1033,10 @@
                 "id": "S4Q001",
                 "template": "instructions",
                 "text": "Now, try to relax. Breathe in, breathe out. Stretch your arms and count 1 to 10. Breathe in, breathe out. Feeling much better? Good! Because we’re about to enter The Sad Zone.",
-                "image": "statics/images/mascot/mother-cheer.png",
+                "image": "statics/images/banners/sad-zone-2.jpg",
                 "audio": [
                     "statics/audio/questions/S4Q001.mp3"
                 ]
-            },
-            {
-                "id": "S4Q002",
-                "template": "banner",
-                "text": "Sad Zone",
-                "image": "statics/images/banners/sad-zone-2.jpg"
             },
             {
                 "id": "S4Q003",
@@ -1374,16 +1356,10 @@
                 "id": "S5Q001",
                 "template": "instructions",
                 "text": "One more badge from stage 5 and you will be officially declared as adventure-seeker and join a community of lifelong learners. Check your gears because this is your final stage.",
-                "image": "statics/images/mascot/mother-angry.png",
+                "image": "statics/images/banners/dream-land.jpg",
                 "audio": [
                     "statics/audio/questions/S5Q001.mp3"
                 ]
-            },
-            {
-                "id": "S5Q002",
-                "template": "banner",
-                "text": "Dream Land",
-                "image": "statics/images/banners/dream-land.jpg"
             },
             {
                 "id": "S5Q003",
@@ -1494,18 +1470,12 @@
             },
             {
                 "id": "S5Q009",
-                "template": "instructions",
+                "template": "banner",
                 "text": "Congratulations on completing the final stage! Here's you HOPE BADGE, adventurer.",
                 "image": "statics/images/badges/Hope.png",
                 "audio": [
                     "statics/audio/questions/S5Q009.mp3"
                 ]
-            },
-            {
-                "id": "S5Q010",
-                "template": "banner",
-                "text": "Finish Line",
-                "image": "statics/images/finish-line.png"
             }
         ]
     },
@@ -1518,14 +1488,14 @@
                 "id": "S6Q001",
                 "template": "instructions",
                 "text": "I'm so proud of you for making it this far! This ADVENTURER TROPHY is rightfully yours. May you continue to study, learn and enjoy life to the fullest!",
-                "image": "statics/images/mascot/mother-happy.png",
+                "image": "statics/images/thropy.gif",
                 "audio": [
                     "statics/audio/questions/S6Q001.mp3"
                 ]
             },
             {
                 "id": "S6Q002",
-                "template": "banner",
+                "template": "instructions",
                 "text": "Your love, hard work, honesty, courage, and hope badges were earned because of your commitment. Use them very wisely . Carry your trophy with humility and remember to never stop learning. Go, grow and glow!",
                 "image": "statics/images/mascot/mother-ok.png",
                 "audio": [

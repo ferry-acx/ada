@@ -1,5 +1,6 @@
 <template>
     <q-page padding class="page-container flex flex-center q-pa-xl">
+        <div class="title-container">Amazing Land of Adventures</div>
         <div class="menu-container bg-white full-width q-pa-md shadow-14">
             <div class="q-pa-lg">
                 <q-img src="statics/images/mascot/mother-cheer.png"></q-img>
@@ -69,6 +70,14 @@ export default {
 <style lang="scss" scoped>
 .page-container {
     background: linear-gradient(180deg, #26a69a 35%, #fff 15%, #fff 50%);
+
+    .title-container {
+        // position: absolute;
+        // z-index: 999;
+        // top: 75px;
+        color: #fff;
+        font-size: 20px;
+    }
 
     .menu-container {
         min-height: 400px;
