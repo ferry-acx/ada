@@ -9,3 +9,9 @@ export default {
     name: 'App'
 };
 </script>
+<style lang="scss">
+@import './assets/fonts/montserrat.scss';
+* {
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+}
+</style>

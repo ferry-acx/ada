@@ -1,6 +1,6 @@
 <template>
     <q-page padding class="page-container flex flex-center q-pa-xl">
-        <div class="title-container">Amazing Land of Adventures</div>
+        <div class="title-container text-center">Amazing Land of Adventures</div>
         <div class="menu-container bg-white full-width q-pa-md shadow-14">
             <div class="q-pa-lg">
                 <q-img src="statics/images/mascot/mother-cheer.png"></q-img>

@@ -1,8 +1,11 @@
 <template>
     <q-page class="theme-multi-single-imaged multi-single-imaged-container row items-center">
         <div class="col-12 justify-center">
-            <h5 class="text-center xs">{{ current.question.text }}</h5>
-            <h2 class="text-center gt-xs">{{ current.question.text }}</h2>
+            <div class="row q-mb-xl">
+                <div class="col-12 text-center">
+                    <div class="text-h6">{{ current.question.text }}</div>
+                </div>
+            </div>
             <div class="choice-row row wrap q-ma-md items-center justify-center">
                 <div
                     class="col-5 choice-container"

@@ -4,7 +4,7 @@
         class="theme-multi-multi-text multi-multi-text-container row full-width full-height items-center justify-center"
     >
         <div class="col-12">
-            <div class="row q-ma-lg">
+            <div class="row q-mb-xl">
                 <div class="col-12 text-center">
                     <div class="text-h6">{{ current.question.text }}</div>
                 </div>

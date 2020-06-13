@@ -1,20 +1,13 @@
 <template>
-    <q-page
-        padding
-        class="theme-multi-multi-imaged row full-width items-center justify-center fixed"
-    >
+    <q-page padding class="theme-multi-multi-imaged row full-width items-center justify-center fixed">
         <div class="col-12">
-            <div class="row q-ma-lg">
+            <div class="row q-mb-xl">
                 <div class="col-12 text-center">
                     <div class="text-grey-8 text-h6">{{ current.question.text }}</div>
                 </div>
             </div>
             <div class="row wrap q-ma-md justify-center items center">
-                <div
-                    class="col-5 q-ma-sm"
-                    v-for="[index, choice] of current.question.choices.entries()"
-                    :key="index"
-                >
+                <div class="col-5 q-ma-sm" v-for="[index, choice] of current.question.choices.entries()" :key="index">
                     <div class="row justify-center full-height full-width text-center">
                         <q-btn
                             class="full-width"
@@ -26,17 +19,12 @@
                                     <div class="col">
                                         <div class="row justify-center">
                                             <div class="col-12">
-                                                <img
-                                                    :src="choice.image"
-                                                    style="height: 100px; width: 100px;"
-                                                />
+                                                <img :src="choice.image" style="height: 100px; width: 100px;" />
                                             </div>
                                         </div>
                                         <div class="row full-width">
                                             <div class="col-12">
-                                                <span
-                                                    class="text-caption text-center"
-                                                >{{ choice.text }}</span>
+                                                <span class="text-caption text-center">{{ choice.text }}</span>
                                             </div>
                                         </div>
                                     </div>
