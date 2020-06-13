@@ -81,7 +81,10 @@ export default {
                 qanda: this.answersList
             };
 
-            const status = await exportFile('tmp.json', JSON.stringify(data));
+            const nospecial = this.config.fullname.replace(/[^a-zA-Z ]/g, '');
+            const filename = nospecial.split(' ').join('_');
+
+            const status = await exportFile(`${filename}.json`, JSON.stringify(data));
 
             if (!status) {
                 this.alertMessage = status;
