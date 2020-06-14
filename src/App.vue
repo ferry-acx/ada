@@ -10,8 +10,8 @@ export default {
 };
 </script>
 <style lang="scss">
-@import './assets/fonts/montserrat.scss';
+@import './css/fonts.scss';
 * {
-    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+    font-family: 'Short Stack', Helvetica, Arial, sans-serif;
 }
 </style>
