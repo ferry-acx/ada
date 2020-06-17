@@ -25,7 +25,7 @@
                             <q-input
                                 standout="bg-secondary text-white"
                                 dense
-                                type="text"
+                                type="number"
                                 v-model="userId"
                                 input-class="text-right"
                             >
@@ -59,7 +59,13 @@
         <q-footer class="bg-white text-white">
             <q-toolbar class="row justify-center full-width text-center">
                 <div class="col-12 q-ma-sm q-mb-lg q-px-sm">
-                    <q-btn push class="full-width" color="secondary" size="lg" @click="saveConfig">Save</q-btn>
+                    <q-btn
+                        push
+                        class="full-width"
+                        color="secondary"
+                        size="lg"
+                        @click="saveConfig"
+                    >Save</q-btn>
                 </div>
             </q-toolbar>
         </q-footer>
@@ -80,6 +86,10 @@ export default {
     created() {},
     computed: {
         config: sync('config/active')
+    },
+    mounted() {
+        this.userId = this.config.userId;
+        this.fullname = this.config.fullname;
     },
     methods: {
         ...call('config/*'),

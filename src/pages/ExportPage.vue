@@ -11,14 +11,14 @@
             <div class="col-12">
                 <div class="row">
                     <div class="col">
-                        <q-btn flat color="secondary" v-on:click="exportData">
+                        <q-btn flat color="secondary" v-on:click="saveData">
                             <q-icon size="xl" name="save_alt" />
                         </q-btn>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <span class="text-secondary text-subtitle2">Export Data</span>
+                        <span class="text-secondary text-subtitle2">Save Data</span>
                     </div>
                 </div>
             </div>
@@ -44,7 +44,10 @@
 
 <script>
 import { sync, call } from 'vuex-pathify';
-import { exportFile } from 'quasar';
+
+// FilesystemDirectory
+import { Plugins, FilesystemEncoding } from '@capacitor/core';
+const { Filesystem } = Plugins;
 
 import moment from 'moment';
 
@@ -71,24 +74,98 @@ export default {
             this.resetAnswerList();
             this.$router.push('/');
         },
-        async exportData() {
+        async initDirectories() {
+            const statRet = await this.stat();
+            if (!statRet) {
+                const mkdirRet = await this.mkdir();
+                return mkdirRet;
+            }
+            return statRet;
+        },
+        async createTemp() {
+            try {
+                const result = await Filesystem.writeFile({
+                    path: `file:///storage/emulated/0/Download/ada.txt`,
+                    data: 'Amazing Land of Adventures records located in: "Downloads/ada/"',
+                    encoding: FilesystemEncoding.UTF8
+                });
+                console.log('createTemp:', result);
+
+                const delResult = await Filesystem.deleteFile({
+                    path: `file:///storage/emulated/0/Download/ada.txt`
+                });
+
+                console.log('delResult:', delResult);
+
+                return true;
+            } catch (e) {
+                return false;
+            }
+        },
+        async stat() {
+            try {
+                let ret = await Filesystem.stat({
+                    path: 'file:///storage/emulated/0/Download/ada/'
+                });
+                console.log('stat:', ret);
+                return true;
+            } catch (e) {
+                console.error('Unable to stat file', e);
+                return false;
+            }
+        },
+        async mkdir() {
+            try {
+                let ret = await Filesystem.mkdir({
+                    path: 'file:///storage/emulated/0/Download/ada',
+                    recursive: false // like mkdir -p
+                });
+                console.log('mkdir:', ret);
+                return true;
+            } catch (e) {
+                console.error('Unable to make directory', e);
+                return false;
+            }
+        },
+        async saveData() {
             this.showLoading();
+            try {
+                await this.createTemp();
+                const initRet = await this.initDirectories();
 
-            const data = {
-                id: this.config.userId,
-                name: this.config.fullname,
-                dateGenerated: moment().format('L'),
-                qanda: this.answersList
-            };
+                if (initRet) {
+                    const data = {
+                        id: this.config.userId,
+                        name: this.config.fullname,
+                        dateGenerated: moment().format('L'),
+                        qanda: this.answersList
+                    };
 
-            const nospecial = this.config.fullname.replace(/[^a-zA-Z ]/g, '');
-            const filename = nospecial.split(' ').join('_');
+                    const nospecial = this.config.fullname.replace(/[^a-zA-Z ]/g, '');
+                    const name = nospecial.split(' ').join('_');
+                    const filename = `${this.config.userId}_${name}.json`;
+                    const result = await Filesystem.writeFile({
+                        path: `file:///storage/emulated/0/Download/ada/${filename}`,
+                        data: JSON.stringify(data),
+                        encoding: FilesystemEncoding.UTF8
+                    });
+                    console.log('Wrote file', result);
 
-            const status = await exportFile(`${filename}.json`, JSON.stringify(data));
-
-            if (!status) {
-                this.alertMessage = status;
-                this.alert = true;
+                    this.$q.notify({
+                        type: 'positive',
+                        message: 'Successfully saved data!',
+                        timeout: 2000
+                    });
+                } else {
+                    throw new Error('Initializing directories failed.');
+                }
+            } catch (e) {
+                console.error('Unable to write file', e);
+                this.$q.notify({
+                    type: 'negative',
+                    message: 'Failed to save data.',
+                    timeout: 2000
+                });
             }
 
             await this.hideLoading();
